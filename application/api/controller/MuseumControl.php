@@ -11,7 +11,7 @@ namespace app\api\controller;
 use app\api\model\Museum;
 use think\Controller;
 
-class Museumcontrol extends Controller
+class MuseumControl extends Controller
 {
     public function museum($id)
     {

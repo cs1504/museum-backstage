@@ -1,3 +1,45 @@
+# 后台管理子系统
+
+## Api
+
+
+
+| 接口名称 | 请求方法 | url |
+| --- | --- | --- |
+| [获取博物馆信息](获取博物馆信息) | GET | /api/museum/:id |
+
+
+
+
+### 获取博物馆信息 
+
+```
+GET http://www.csmuseum.xyz/api/museum/:id
+```
+
+返回
+
+```json
+{
+    "id": 2,
+    "name": "测试中国国家博物馆",
+    "introduce": "这是测试数据",
+    "open_time": "8：00-20：00",
+    "edu_activity": null,
+    "collection": null,
+    "academic": null,
+    "lng": null,
+    "lat": null
+}
+```
+
+
+
+============================= 华丽的分割线，以下是 ThinkPHP 5.1 的 README =============================
+
+---
+
+
 ThinkPHP 5.1
 ===============
 

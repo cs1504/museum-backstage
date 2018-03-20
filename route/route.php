@@ -15,6 +15,8 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 
+Route::get('museum/:id','api/MuseumControl/museum');
+
 return [
 
 ];
