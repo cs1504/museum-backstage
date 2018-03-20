@@ -16,7 +16,7 @@ class Index extends Controller
 {
     public function hello()
     {
-        // 
+        // 测试
         $user = User::where('loginname', 'wyh0655')->find();
         return json($user);
     }
