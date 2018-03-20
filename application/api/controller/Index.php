@@ -16,10 +16,7 @@ class Index extends Controller
 {
     public function hello()
     {
-//        $user = new User();
-//        $user->loginname     = 'thinkphp';
-//        $user->email    = 'thinkphp@qq.com';
-//        $user->save();
+        // 测试修改
         $user = User::where('loginname', 'wyh0655')->find();
         return json($user);
     }
