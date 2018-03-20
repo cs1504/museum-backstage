@@ -17,9 +17,9 @@ return [
     // 数据库名
     'database'        => 'museum',
     // 用户名
-    'username'        => 'root',
+    'username'        => Env::get('database.username','root'),
     // 密码
-    'password'        => '',
+    'password'        => Env::get('database.password','root'),
     // 端口
     'hostport'        => '',
     // 连接dsn
