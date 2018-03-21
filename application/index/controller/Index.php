@@ -12,10 +12,6 @@ class Index
 
     public function hello()
     {
-//        $user = new User();
-//        $user->loginname     = 'thinkphp';
-//        $user->email    = 'thinkphp@qq.com';
-//        $user->save();
         $user = User::where('loginname', 'thinkphp')->find();
         return json($user);
     }

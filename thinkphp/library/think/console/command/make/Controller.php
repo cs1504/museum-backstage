@@ -11,9 +11,9 @@
 
 namespace think\console\command\make;
 
+use think\Config;
 use think\console\command\Make;
 use think\console\input\Option;
-use think\facade\Config;
 
 class Controller extends Make
 {
@@ -24,17 +24,12 @@ class Controller extends Make
     {
         parent::configure();
         $this->setName('make:controller')
-            ->addOption('api', null, Option::VALUE_NONE, 'Generate an api controller class.')
             ->addOption('plain', null, Option::VALUE_NONE, 'Generate an empty controller class.')
             ->setDescription('Create a new resource controller class');
     }
 
     protected function getStub()
     {
-        if ($this->input->getOption('api')) {
-            return __DIR__ . '/stubs/controller.api.stub';
-        }
-
         if ($this->input->getOption('plain')) {
             return __DIR__ . '/stubs/controller.plain.stub';
         }
