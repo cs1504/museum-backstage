@@ -19,4 +19,16 @@ class MuseumControlApi extends Controller
         $museum = Museum::where('id', $id)->find();
         return json($museum);
     }
+
+    public function search()
+    {
+        if(request()->isGet()) {
+            $data = input('get.');
+            $museum = Museum::where('name', 'like', '%'.$data['name'].'%')
+                ->select();
+            return json($museum);
+        }
+    }
+
+
 }

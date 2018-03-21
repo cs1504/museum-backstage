@@ -1,3 +1,195 @@
+# 后台管理子系统
+
+## Api
+
+> 测试 api 可以使用 postman ，postman 是一个跨平台的 post|get 检测软件，很方便
+
+| 接口名称 | 请求方法 | url |
+| --- | --- | --- |
+| [获取博物馆信息](#获取博物馆信息) | GET | /api/museum/:id |
+| [搜索博物馆](#搜索博物馆) | GET | /api/museum/search/ |
+| [管理员登录](#管理员登录) | POST | /api/admin/login/ |
+| [用户登录](#用户登录) | POST | /api/user/login/ |
+
+
+### 获取博物馆信息 
+
+```
+GET http://www.csmuseum.xyz/api/museum/:id
+```
+
+返回
+
+```json
+{
+    "id": 2,
+    "name": "测试中国国家博物馆",
+    "introduce": "这是测试数据",
+    "open_time": "8：00-20：00",
+    "edu_activity": null,
+    "collection": null,
+    "academic": null,
+    "lng": null,
+    "lat": null
+}
+```
+
+### 搜索博物馆
+
+```
+GET http://www.csmuseum.xyz/api/museum/search/
+```
+
+待完善
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| name | 搜索关键字 | 必填 |
+
+返回 
+
+```json
+[
+    {
+        "id": 1,
+        "name": "测试中国国家博物馆1",
+        "introduce": "这是测试数据",
+        "open_time": "这是测试数据8：00-20：00",
+        "edu_activity": "",
+        "collection": "",
+        "academic": "",
+        "lng": 0,
+        "lat": 0
+    },
+    {
+        "id": 2,
+        "name": "测试中国国家博物馆",
+        "introduce": "这是测试数据",
+        "open_time": "8：00-20：00",
+        "edu_activity": null,
+        "collection": null,
+        "academic": null,
+        "lng": null,
+        "lat": null
+    }
+]
+```
+
+
+### 管理员登录
+
+```
+POST http://www.csmuseum.xyz/api/admin/login/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+
+返回值
+
+```json
+{
+    "valid": 1,
+    "msg": "登录成功"
+}
+```
+
+### 用户登录
+
+```
+POST http://www.csmuseum.xyz/api/user/login/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+
+返回值
+
+```json
+{
+    "valid": 1,
+    "msg": "登录成功"
+}
+```
+
+
+----
+
+
+Nginx 配置文件
+
+
+```conf
+server
+	{
+		listen 80;
+		server_name www.csmuseum.xyz ;
+		index index.html index.htm index.php default.html default.htm default.php;
+		root  /home/wwwroot/www.csmuseum.xyz/think/public;
+
+		location / {
+        		try_files $uri $uri/ /index.php?s=$uri&$args;
+    		}	
+
+		location ~ .+.php($|/) {
+			set $script $uri;
+			set $path_info "/";
+			if ($uri ~ "^(.+.php)(/.+)") {
+				set $script $1;
+				set $path_info $2;
+			}
+
+			fastcgi_pass  unix:/tmp/php-cgi.sock;
+			fastcgi_index index.php?IF_REWRITE=1;
+			include fastcgi.conf;
+			fastcgi_param PHP_VALUE "open_basedir=/home/wwwroot/default/tp5/public/:/tmp/:/proc/";
+			fastcgi_param PATH_INFO $path_info;
+			fastcgi_param SCRIPT_FILENAME $root$fastcgi_script_name;
+			include fastcgi_params;
+		}
+
+
+		include none.conf;
+		#error_page   404   /404.html;
+
+		include enable-php.conf;
+
+		location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
+		{
+			expires      30d;
+		}
+
+		location ~ .*\.(js|css)?$
+		{
+			expires      12h;
+		}
+
+		location ~ /.well-known {
+			allow all;
+		}
+
+		location ~ /\.
+		{
+			deny all;
+		}
+
+		access_log off;
+	}
+```
+
+
+
+
+=================== 华丽的分割线，以下是 ThinkPHP 5.0 的 README ===================
+
+
+
+
 ThinkPHP 5.0
 ===============
 

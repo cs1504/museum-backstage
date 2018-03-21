@@ -16,7 +16,7 @@ Route::get('think', function () {
 });
 
 Route::get('api/museum/:id','api/MuseumControlApi/museum');
-
+Route::get('api/museum/search','api/MuseumControlApi/search');
 Route::any('api/admin/login/','api/AdminControlApi/login');
 Route::any('api/user/login/','api/UserControlApi/login');
 
