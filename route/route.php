@@ -13,7 +13,7 @@ Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
 
-Route::get('api/museum/:id','api/MuseumControl/museum');
+Route::get('api/museum/:id','api/MuseumControlApi/museum');
 
 Route::any('api/admin/login/','api/AdminControlApi/login');
 Route::any('api/user/login/','api/UserControlApi/login');
