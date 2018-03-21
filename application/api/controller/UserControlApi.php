@@ -6,7 +6,7 @@ namespace app\api\controller;
 use app\api\model\User;
 use think\Controller;
 
-class UserControl extends Controller
+class UserControlApi extends Controller
 {
     public function login() {
         if(request()->isPost()) {

@@ -10,14 +10,14 @@ namespace app\api\validate;
 
 use think\Validate;
 
-class Admin extends Validate
+class User extends Validate
 {
     protected $rule = [
         'loginname'=>'require',
         'password'=>'require',
     ];
     protected $message = [
-        'user.require'=>'请输入用户名',
+        'loginname.require'=>'请输入用户名',
         'password.require'=>'请输入密码',
     ];
 }

@@ -11,20 +11,15 @@ namespace app\api\controller;
 use app\api\model\Admin;
 use think\Controller;
 
-class AdminControl extends Controller
+class AdminControlApi extends Controller
 {
     public function login() {
         if(request()->isPost()) {
             $res = (new Admin())->login(input('post.'));
-            if($res['valid']) {
-                // 登录成功
-                $this->success($res['msg'],'/admin');exit;
-            }
-            else {
-                // 登录失败
-                $this->error($res['msg']);exit;
-            }
+            return json($res);
         }
-        
+        else {
+            return json(['valid' => 0, 'msg' => '请用 post 方法']);
+        }
     }
 }

@@ -7,8 +7,8 @@
 | 接口名称 | 请求方法 | url |
 | --- | --- | --- |
 | [获取博物馆信息](#获取博物馆信息) | GET | /api/museum/:id |
-
-
+| [管理员登录](#管理员登录) | POST | api/admin/login/ |
+| [用户登录](#用户登录) | POST | api/user/login/ |
 
 
 ### 获取博物馆信息 
@@ -33,6 +33,45 @@ GET http://www.csmuseum.xyz/api/museum/:id
 }
 ```
 
+### 管理员登录
+
+```
+POST http://www.csmuseum.xyz/api/admin/login/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+
+返回值
+
+```json
+{
+    "valid": 1,
+    "msg": "登录成功"
+}
+```
+
+### 用户登录
+
+```
+POST http://www.csmuseum.xyz/api/user/login/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+
+返回值
+
+```json
+{
+    "valid": 1,
+    "msg": "登录成功"
+}
+```
 
 
 =================== 华丽的分割线，以下是 ThinkPHP 5.1 的 README ===================

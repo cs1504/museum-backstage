@@ -12,7 +12,7 @@ use think\Controller;
 use app\api\model\Museum;
 
 
-class MuseumControl extends Controller
+class MuseumControlApi extends Controller
 {
     public function museum($id)
     {
