@@ -8,8 +8,9 @@
 
 namespace app\api\controller;
 
-use app\api\model\Museum;
 use think\Controller;
+use app\api\model\Museum;
+
 
 class MuseumControl extends Controller
 {
