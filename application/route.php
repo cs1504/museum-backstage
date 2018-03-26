@@ -23,6 +23,10 @@ Route::any('api/user/login/','api/UserControlApi/login');
 Route::get('api/news/:id','api/NewsControlApi/news');
 Route::get('api/news/search','api/NewsControlApi/search');
 
+Route::get('api/audio/:id', 'api/AudioControlApi/audio');
+Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
+Route::get('api/audio/search/', 'api/AudioControlApi/search');
+
 return [
     '__pattern__' => [
         'name' => '\w+',

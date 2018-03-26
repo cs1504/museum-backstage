@@ -4,6 +4,7 @@
 
 > 测试 api 可以使用 postman ，postman 是一个跨平台的 post|get 检测软件，很方便
 
+需要什么 API 直接跟我说，我尽快写，尽快完善。
 
 网址改成 http://139.199.102.73:8080/
 
@@ -16,6 +17,9 @@
 | [用户登录](#用户登录) | POST | /api/user/login/ |
 | [获取新闻](#获取新闻) | GET | /api/news/:id |
 | [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
+| [获取音频信息](#获取音频信息) | GET | /api/audio/:id |
+| [某个用户的音频](#某个用户发布的音频) | GET | /api/audiobyuser/:userid |
+| [搜索音频](#搜索音频) | GET | /api/audio/search |
 
 
 ### 获取博物馆信息 
@@ -162,8 +166,52 @@ GET http://139.199.102.73:8080/api/news/search/
 | title | 按 title 搜索 | 必填 |
 
 
+### 获取音频信息
 
-----
+
+```
+GET http://139.199.102.73:8080/api/audio/:id
+```
+
+返回 
+
+
+```json
+{
+    "id": 1,
+    "user_id": 1,
+    "musemu_id": 1,
+    "status": 0,
+    "upload_time": "2018-03-18 10:50:30",
+    "pass_time": null,
+    "addr": "http://p4buh8sqx.bkt.clouddn.com/%E8%B5%B5%E9%9B%B7-%E6%88%90%E9%83%BD%20%28Live%29.mp3",
+    "description": "测试数据，这里放了一首歌的链接",
+    "totext": null
+}
+```
+
+
+### 某个用户的音频
+
+
+```
+GET http://139.199.102.73:8080/api/audiobyuser/:userid
+```
+
+
+### 搜索音频
+
+```
+GET http://139.199.102.73:8080/api/audio/search
+```
+
+待完善
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| description | 按 description 搜索 | 必填 |
+
 
 
 Nginx 配置文件
