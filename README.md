@@ -4,18 +4,24 @@
 
 > 测试 api 可以使用 postman ，postman 是一个跨平台的 post|get 检测软件，很方便
 
+
+网址改成 http://139.199.102.73:8080/
+
+
 | 接口名称 | 请求方法 | url |
 | --- | --- | --- |
 | [获取博物馆信息](#获取博物馆信息) | GET | /api/museum/:id |
 | [搜索博物馆](#搜索博物馆) | GET | /api/museum/search/ |
 | [管理员登录](#管理员登录) | POST | /api/admin/login/ |
 | [用户登录](#用户登录) | POST | /api/user/login/ |
+| [获取新闻](#获取新闻) | GET | /api/news/:id |
+| [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
 
 
 ### 获取博物馆信息 
 
 ```
-GET http://www.csmuseum.xyz/api/museum/:id
+GET http://139.199.102.73:8080/api/museum/:id
 ```
 
 返回
@@ -37,7 +43,7 @@ GET http://www.csmuseum.xyz/api/museum/:id
 ### 搜索博物馆
 
 ```
-GET http://www.csmuseum.xyz/api/museum/search/
+GET http://139.199.102.73:8080/api/museum/search/
 ```
 
 待完善
@@ -80,7 +86,7 @@ GET http://www.csmuseum.xyz/api/museum/search/
 ### 管理员登录
 
 ```
-POST http://www.csmuseum.xyz/api/admin/login/
+POST http://139.199.102.73:8080/api/admin/login/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -100,7 +106,7 @@ POST http://www.csmuseum.xyz/api/admin/login/
 ### 用户登录
 
 ```
-POST http://www.csmuseum.xyz/api/user/login/
+POST http://139.199.102.73:8080/api/user/login/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -116,6 +122,45 @@ POST http://www.csmuseum.xyz/api/user/login/
     "msg": "登录成功"
 }
 ```
+
+### 获取新闻
+
+```
+POST http://139.199.102.73:8080/api/news/:id
+```
+
+返回
+
+```json
+{
+    "id": 1,
+    "title": "浙江良渚古城遗址申遗 博物馆迎参观热",
+    "author": "浙江新闻网",
+    "release_time": "2018-01-31 00:00:00",
+    "modify_time": null,
+    "excerpt": "图为:浙江博物馆展出的镇馆之宝——“良渚玉琮王”。 王远 摄 中新网浙江新闻1月31日电(见习记者 王远)近日,中国联合国教科文组织全国委员会秘书处致函联合国 ",
+    "content": null,
+    "status": 0,
+    "nature": null,
+    "comment_status": 0,
+    "url": null
+}
+```
+
+### 搜索新闻 
+
+
+```
+GET http://139.199.102.73:8080/api/news/search/
+```
+
+待完善
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| title | 按 title 搜索 | 必填 |
+
 
 
 ----
