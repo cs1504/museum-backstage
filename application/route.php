@@ -20,6 +20,8 @@ Route::get('api/museum/search','api/MuseumControlApi/search');
 Route::any('api/admin/login/','api/AdminControlApi/login');
 Route::any('api/user/login/','api/UserControlApi/login');
 
+Route::get('api/news/:id','api/NewsControlApi/news');
+Route::get('api/news/search','api/NewsControlApi/search');
 
 return [
     '__pattern__' => [
