@@ -14,8 +14,18 @@ use think\Controller;
 class AdminControlApi extends Controller
 {
     public function login() {
-        if(request()->isPost()) {
+        if($this->request()->isPost()) {
             $res = (new Admin())->login(input('post.'));
+            return json($res);
+        }
+        else {
+            return json(['valid' => 0, 'msg' => '请用 post 方法']);
+        }
+    }
+
+    public function reg() {
+        if($this->request->isPost()) {
+            $res = (new Admin())->reg(input('post.'));
             return json($res);
         }
         else {

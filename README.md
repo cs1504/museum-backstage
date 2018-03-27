@@ -13,8 +13,12 @@
 | --- | --- | --- |
 | [获取博物馆信息](#获取博物馆信息) | GET | /api/museum/:id |
 | [搜索博物馆](#搜索博物馆) | GET | /api/museum/search/ |
+| [获取展览信息](#获取展览信息) | GET | /api/exhibition/:id |
+| [搜索展览](#搜索展览) | GET | /api/exhibition/search/ |
 | [管理员登录](#管理员登录) | POST | /api/admin/login/ |
+| [管理员注册](#管理员注册) | POST | /api/admin/reg/ |
 | [用户登录](#用户登录) | POST | /api/user/login/ |
+| [用户注册](#用户注册) | POST | /api/user/reg/ |
 | [获取新闻](#获取新闻) | GET | /api/news/:id |
 | [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
 | [获取音频信息](#获取音频信息) | GET | /api/audio/:id |
@@ -87,6 +91,27 @@ GET http://139.199.102.73:8080/api/museum/search/
 ```
 
 
+### 获取展览信息 
+
+```
+GET http://139.199.102.73:8080/api/exhibition/:id
+```
+
+
+### 搜索展览
+
+```
+GET http://139.199.102.73:8080/api/exhibition/search/
+```
+
+待完善
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| name | 搜索关键字 | 必填 |
+
+
 ### 管理员登录
 
 ```
@@ -107,6 +132,19 @@ POST http://139.199.102.73:8080/api/admin/login/
 }
 ```
 
+### 管理员注册 
+
+```
+POST http://139.199.102.73:8080/api/admin/reg/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+| role | 角色 | 规定1为普通管理员，0为超级管理员 |
+
+
 ### 用户登录
 
 ```
@@ -126,6 +164,19 @@ POST http://139.199.102.73:8080/api/user/login/
     "msg": "登录成功"
 }
 ```
+
+
+### 用户注册 
+
+```
+POST http://139.199.102.73:8080/api/user/reg/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| loginname | 登录名 | 必填 |
+| password | 密码 | 必填 | 
+
 
 ### 获取新闻
 

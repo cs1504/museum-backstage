@@ -17,4 +17,14 @@ class UserControlApi extends Controller
             return json(['valid' => 0, 'msg' => '请用 post 方法']);
         }
     }
+
+    public function reg() {
+        if($this->request->isPost()) {
+            $res = (new User())->reg(input('post.'));
+            return json($res);
+        }
+        else {
+            return json(['valid' => 0, 'msg' => '请用 post 方法']);
+        }
+    }
 }
