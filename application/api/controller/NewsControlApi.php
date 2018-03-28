@@ -11,6 +11,13 @@ namespace app\api\controller;
 
 use think\Controller;
 use app\api\model\News;
+use think\db;
+
+ini_set('memory_limit', '1024M');
+use Fukuball\Jieba\Jieba;
+use Fukuball\Jieba\Finalseg;
+Jieba::init();
+Finalseg::init();
 
 class NewsControlApi extends Controller
 {
@@ -24,9 +31,26 @@ class NewsControlApi extends Controller
     {
         if (request()->isGet()) {
             $data = input('get.');
-            $news = News::where('title', 'like', '%' . $data['title'] . '%')
-                ->select();
+            $list = Jieba::cut($data["title"]);
+            var_dump($list);
+            $q = '';
+            foreach ($list as $ss) {
+                if (strlen($ss) > 1) {
+                    $q .= str_replace('%','',urlencode($ss)) . ' ';
+                }
+            }
+            var_dump($q);
+            $news = Db::query("select * from news where MATCH (titleindex) AGAINST ('$q')");
             return json($news);
+        }
+    }
+    public function insert() {
+        if (request()->isPost()) {
+            $data = input('post.');
+            $data['titleindex'] = implode('', cut($data['title']));
+            var_dump($data['titleindex']);
+            $res = (new News())->insert($data);
+            return json($res);
         }
     }
 }
