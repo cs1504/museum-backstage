@@ -38,7 +38,7 @@ class NewsControlApi extends Controller
                     $q .= str_replace('%','',urlencode($ss)) . ' ';
                 }
             }
-            $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex,excerptindex,contentindex) AGAINST ('+".$q."' WITH QUERY EXPANSION)");
+            $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex,excerptindex,contentindex) AGAINST ('$q')");
             return json($news);
         }
     }
