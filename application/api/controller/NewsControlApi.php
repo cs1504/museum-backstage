@@ -32,15 +32,13 @@ class NewsControlApi extends Controller
         if (request()->isGet()) {
             $data = input('get.');
             $list = Jieba::cut($data["title"]);
-            var_dump($list);
             $q = '';
             foreach ($list as $ss) {
                 if (strlen($ss) > 1) {
                     $q .= str_replace('%','',urlencode($ss)) . ' ';
                 }
             }
-            var_dump($q);
-            $news = Db::query("select * from news where MATCH (titleindex) AGAINST ('$q')");
+            $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (experptindex) AGAINST ('$q')");
             return json($news);
         }
     }
