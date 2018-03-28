@@ -35,8 +35,7 @@ Route::get('api/audio/:id', 'api/AudioControlApi/audio');
 Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
 Route::get('api/audio/search/', 'api/AudioControlApi/search');
 
-Route::get('api/comment/:id', 'api/CommentControlApi/comment');
-Route::put('api/comment/:id', 'api/CommentControlApi/comment');
+Route::any('api/comment/:id', 'api/CommentControlApi/comment');
 Route::post('api/comments', 'api/CommentControlApi/comments');
 
 return [

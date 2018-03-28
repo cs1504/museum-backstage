@@ -123,6 +123,17 @@ class CommentControlApi extends Controller
                 return json(['valid'=>0,'msg'=>'未发送数据']);
             return json(['valid'=>1,'msg'=>'修改评论成功']);
         }
+        if(request()->isDelete()) {
+            $res = Comment::where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此评论']);
+            }
+            $res = Db::table('comment')->delete($id);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'删除失败']);
+            return json(['valid'=>1,'msg'=>'删除评论成功']);
+        }
     }
 
 }

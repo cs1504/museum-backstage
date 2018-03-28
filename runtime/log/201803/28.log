@@ -5753,3 +5753,73 @@ Content-Disposition: form-data; name="content"
   'content' => '这是一条测试的评论，评论的是第一家博物馆，还可以进行修改，在测试一下',
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-28T20:19:52+08:00 ] 127.0.0.1 DELETE /api/comment/2
+[ info ] museum.xyz/api/comment/2 [运行时间：0.040583s][吞吐率：24.64req/s] [内存消耗：3,658.25kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'CommentControlApi',
+    2 => 'comment',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '1e156069-6f9b-440b-99c5-b6a8b0779da5',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=5tindq93i250stln12gbelhd53',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ RUN ] app\api\controller\CommentControlApi->comment[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/CommentControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001193s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002434s ]
+[ sql ] [ SQL ] DELETE FROM `comment`    WHERE  `id` = 2 [ RunTime:0.001479s ]
+---------------------------------------------------------------
+[ 2018-03-28T20:20:39+08:00 ] 127.0.0.1 DELETE /api/comment/1
+[ info ] museum.xyz/api/comment/1 [运行时间：0.037619s][吞吐率：26.58req/s] [内存消耗：4,036.22kb] [文件加载：63]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'CommentControlApi',
+    2 => 'comment',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f6cefd76-3097-4c30-b2da-bfe1854307bc',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=5tindq93i250stln12gbelhd53',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ RUN ] app\api\controller\CommentControlApi->comment[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/CommentControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000563s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `comment` [ RunTime:0.002557s ]
+[ sql ] [ SQL ] SELECT * FROM `comment` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.001479s ]
+[ error ] [8192]Non-static method think\Model::delete() should not be called statically, assuming $this from incompatible context[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/CommentControlApi.php:132]
