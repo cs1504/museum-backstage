@@ -1,0 +1,1727 @@
+---------------------------------------------------------------
+[ 2018-03-28T07:38:49+08:00 ] 127.0.0.1 GET /
+[ info ] museum.xyz/ [运行时间：0.032734s][吞吐率：30.55req/s] [内存消耗：1,741.60kb] [文件加载：36]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-28T07:39:19+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.030743s][吞吐率：32.53req/s] [内存消耗：1,856.13kb] [文件加载：40]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../jieba-php/src/vendor/multi-array/MultiArray.php' (include_path='.:/Applications/XAMPP/xamppfiles/lib/php')[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:17]
+---------------------------------------------------------------
+[ 2018-03-28T07:41:56+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.027110s][吞吐率：36.89req/s] [内存消耗：1,856.36kb] [文件加载：40]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../../jieba-php/src/vendor/multi-array/MultiArray.php' (include_path='.:/Applications/XAMPP/xamppfiles/lib/php')[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:17]
+---------------------------------------------------------------
+[ 2018-03-28T07:41:57+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.026671s][吞吐率：37.49req/s] [内存消耗：1,856.38kb] [文件加载：40]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../../jieba-php/src/vendor/multi-array/MultiArray.php' (include_path='.:/Applications/XAMPP/xamppfiles/lib/php')[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:17]
+---------------------------------------------------------------
+[ 2018-03-28T07:55:45+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.028719s][吞吐率：34.82req/s] [内存消耗：1,856.35kb] [文件加载：40]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [64]main(): Failed opening required '../../../vendor/jieba-php/src/vendor/multi-array/MultiArray.php' (include_path='.:/Applications/XAMPP/xamppfiles/lib/php')[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:18]
+---------------------------------------------------------------
+[ 2018-03-28T08:05:21+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.021386s][吞吐率：46.76req/s] [内存消耗：1,929.84kb] [文件加载：41]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'Fukuball\Tebru\MultiArray' not found[/Applications/XAMPP/xamppfiles/htdocs/think/extend/Fukuball/Jieba/Jieba.php:159]
+---------------------------------------------------------------
+[ 2018-03-28T08:08:00+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.094245s][吞吐率：10.61req/s] [内存消耗：3,552.61kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; _undeveloped_session=RHNJTkI2ak1ENkp4ZVN5czNGaEI2cVA3aWkySC9sVXhIQjFNK21ybVpHejZYYkk3eDRjenBGZ3FmaXVlditGU3BiZTFoUXREWUF0N213NzUxUVZ1MEVjZXZQOE9qOTQ5aDdKTUo2R1pSRnBTY3pjaitHdGNQbGNJaTJXME1Mc283eVJwNGY5RWhKM0tLQnh1MkhjYXF3dEN3NUNobGUxVEVlak03VDZ6VVg0PS0tcnlYc3RSalVOK0cyVjl2dElvVnRCQT09--46b235414cd67b0abd5677885870bfb4ad243b69; pgv_si=s2852259840',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014099s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.023386s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `title` LIKE '%q%' [ RunTime:0.007814s ]
+---------------------------------------------------------------
+[ 2018-03-28T08:22:12+08:00 ] 127.0.0.1 POST /domain_views
+[ info ] museum.xyz/domain_views [运行时间：0.017455s][吞吐率：57.29req/s] [内存消耗：2,121.77kb] [文件加载：44]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'domain_views',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '22',
+  'origin' => 'http://museum.xyz',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => '*/*',
+  'referer' => 'http://museum.xyz/zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529; _gat=1',
+)
+[ info ] [ PARAM ] array (
+  'domain_name' => 'museum.xyz',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-28T08:22:12+08:00 ] 127.0.0.1 GET /api/domains/4120935/stats
+[ info ] museum.xyz/api/domains/4120935/stats [运行时间：0.034242s][吞吐率：29.20req/s] [内存消耗：2,132.86kb] [文件加载：45]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'domains',
+    2 => '4120935',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-csrf-token' => '0TAzCSDq/+e2jfq33iLbS+cq2RprBIAiVDZm5nPdNiP2S/V/rOzbIdVWz3Iq8KSkjjRW2QqLhymD5EN7zzMjKA==',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://museum.xyz/zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529; _gat=1',
+  'if-none-match' => 'W/"b1dec920528c04788f2e0170c066a34d"',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-28T08:22:12+08:00 ] 127.0.0.1 GET /api/domains/suggestions?term=museum.xyz&client_id=8403
+[ info ] museum.xyz/api/domains/suggestions?term=museum.xyz&client_id=8403 [运行时间：0.021130s][吞吐率：47.33req/s] [内存消耗：2,133.80kb] [文件加载：45]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'domains',
+    2 => 'suggestions',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-csrf-token' => '0TAzCSDq/+e2jfq33iLbS+cq2RprBIAiVDZm5nPdNiP2S/V/rOzbIdVWz3Iq8KSkjjRW2QqLhymD5EN7zzMjKA==',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'referer' => 'http://museum.xyz/zh-cn',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529; _gat=1',
+  'if-none-match' => 'W/"795af5b20f48add6bdc064ac52286716"',
+)
+[ info ] [ PARAM ] array (
+  'term' => 'museum.xyz',
+  'client_id' => '8403',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-28T08:22:36+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：0.033740s][吞吐率：29.64req/s] [内存消耗：2,522.20kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529; _gat=1',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to a member function exists() on array[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/fukuball/jieba-php/src/class/Jieba.php:375]
+---------------------------------------------------------------
+[ 2018-03-28T08:23:41+08:00 ] 127.0.0.1 GET /api/news/search?title=q
+[ info ] museum.xyz/api/news/search?title=q [运行时间：1.655262s][吞吐率：0.60req/s] [内存消耗：526,436.38kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'title' => 'q',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001009s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.002669s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `title` LIKE '%q%' [ RunTime:0.000450s ]
+---------------------------------------------------------------
+[ 2018-03-28T08:24:51+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86 [运行时间：1.667549s][吞吐率：0.60req/s] [内存消耗：525,507.67kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: title[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:35]
+---------------------------------------------------------------
+[ 2018-03-28T08:25:02+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86 [运行时间：1.682010s][吞吐率：0.59req/s] [内存消耗：526,460.13kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.002485s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `title` LIKE '%北京历史博物馆%' [ RunTime:0.000412s ]
+---------------------------------------------------------------
+[ 2018-03-28T08:25:06+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86 [运行时间：1.650125s][吞吐率：0.61req/s] [内存消耗：526,459.76kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000861s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.002751s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `title` LIKE '%北京历史博物馆%' [ RunTime:0.000444s ]
+---------------------------------------------------------------
+[ 2018-03-28T08:25:29+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.627693s][吞吐率：0.61req/s] [内存消耗：526,469.86kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000694s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `news` [ RunTime:0.004059s ]
+[ sql ] [ SQL ] SELECT * FROM `news` WHERE  `title` LIKE '%北京历史博物馆开讲啦%' [ RunTime:0.000391s ]
+---------------------------------------------------------------
+[ 2018-03-28T08:42:11+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.695191s][吞吐率：0.59req/s] [内存消耗：525,171.47kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\api\controller\Db' not found[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:35]
+---------------------------------------------------------------
+[ 2018-03-28T08:42:25+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.678679s][吞吐率：0.60req/s] [内存消耗：525,172.78kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Array to string conversion[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:36]
+---------------------------------------------------------------
+[ 2018-03-28T09:09:58+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.653946s][吞吐率：0.60req/s] [内存消耗：525,442.75kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000759s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:10:26+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.637210s][吞吐率：0.61req/s] [内存消耗：525,442.96kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000718s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:11:29+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.642579s][吞吐率：0.61req/s] [内存消耗：525,443.55kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000882s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:11:33+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.661149s][吞吐率：0.60req/s] [内存消耗：525,443.55kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000722s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:12:48+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.622686s][吞吐率：0.62req/s] [内存消耗：525,434.75kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000752s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''北京 历史博物馆 开讲 啦'' at line 1[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:13:03+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.652071s][吞吐率：0.61req/s] [内存消耗：525,434.45kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000690s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '北京 历史博物馆 开讲 啦' at line 1[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:13:12+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.659371s][吞吐率：0.60req/s] [内存消耗：525,434.68kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000751s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '历史博物馆 开讲 啦)' at line 1[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:13:19+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.639783s][吞吐率：0.61req/s] [内存消耗：525,434.71kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '历史博物馆 开讲 啦)' at line 1[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T09:13:39+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.643165s][吞吐率：0.61req/s] [内存消耗：525,385.16kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000577s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 历史博物馆 开讲 啦') [ RunTime:0.000869s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:22:57+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8E%86%E5%8F%B2%E5%8D%9A%E7%89%A9%E9%A6%86%E5%BC%80%E8%AE%B2%E5%95%A6 [运行时间：1.663775s][吞吐率：0.60req/s] [内存消耗：525,385.61kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京历史博物馆开讲啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000720s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 历史博物馆 开讲 啦') [ RunTime:0.000726s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:23:03+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC [运行时间：1.623789s][吞吐率：0.62req/s] [内存消耗：525,350.96kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000798s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京') [ RunTime:0.000665s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:23:30+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%95%A6 [运行时间：1.658045s][吞吐率：0.60req/s] [内存消耗：525,352.59kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000683s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 啦') [ RunTime:0.000599s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:34:03+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%95%A6
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%95%A6 [运行时间：1.623113s][吞吐率：0.62req/s] [内存消耗：525,353.83kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京啦',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000675s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 啦') [ RunTime:0.000688s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:34:10+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC [运行时间：1.654254s][吞吐率：0.60req/s] [内存消耗：525,351.59kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000684s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京') [ RunTime:0.000588s ]
+---------------------------------------------------------------
+[ 2018-03-28T09:39:33+08:00 ] 127.0.0.1 GET /api/news/search?key=this%20fenci
+[ info ] museum.xyz/api/news/search?key=this%20fenci [运行时间：1.916349s][吞吐率：0.52req/s] [内存消耗：525,332.65kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'this fenci',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000662s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('this fenci') [ RunTime:0.000640s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:11:25+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4 [运行时间：1.647841s][吞吐率：0.61req/s] [内存消耗：525,361.55kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京今年',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000614s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 今年') [ RunTime:0.000695s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:11:55+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4 [运行时间：1.643041s][吞吐率：0.61req/s] [内存消耗：525,362.02kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京今年',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000679s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 今年') [ RunTime:0.000714s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:12:02+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC [运行时间：1.634601s][吞吐率：0.61req/s] [内存消耗：525,354.97kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000596s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京') [ RunTime:0.000602s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:13:53+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97 [运行时间：1.655000s][吞吐率：0.60req/s] [内存消耗：525,329.69kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000699s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北') [ RunTime:0.000610s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:14:03+08:00 ] 127.0.0.1 GET /api/news/search?key=this
+[ info ] museum.xyz/api/news/search?key=this [运行时间：1.643134s][吞吐率：0.61req/s] [内存消耗：525,331.96kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'this',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000647s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('this') [ RunTime:0.000751s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:14:32+08:00 ] 127.0.0.1 GET /api/news/search?key=this%20fenci
+[ info ] museum.xyz/api/news/search?key=this%20fenci [运行时间：1.938314s][吞吐率：0.52req/s] [内存消耗：525,336.53kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'this fenci',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('this fenci') [ RunTime:0.000780s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:23:53+08:00 ] 127.0.0.1 GET /api/news/search?key=this%20fenci
+[ info ] museum.xyz/api/news/search?key=this%20fenci [运行时间：1.959864s][吞吐率：0.51req/s] [内存消耗：525,337.27kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'this fenci',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000650s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('this fenci') [ RunTime:0.001145s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:24:00+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC [运行时间：1.590612s][吞吐率：0.63req/s] [内存消耗：525,355.82kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000690s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京') [ RunTime:0.000635s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:28:14+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8D%9A%E7%89%A9%E9%A6%86
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8D%9A%E7%89%A9%E9%A6%86 [运行时间：1.639369s][吞吐率：0.61req/s] [内存消耗：525,366.94kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京博物馆',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000665s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 博物馆') [ RunTime:0.000725s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:29:58+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82 [运行时间：1.675032s][吞吐率：0.60req/s] [内存消耗：525,372.00kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京城市',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000681s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (title) AGAINST ('北京 城市') [ RunTime:0.000819s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:31:47+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82 [运行时间：1.656839s][吞吐率：0.60req/s] [内存消耗：525,429.66kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京城市',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[HY000]: General error: 1191 Can't find FULLTEXT index matching the column list[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-28T10:32:07+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82 [运行时间：1.635642s][吞吐率：0.61req/s] [内存消耗：525,372.52kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京城市',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000719s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('北京 城市') [ RunTime:0.000810s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:32:11+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%9F%8E%E5%B8%82 [运行时间：1.622336s][吞吐率：0.62req/s] [内存消耗：525,372.98kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京城市',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000772s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('北京 城市') [ RunTime:0.000571s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:32:24+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8D%9A%E7%89%A9%E9%A6%86
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%8D%9A%E7%89%A9%E9%A6%86 [运行时间：1.630497s][吞吐率：0.61req/s] [内存消耗：525,365.45kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京博物馆',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000551s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('北京 博物馆') [ RunTime:0.000705s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:32:38+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E5%89%AF%E4%B8%AD%E5%BF%83
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E5%89%AF%E4%B8%AD%E5%BF%83 [运行时间：1.641377s][吞吐率：0.61req/s] [内存消耗：525,370.15kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京副中心',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('北京 副 中心') [ RunTime:0.000831s ]
+---------------------------------------------------------------
+[ 2018-03-28T10:33:06+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4 [运行时间：1.671983s][吞吐率：0.60req/s] [内存消耗：525,361.70kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京今年',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('北京 今年') [ RunTime:0.000604s ]
+---------------------------------------------------------------
+[ 2018-03-28T11:27:12+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4 [运行时间：1.699938s][吞吐率：0.59req/s] [内存消耗：525,126.23kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京今年',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: q[/Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php:38]
+---------------------------------------------------------------
+[ 2018-03-28T11:27:28+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97%E4%BA%AC%E4%BB%8A%E5%B9%B4 [运行时间：1.658312s][吞吐率：0.60req/s] [内存消耗：525,365.03kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北京今年',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000589s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('E58C97E4BAAC E4BB8AE5B9B4 ') [ RunTime:0.001528s ]
+---------------------------------------------------------------
+[ 2018-03-28T12:43:54+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%AE%9D%E8%97%8F
+[ info ] museum.xyz/api/news/search?key=%E5%AE%9D%E8%97%8F [运行时间：1.706660s][吞吐率：0.59req/s] [内存消耗：525,333.92kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '宝藏',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000700s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('E5AE9DE8978F ') [ RunTime:0.000712s ]
+---------------------------------------------------------------
+[ 2018-03-28T12:45:31+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%AE%9D%E8%97%8F
+[ info ] museum.xyz/api/news/search?key=%E5%AE%9D%E8%97%8F [运行时间：1.649254s][吞吐率：0.61req/s] [内存消耗：525,333.66kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '宝藏',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000717s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('E5AE9DE8978F ') [ RunTime:0.000703s ]
+---------------------------------------------------------------
+[ 2018-03-28T12:45:41+08:00 ] 127.0.0.1 GET /api/news/search?key=%E4%B8%AD%E5%9B%BD
+[ info ] museum.xyz/api/news/search?key=%E4%B8%AD%E5%9B%BD [运行时间：1.659861s][吞吐率：0.60req/s] [内存消耗：525,371.40kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; pgv_si=s2852259840; _undeveloped_session=OWg5ckcyNEp2Y2pDa3AySU1RMFA3TExEY050c2cweU1XUWEzRXNKNnVnZERzVEhMcFJWR25INzArRzd3eXkzMy8xNmIzeEVYUGZ2SXVmd0ZHaVNXKzZsQnRJZExnT2VLYzhrRThpY3o2amR5RGVEVGIzaExBMjdMbEJrbWZjL3kyODVoWFM2bDA3Ri9ZcDlabTBndjdFUGcrTzY5R2VyWDdrSGkvTWxadWNnPS0teW5XeVlIZkF6NDFDQVVDU0ZncjZGZz09--482ea5be0360d5d7a49aef5b93fcc12553361459; _gid=GA1.2.2067087885.1522196529',
+)
+[ info ] [ PARAM ] array (
+  'key' => '中国',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select * from news where MATCH (titleindex) AGAINST ('E4B8ADE59BBD ') [ RunTime:0.000696s ]
