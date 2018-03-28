@@ -31,7 +31,7 @@ class NewsControlApi extends Controller
     {
         if (request()->isGet()) {
             $data = input('get.');
-            $list = Jieba::cut_for_search($data["title"]);
+            $list = Jieba::cut($data["title"]);
             $q = '';
             foreach ($list as $ss) {
                 if (strlen($ss) > 1) {
