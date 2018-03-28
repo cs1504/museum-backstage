@@ -1,5 +1,13 @@
 # 后台管理子系统
 
+## 用到的工具及说明
+
+thinkPHP5 [https://www.kancloud.cn/manual/thinkphp5/118003](https://www.kancloud.cn/manual/thinkphp5/118003)
+
+jieba 中文分词 [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jieba)  [https://github.com/fukuball/jieba-php](https://github.com/fukuball/jieba-php)
+
+七牛云 [https://developer.qiniu.com/kodo/sdk/1236/android](https://developer.qiniu.com/kodo/sdk/1236/android)  [https://developer.qiniu.com/kodo/sdk/1241/php](https://developer.qiniu.com/kodo/sdk/1241/php)
+
 ## Api
 
 > 测试 api 可以使用 postman ，postman 是一个跨平台的 post|get 检测软件，很方便
@@ -21,9 +29,15 @@
 | [用户注册](#用户注册) | POST | /api/user/reg/ |
 | [获取新闻](#获取新闻) | GET | /api/news/:id |
 | [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
+| [获取最新新闻](#获取最新新闻) | GET | /api/news/latest/ |
 | [获取音频信息](#获取音频信息) | GET | /api/audio/:id |
 | [某个用户的音频](#某个用户发布的音频) | GET | /api/audiobyuser/:userid |
 | [搜索音频](#搜索音频) | GET | /api/audio/search |
+| [获取某条评论消息](#获取某条评论消息) | GET | /api/comment/:id |
+| [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
+| [发布新的评论](#发布新的评论) | POST | /api/comments/ |
+
+
 
 
 ### 获取博物馆信息 
@@ -209,12 +223,24 @@ POST http://139.199.102.73:8080/api/news/:id
 GET http://139.199.102.73:8080/api/news/search/
 ```
 
-待完善
-
 
 | 参数 | 意义 | 备注 |
 | --- | --- | --- |
-| title | 按 title 搜索 | 必填 |
+| title | 按 title 搜索 | 非必填 |
+| key | 按关键字搜索，包括 title excerpt content | 非必填 |
+| page | 分页的第 n 页 |非必填，默认返回第一页(前10条数据) |
+
+
+### 获取最新新闻
+
+```
+GET http://139.199.102.73:8080/api/news/latest/
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| page | 分页的第 n 页 |非必填，默认返回第一页(前10条数据) |
+
 
 
 ### 获取音频信息
@@ -262,6 +288,47 @@ GET http://139.199.102.73:8080/api/audio/search
 | 参数 | 意义 | 备注 |
 | --- | --- | --- |
 | description | 按 description 搜索 | 必填 |
+
+
+> 注意！！！下面的评论前两个 url 是 comment/:id 第三个是 comments
+
+
+### 获取某条评论消息
+
+```
+GET http://139.199.102.73:8080/api/comment/:id
+```
+
+### 修改某条评论
+
+
+``` 
+PUT http://139.199.102.73:8080/api/comment/:id
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| id |  评论 id | 必填 |
+| content | 评论正文 10-140字 | 必填 | 
+
+
+
+### 发布新的评论
+
+
+```
+GET http://139.199.102.73:8080/api/comment
+```
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| coption | 评论种类，博物馆1，展览2，新闻3，音频4  | 必填 |
+| museum_id | 若coption=1,则必填 | |
+| exhibition_id | 若coption=2 则必填 | |
+| news_id | 若 coption=3 则必填 | |
+| audip_id | 若 coption=4 则必填 | |
+| content | 10 - 140 字的评论 | 必填 |
 
 
 

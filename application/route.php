@@ -29,10 +29,15 @@ Route::any('api/user/reg/','api/UserControlApi/reg');
 
 Route::get('api/news/:id','api/NewsControlApi/news');
 Route::get('api/news/search','api/NewsControlApi/search');
+Route::get('api/news/latest/', 'api/NewsControlApi/latest');
 
 Route::get('api/audio/:id', 'api/AudioControlApi/audio');
 Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
 Route::get('api/audio/search/', 'api/AudioControlApi/search');
+
+Route::get('api/comment/:id', 'api/CommentControlApi/comment');
+Route::put('api/comment/:id', 'api/CommentControlApi/comment');
+Route::post('api/comments', 'api/CommentControlApi/comments');
 
 return [
     '__pattern__' => [
