@@ -11,7 +11,7 @@ namespace app\api\controller;
 
 use think\Controller;
 use app\api\model\News;
-use think\db;
+use think\Db;
 
 ini_set('memory_limit', '1024M');
 use Fukuball\Jieba\Jieba;

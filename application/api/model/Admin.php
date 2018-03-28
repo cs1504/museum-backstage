@@ -10,7 +10,7 @@ namespace app\api\model;
 
 
 use think\Model;
-use think\db;
+use think\Db;
 
 class Admin extends Model
 {
