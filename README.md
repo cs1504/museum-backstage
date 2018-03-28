@@ -35,6 +35,7 @@ jieba 中文分词 [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jie
 | [搜索音频](#搜索音频) | GET | /api/audio/search |
 | [获取某条评论消息](#获取某条评论消息) | GET | /api/comment/:id |
 | [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
+| [删除某条评论](#修改某条评论) |  DELETE | /api/comment/:id |
 | [发布新的评论](#发布新的评论) | POST | /api/comments/ |
 
 
@@ -311,6 +312,12 @@ PUT http://139.199.102.73:8080/api/comment/:id
 | id |  评论 id | 必填 |
 | content | 评论正文 10-140字 | 必填 | 
 
+### 删除某条评论
+
+
+``` 
+DELETE http://139.199.102.73:8080/api/comment/:id
+```
 
 
 ### 发布新的评论
