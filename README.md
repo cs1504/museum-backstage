@@ -38,6 +38,7 @@ jieba 中文分词 [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jie
 | [获取音频信息](#获取音频信息) | GET | /api/audio/:id |
 | [某个用户的音频](#某个用户发布的音频) | GET | /api/audiobyuser/:userid |
 | [搜索音频](#搜索音频) | GET | /api/audio/search |
+| [获取七牛云上传token](#获取七牛云上传token) | POST | /api/getqiniutoken |
 | [添加音频](#添加音频) | POST | /api/audio/add | 
 | [获取某条评论消息](#获取某条评论消息) | GET | /api/comment/:id |
 | [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
@@ -340,6 +341,15 @@ GET http://139.199.102.73:8080/api/audio/search
 | 参数 | 意义 | 备注 |
 | --- | --- | --- |
 | description | 按 description 搜索 | 必填 |
+
+
+### 获取七牛云上传token
+
+
+```
+POST http://139.199.102.73:8080/api/getqiniutoken
+```
+
 
 
 ### 添加音频 

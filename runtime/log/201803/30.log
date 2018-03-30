@@ -7732,3 +7732,348 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `audio` [ RunTime:0.002097s ]
 [ sql ] [ SQL ] INSERT INTO `audio` (`user_id` , `museum_id` , `addr` , `description`) VALUES (1 , 1 , 'htttp://museum.org' , 'hahah') [ RunTime:0.000647s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:08:27+08:00 ] 127.0.0.1 POST /api/user/login
+[ info ] museum.xyz/api/user/login [运行时间：0.035015s][吞吐率：28.56req/s] [内存消耗：4,014.58kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'UserControlApi',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------473514992988635227115566',
+  'cache-control' => 'no-cache',
+  'postman-token' => '56e45e6b-f7c9-4398-a6f7-fd35768491e1',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '282',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\api\controller\UserControlApi->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/UserControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000923s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002648s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'admin'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:08:35+08:00 ] 127.0.0.1 POST /api/user/login
+[ info ] museum.xyz/api/user/login [运行时间：0.032553s][吞吐率：30.72req/s] [内存消耗：4,014.47kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'UserControlApi',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------561977196469057184097488',
+  'cache-control' => 'no-cache',
+  'postman-token' => '4e42ed5a-5713-408b-ba3c-52fa484ac1c1',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '284',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'user001',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\api\controller\UserControlApi->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/UserControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000647s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004547s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'user001'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000520s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:08:36+08:00 ] 127.0.0.1 POST /api/user/login
+[ info ] museum.xyz/api/user/login [运行时间：0.030502s][吞吐率：32.78req/s] [内存消耗：4,014.63kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'UserControlApi',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'content-type' => 'multipart/form-data; boundary=--------------------------359720841408749091730710',
+  'cache-control' => 'no-cache',
+  'postman-token' => 'ba3beab2-c5d1-42be-8411-f5b30682991c',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'content-length' => '284',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'user001',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\api\controller\UserControlApi->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/UserControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000525s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.003722s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'user001'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:33:29+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.050369s][吞吐率：19.85req/s] [内存消耗：3,591.34kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '3c84abd7-735a-4c6b-bd22-4d0bd8be5f28',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000724s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'museumtest.option' doesn't exist[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-03-30T21:33:57+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.030999s][吞吐率：32.26req/s] [内存消耗：3,628.10kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '34079e30-9b44-4ddb-b2e2-3a7ae17e95a6',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000585s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `options` [ RunTime:0.002375s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000372s ]
+[ error ] [2]hash_hmac() expects parameter 3 to be string, array given[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/qiniu/php-sdk/src/Qiniu/Auth.php:24]
+---------------------------------------------------------------
+[ 2018-03-30T21:36:10+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.030965s][吞吐率：32.29req/s] [内存消耗：3,628.10kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'c55ecc86-0a2a-46d9-ab2f-127b07504337',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000595s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `options` [ RunTime:0.004150s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT * FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000387s ]
+[ error ] [2]hash_hmac() expects parameter 3 to be string, array given[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/qiniu/php-sdk/src/Qiniu/Auth.php:24]
+---------------------------------------------------------------
+[ 2018-03-30T21:38:01+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.028670s][吞吐率：34.88req/s] [内存消耗：3,559.50kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'f8b6adf6-aba1-4241-b4c3-29049cfcbc18',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000515s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `options` [ RunTime:0.003859s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000339s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:39:26+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.029827s][吞吐率：33.53req/s] [内存消耗：3,571.95kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'df07f2a3-65c5-45a9-b587-4e0e3b341908',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000780s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `options` [ RunTime:0.004196s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000354s ]
+---------------------------------------------------------------
+[ 2018-03-30T21:40:12+08:00 ] 127.0.0.1 GET /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.015923s][吞吐率：62.80req/s] [内存消耗：2,531.80kb] [文件加载：50]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => 'b5c72074-f44c-4f0f-abb0-b725f745dfae',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T21:40:15+08:00 ] 127.0.0.1 POST /api/getqiniutoken
+[ info ] museum.xyz/api/getqiniutoken [运行时间：0.030374s][吞吐率：32.92req/s] [内存消耗：3,575.05kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'QiniuToken',
+    2 => 'getToken',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'no-cache',
+  'postman-token' => '6c0e4022-aa95-4a42-a2be-f6788f190348',
+  'user-agent' => 'PostmanRuntime/7.1.1',
+  'accept' => '*/*',
+  'host' => 'museum.xyz',
+  'cookie' => 'PHPSESSID=dsri1rqvacheho1qe4fja9lv91',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'multipart/form-data; boundary=--------------------------387405479037058860102797',
+  'content-length' => '508',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '1',
+  'museum_id' => '1',
+  'addr' => 'htttp://museum.org',
+  'description' => 'hahah',
+)
+[ info ] [ RUN ] app\api\controller\QiniuToken->getToken[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/QiniuToken.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `options` [ RunTime:0.004274s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000311s ]

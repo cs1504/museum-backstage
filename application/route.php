@@ -46,6 +46,8 @@ Route::post('api/audio/add/', 'api/AudioControlApi/add');
 Route::any('api/comment/:id', 'api/CommentControlApi/comment');
 Route::post('api/comments', 'api/CommentControlApi/comments');
 
+Route::any('api/getqiniutoken', 'api/QiniuToken/getToken');
+
 return [
     '__pattern__' => [
         'name' => '\w+',
