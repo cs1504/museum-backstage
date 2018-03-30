@@ -14,6 +14,11 @@ use think\Db;
 
 class User extends Model
 {
+    public function getStatusTextAttr() {
+        $status = [0=>'正常',1=>'禁用'];
+        return $status[$this['status']];
+    }
+
     public function login($data)
     {
         //1.执行验证
@@ -32,10 +37,10 @@ class User extends Model
             //说明在数据库未匹配到相关数据
             return ['valid' => 0, 'msg' => '用户名或者密码不正确'];
         }
+        // cookie session
 
-        //3.将用户信息存入到session中
-        session('loginname', $userInfo['loginname']);
-        session('nickname', $userInfo['nickname']);
+        session('loginname', $userInfo['loginname'], 'think_');
+        session('nickname', $userInfo['nickname'], 'think_');
 
         return ['valid'=>1,'msg'=>'登录成功'];
     }

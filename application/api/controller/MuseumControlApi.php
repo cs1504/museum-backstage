@@ -30,5 +30,19 @@ class MuseumControlApi extends Controller
         }
     }
 
+    public function nearest(){
+        if(request()->isGet()) {
+            $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 0;
+            $museum = Museum::where('lng', '>', 0)
+                ->field('id, name, introduce, open_time, edu_activity, collection, academic, lng, lat, city')
+                ->field('pow((lng-'.$data['lng'].'),2)+pow((lat-'.$data['lat'].'),2) as distance')
+                ->order('distance')
+                ->page($data['page'],10)
+                ->select();
+            return json($museum);
+        }
+    }
 
 }

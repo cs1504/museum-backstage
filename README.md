@@ -21,18 +21,24 @@ jieba 中文分词 [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jie
 | --- | --- | --- |
 | [获取博物馆信息](#获取博物馆信息) | GET | /api/museum/:id |
 | [搜索博物馆](#搜索博物馆) | GET | /api/museum/search/ |
+| [获取最近的博物馆](#获取最近的博物馆) | GET | /api/museum/nearest |
 | [获取展览信息](#获取展览信息) | GET | /api/exhibition/:id |
 | [搜索展览](#搜索展览) | GET | /api/exhibition/search/ |
 | [管理员登录](#管理员登录) | POST | /api/admin/login/ |
 | [管理员注册](#管理员注册) | POST | /api/admin/reg/ |
+| [管理员注销](#管理员注销) | GET | /api/admin/logout |
+| [获取管理员用户信息](#获取管理员用户信息) | POST | /api/admin/getinfo |
 | [用户登录](#用户登录) | POST | /api/user/login/ |
 | [用户注册](#用户注册) | POST | /api/user/reg/ |
+| [用户注销](#用户注销) | GET | /api/user/logout |
+| [获取用户信息](#获取用户用户信息) | POST | /api/user/getinfo |
 | [获取新闻](#获取新闻) | GET | /api/news/:id |
 | [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
 | [获取最新新闻](#获取最新新闻) | GET | /api/news/latest/ |
 | [获取音频信息](#获取音频信息) | GET | /api/audio/:id |
 | [某个用户的音频](#某个用户发布的音频) | GET | /api/audiobyuser/:userid |
 | [搜索音频](#搜索音频) | GET | /api/audio/search |
+| [添加音频](#添加音频) | POST | /api/audio/add | 
 | [获取某条评论消息](#获取某条评论消息) | GET | /api/comment/:id |
 | [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
 | [删除某条评论](#修改某条评论) |  DELETE | /api/comment/:id |
@@ -105,6 +111,18 @@ GET http://139.199.102.73:8080/api/museum/search/
 ]
 ```
 
+### 获取最近的博物馆
+
+```
+GET http://139.199.102.73:8080/api/museum/nearest
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| lng | 经度 | 必填 |
+| lat | 纬度 | 必填 | 
+| page | 页码 | 非必填，默认返回最近的十家 | 
+
 
 ### 获取展览信息 
 
@@ -128,6 +146,8 @@ GET http://139.199.102.73:8080/api/exhibition/search/
 
 
 ### 管理员登录
+
+测试账号 admin 密码 123456
 
 ```
 POST http://139.199.102.73:8080/api/admin/login/
@@ -160,7 +180,25 @@ POST http://139.199.102.73:8080/api/admin/reg/
 | role | 角色 | 规定1为普通管理员，0为超级管理员 |
 
 
+### 管理员注销 
+
+```
+GET http://139.199.102.73:8080/api/admin/logout/
+```
+
+### 获取管理员用户信息
+
+```
+POST http://139.199.102.73:8080/api/admin/getinfo
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| id | 用户id | 必填 |
+
 ### 用户登录
+
+测试账号 user001 密码 123456
 
 ```
 POST http://139.199.102.73:8080/api/user/login/
@@ -191,6 +229,19 @@ POST http://139.199.102.73:8080/api/user/reg/
 | --- | --- | --- |
 | loginname | 登录名 | 必填 |
 | password | 密码 | 必填 | 
+
+
+### 用户注销 
+
+```
+GET http://139.199.102.73:8080/api/admin/logout/
+```
+
+### 获取用户信息
+
+```
+POST http://139.199.102.73:8080/api/admin/getinfo
+```
 
 
 ### 获取新闻
@@ -289,6 +340,23 @@ GET http://139.199.102.73:8080/api/audio/search
 | 参数 | 意义 | 备注 |
 | --- | --- | --- |
 | description | 按 description 搜索 | 必填 |
+
+
+### 添加音频 
+
+
+```
+POST http://139.199.102.73:8080/api/audio/add
+```
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| user_id | 用户 ID | 必填 |
+| museum_id | 博物馆 ID | 必填 | 
+| addr | 音频地址 | 必填 |
+| description | 描述 | 必填 |
+
 
 
 > 注意！！！下面的评论前两个 url 是 comment/:id 第三个是 comments

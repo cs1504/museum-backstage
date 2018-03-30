@@ -11,9 +11,15 @@ namespace app\api\model;
 
 use think\Model;
 use think\Db;
+use think\Session;
 
 class Admin extends Model
 {
+    public function getRoleTextAttr() {
+        $role = [0=>'超级管理员',1=>'管理员'];
+        return $role[$this['role']];
+    }
+
     public function login($data)
     {
         //1.执行验证
@@ -34,10 +40,9 @@ class Admin extends Model
         }
 
         //3.将用户信息存入到session中
-        session('loginname', $userInfo['loginname']);
-        session('nickname', $userInfo['nickname']);
-
-        return ['valid'=>1,'msg'=>'登录成功'];
+        Session::set('loginname', $userInfo['loginname']);
+        Session::set('nickname', $userInfo['nickname']);
+        return ['valid'=>1,'msg'=>'登录成功', 'loginname'=>Session::get('loginname')];
     }
 
     public function reg($data) {
@@ -62,4 +67,5 @@ class Admin extends Model
         }
         return ['valid'=>1,'id' => $id, 'loginname' => $data['loginname'],'msg'=>'注册成功'];
     }
+
 }
