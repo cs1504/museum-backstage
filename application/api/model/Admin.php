@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WYH
- * Date: 14/03/2018
- * Time: 6:53 PM
- */
 
 namespace app\api\model;
 
@@ -40,6 +34,7 @@ class Admin extends Model
         }
 
         //3.将用户信息存入到session中
+        Session::set('id', $userInfo['id']);
         Session::set('loginname', $userInfo['loginname']);
         Session::set('nickname', $userInfo['nickname']);
         return ['valid'=>1,'msg'=>'登录成功', 'loginname'=>Session::get('loginname')];

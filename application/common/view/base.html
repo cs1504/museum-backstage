@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{block name='title'}{/block}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="__STATIC__/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="__STATIC__/css/lineicons/style.css">
+
+
+    <link rel="stylesheet" href="__STATIC__/css/style.css">
+    <link rel="stylesheet" href="__STATIC__/css/style-responsive.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<section id="container" >
+
+    {block name='header'} {/block}
+    {block name='aside'} {/block}
+    {block name='content'}{/block}
+    {block name='footer'} {/block}
+
+</section>
+
+<script src="__STATIC__/js/jquery.scrollTo.min.js"></script>
+<script src="__STATIC__/js/jquery.nicescroll.js"></script>
+<script src="__STATIC__/js/jquery.sparkline.js"></script>
+<script src="__STATIC__/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="__STATIC__/js/common-scripts.js"></script>
+
+</body>
+</html>

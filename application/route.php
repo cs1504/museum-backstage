@@ -15,6 +15,16 @@ Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
 
+
+Route::any('login', 'admin/Login/login');
+Route::any('logout', 'admin/Login/logout');
+
+
+
+
+
+
+
 Route::get('api/museum/:id','api/MuseumControlApi/museum');
 Route::get('api/museum/search','api/MuseumControlApi/search');
 Route::get('api/museum/nearest','api/MuseumControlApi/nearest');
@@ -47,6 +57,15 @@ Route::any('api/comment/:id', 'api/CommentControlApi/comment');
 Route::post('api/comments', 'api/CommentControlApi/comments');
 
 Route::any('api/getqiniutoken', 'api/QiniuToken/getToken');
+
+
+
+
+
+
+
+
+
 
 return [
     '__pattern__' => [

@@ -1,0 +1,47 @@
+{extend name='common@frame'/}
+
+{block name='title'}首页{/block}
+
+
+{block name='content'}
+<section id="main-content">
+    <section class="wrapper site-min-height">
+        <h3><i class="fa fa-angle-right"></i> 数据总览</h3>
+        <div class="row mt">
+            <div class="col-md-4 mt">
+                <div class="content-panel centered">
+                    共有博物馆<h1 class="inline-block">{$count['museum']}</h1>家
+                </div>
+            </div>
+            <div class="col-md-4 mt">
+                <div class="content-panel centered">
+                    共有展览<h1 class="inline-block">{$count['exhibition']}</h1>场
+                </div>
+            </div>
+            <div class="col-md-4 mt">
+                <div class="content-panel centered">
+                    共有新闻<h1 class="inline-block">{$count['news']}</h1>条
+                </div>
+            </div>
+            <div class="col-md-4 mt">
+                <div class="content-panel centered">
+                    共有音频<h1 class="inline-block">{$count['audio']}</h1>个
+                </div>
+            </div>
+            <div class="col-md-4 mt">
+                <div class="content-panel centered">
+                    共有用户<h1 class="inline-block">{$count['user']}</h1>人
+                </div>
+            </div>
+        </div>
+        <h3><i class="fa fa-angle-right"></i> 服务器监控</h3>
+        <div class="row mt">
+
+        </div>
+    </section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+
+
+
+
+{/block}

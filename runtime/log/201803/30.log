@@ -8077,3 +8077,1999 @@
 [ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'AK' LIMIT 1 [ RunTime:0.000360s ]
 [ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'SK' LIMIT 1 [ RunTime:0.000334s ]
 [ sql ] [ SQL ] SELECT `option_value` FROM `options` WHERE  `option_name` = 'bucket' LIMIT 1 [ RunTime:0.000311s ]
+---------------------------------------------------------------
+[ 2018-03-30T22:06:24+08:00 ] 127.0.0.1 GET /
+[ info ] museum.xyz/ [运行时间：0.023784s][吞吐率：42.04req/s] [内存消耗：2,165.78kb] [文件加载：44]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T22:06:29+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018729s][吞吐率：53.39req/s] [内存消耗：2,236.65kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined method app\login\controller\Login::fetch()[/Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php:30]
+---------------------------------------------------------------
+[ 2018-03-30T22:07:28+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.023639s][吞吐率：42.30req/s] [内存消耗：2,589.23kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:08:52+08:00 ] 127.0.0.1 GET /login/Login/indx
+[ info ] museum.xyz/login/Login/indx [运行时间：0.017989s][吞吐率：55.59req/s] [内存消耗：2,591.45kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'Login' => 'indx',
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:08:55+08:00 ] 127.0.0.1 GET /login/Login/index
+[ info ] museum.xyz/login/Login/index [运行时间：0.017996s][吞吐率：55.57req/s] [内存消耗：2,591.74kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'Login' => 'index',
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:09:04+08:00 ] 127.0.0.1 GET /login/Login/index
+[ info ] museum.xyz/login/Login/index [运行时间：0.021626s][吞吐率：46.24req/s] [内存消耗：2,591.80kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'Login' => 'index',
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:09:21+08:00 ] 127.0.0.1 GET /login/Login/index
+[ info ] museum.xyz/login/Login/index [运行时间：0.019073s][吞吐率：52.43req/s] [内存消耗：2,591.73kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'Login' => 'index',
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:09:24+08:00 ] 127.0.0.1 GET /login/Login/index
+[ info ] museum.xyz/login/Login/index [运行时间：0.018528s][吞吐率：53.97req/s] [内存消耗：2,591.80kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'Login' => 'index',
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:09:27+08:00 ] 127.0.0.1 GET /login/Login/
+[ info ] museum.xyz/login/Login/ [运行时间：0.017586s][吞吐率：56.86req/s] [内存消耗：2,590.59kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:09:31+08:00 ] 127.0.0.1 GET /login/
+[ info ] museum.xyz/login/ [运行时间：0.019819s][吞吐率：50.46req/s] [内存消耗：2,589.82kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\login\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/login/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/login/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:10:18+08:00 ] 127.0.0.1 GET /login/
+[ info ] museum.xyz/login/ [运行时间：0.020221s][吞吐率：49.45req/s] [内存消耗：2,590.13kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:10:22+08:00 ] 127.0.0.1 GET /login/
+[ info ] museum.xyz/login/ [运行时间：0.019469s][吞吐率：51.36req/s] [内存消耗：2,590.36kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:10:34+08:00 ] 127.0.0.1 GET /user/Login/login
+[ info ] museum.xyz/user/Login/login [运行时间：0.015710s][吞吐率：63.65req/s] [内存消耗：2,208.46kb] [文件加载：46]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T22:10:51+08:00 ] 127.0.0.1 GET /user/Login/index
+[ info ] museum.xyz/user/Login/index [运行时间：0.020133s][吞吐率：49.67req/s] [内存消耗：2,590.73kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/index.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:11:14+08:00 ] 127.0.0.1 GET /user/index/index
+[ info ] museum.xyz/user/index/index [运行时间：0.017350s][吞吐率：57.64req/s] [内存消耗：2,225.57kb] [文件加载：47]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T22:11:19+08:00 ] 127.0.0.1 GET /user/login
+[ info ] museum.xyz/user/login [运行时间：0.018500s][吞吐率：54.05req/s] [内存消耗：2,590.86kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/index.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:11:29+08:00 ] 127.0.0.1 GET /user/login/login
+[ info ] museum.xyz/user/login/login [运行时间：0.015740s][吞吐率：63.53req/s] [内存消耗：2,208.47kb] [文件加载：46]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T22:11:57+08:00 ] 127.0.0.1 GET /user/login/index
+[ info ] museum.xyz/user/login/index [运行时间：0.017964s][吞吐率：55.67req/s] [内存消耗：2,591.21kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/index.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T22:12:10+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017969s][吞吐率：55.65req/s] [内存消耗：2,589.88kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [0]模板文件不存在:/Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/view/driver/Think.php:80]
+---------------------------------------------------------------
+[ 2018-03-30T23:16:54+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.029372s][吞吐率：34.05req/s] [内存消耗：2,723.84kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:18:02+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.022036s][吞吐率：45.38req/s] [内存消耗：2,728.45kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:20:33+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.030111s][吞吐率：33.21req/s] [内存消耗：2,730.77kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:20:35+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.016859s][吞吐率：59.32req/s] [内存消耗：2,538.70kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:20:45+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.020373s][吞吐率：49.08req/s] [内存消耗：2,734.13kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:21:06+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018591s][吞吐率：53.79req/s] [内存消耗：2,734.68kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:23:45+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.030068s][吞吐率：33.26req/s] [内存消耗：2,735.00kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:20+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.020687s][吞吐率：48.34req/s] [内存消耗：2,733.48kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:33+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018030s][吞吐率：55.46req/s] [内存消耗：2,733.27kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:49+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.035305s][吞吐率：28.32req/s] [内存消耗：3,936.39kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:50+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018772s][吞吐率：53.27req/s] [内存消耗：2,538.45kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:52+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.025773s][吞吐率：38.80req/s] [内存消耗：3,936.05kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:24:53+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017253s][吞吐率：57.96req/s] [内存消耗：2,538.45kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:25:31+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018066s][吞吐率：55.35req/s] [内存消耗：2,733.27kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:27:29+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018754s][吞吐率：53.32req/s] [内存消耗：2,733.27kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:27:40+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017162s][吞吐率：58.27req/s] [内存消耗：2,538.83kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:28:09+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018696s][吞吐率：53.49req/s] [内存消耗：2,733.45kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:28:21+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.027582s][吞吐率：36.26req/s] [内存消耗：3,936.39kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:28:24+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018294s][吞吐率：54.66req/s] [内存消耗：2,538.56kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:04+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.028242s][吞吐率：35.41req/s] [内存消耗：3,936.39kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:07+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018738s][吞吐率：53.37req/s] [内存消耗：2,732.95kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:08+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017578s][吞吐率：56.89req/s] [内存消耗：2,538.98kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:10+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018269s][吞吐率：54.74req/s] [内存消耗：2,538.98kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:11+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017469s][吞吐率：57.24req/s] [内存消耗：2,538.98kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:18+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.019456s][吞吐率：51.40req/s] [内存消耗：2,733.27kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:25+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.032533s][吞吐率：30.74req/s] [内存消耗：4,017.93kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '33',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'user001',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.004917s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'user001'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000377s ]
+---------------------------------------------------------------
+[ 2018-03-30T23:29:28+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017898s][吞吐率：55.87req/s] [内存消耗：2,538.27kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:29:32+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.033868s][吞吐率：29.53req/s] [内存消耗：4,017.55kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '33',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'user001',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000588s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002497s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'user001'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000559s ]
+---------------------------------------------------------------
+[ 2018-03-30T23:29:35+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017621s][吞吐率：56.75req/s] [内存消耗：2,538.27kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:30:21+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.031384s][吞吐率：31.86req/s] [内存消耗：4,022.37kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '36',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'buctcs1504',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000695s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.002175s ]
+[ sql ] [ SQL ] SELECT * FROM `user` WHERE  `loginname` = 'buctcs1504'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000417s ]
+---------------------------------------------------------------
+[ 2018-03-30T23:30:25+08:00 ] 127.0.0.1 GET /index
+[ info ] museum.xyz/index [运行时间：0.017260s][吞吐率：57.94req/s] [内存消耗：2,166.07kb] [文件加载：44]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:30:28+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017260s][吞吐率：57.94req/s] [内存消耗：2,538.58kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:30:30+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.025357s][吞吐率：39.44req/s] [内存消耗：3,936.61kb] [文件加载：61]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '30',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'buctcs1504',
+  'password' => '',
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:30:31+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.020210s][吞吐率：49.48req/s] [内存消耗：2,538.58kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\user\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/user/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/user/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:31:45+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.021476s][吞吐率：46.56req/s] [内存消耗：2,606.11kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\admin\controller\Admin' not found[/Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php:20]
+---------------------------------------------------------------
+[ 2018-03-30T23:31:56+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.027089s][吞吐率：36.92req/s] [内存消耗：2,733.09kb] [文件加载：53]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:02+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.019602s][吞吐率：51.02req/s] [内存消耗：2,606.11kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\admin\controller\Admin' not found[/Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php:20]
+---------------------------------------------------------------
+[ 2018-03-30T23:32:16+08:00 ] 127.0.0.1 POST /login
+[ info ] museum.xyz/login [运行时间：0.030724s][吞吐率：32.55req/s] [内存消耗：4,021.80kb] [文件加载：62]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://museum.xyz',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+  'loginname' => 'admin',
+  'password' => '123456',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000638s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.002546s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` WHERE  `loginname` = 'admin'  AND `password` = 'fe386210f3e642fe7ae8931bbede6fa9' LIMIT 1 [ RunTime:0.000480s ]
+---------------------------------------------------------------
+[ 2018-03-30T23:32:20+08:00 ] 127.0.0.1 GET /index
+[ info ] museum.xyz/index [运行时间：0.016048s][吞吐率：62.31req/s] [内存消耗：2,166.35kb] [文件加载：44]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://museum.xyz/login',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ /Applications/XAMPP/xamppfiles/htdocs/think/application/index/controller/Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:22+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017629s][吞吐率：56.72req/s] [内存消耗：2,538.54kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:24+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.018074s][吞吐率：55.33req/s] [内存消耗：2,538.98kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:35+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017539s][吞吐率：57.02req/s] [内存消耗：2,539.00kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:53+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.021681s][吞吐率：46.12req/s] [内存消耗：2,539.16kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-03-30T23:32:57+08:00 ] 127.0.0.1 GET /login
+[ info ] museum.xyz/login [运行时间：0.017176s][吞吐率：58.22req/s] [内存消耗：2,539.05kb] [文件加载：51]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Login',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/XAMPP/xamppfiles/htdocs/think/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/XAMPP/xamppfiles/htdocs/think/public/../application/admin/view/login/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
