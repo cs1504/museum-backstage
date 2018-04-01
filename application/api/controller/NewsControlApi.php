@@ -77,7 +77,7 @@ class NewsControlApi extends Controller
             if(!isset($data['page']))
                 $data['page'] = 0;
             $news = Db::table('news')
-                ->field('id, title, author, release_time, modify_time, excerpt, content, status, nature')
+                ->field('id, title, author, release_time, modify_time, excerpt, content, status, nature, img_url')
                 ->order('release_time desc')
                 ->page($data['page'],10)
                 ->select();
