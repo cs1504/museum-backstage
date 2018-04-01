@@ -36,7 +36,7 @@ class Login extends Controller
         $res = AdminControlApi::logout();
         $res = json_decode($res->getContent(), true);
         if($res['valid'])
-            return $this->fetch('login');
+            $this->redirect('/login');
         else
             $this->error($res['msg']);exit;
     }
