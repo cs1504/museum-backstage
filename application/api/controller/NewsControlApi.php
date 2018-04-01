@@ -41,7 +41,7 @@ class NewsControlApi extends Controller
                     $data['page'] = 1;
                 $data['page'] = ($data['page']-1) * 10;
 //                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+".$q." IN BOOLEAN MODE') limit ".$data['page']." , 10");
-                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like `%".$data['title']."%`) limit ".$data['page']." , 10");
+                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like '%".$data['title']."%') limit ".$data['page']." , 10");
             }
             else if(isset($data['key'])) {
 //                $list = Jieba::cut($data["key"]);
@@ -55,7 +55,7 @@ class NewsControlApi extends Controller
                     $data['page'] = 1;
                 $data['page'] = ($data['page']-1) * 10;
 //                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex,excerptindex,contentindex) AGAINST ('+".$q."') limit ".$data['page']." , 10");
-                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like `%".$data['key']."%`) or (`content` like `%".$data['key']."%`) limit ".$data['page']." , 10");
+                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like '%".$data['key']."%') or (`content` like '%".$data['key']."%') limit ".$data['page']." , 10");
             }
             else {
                 if(!isset($data['page']))
