@@ -7,7 +7,7 @@ use think\Controller;
 use app\api\model\News;
 use think\Db;
 
-ini_set('memory_limit', '1024M');
+ini_set('memory_limit', '128M');
 use Fukuball\Jieba\Jieba;
 use Fukuball\Jieba\Finalseg;
 Jieba::init();
