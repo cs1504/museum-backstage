@@ -7,7 +7,7 @@ use think\Controller;
 use app\api\model\News;
 use think\Db;
 
-ini_set('memory_limit', '128M');
+ini_set('memory_limit', '1024M');
 use Fukuball\Jieba\Jieba;
 use Fukuball\Jieba\Finalseg;
 Jieba::init();
@@ -29,30 +29,33 @@ class NewsControlApi extends Controller
         if (request()->isGet()) {
             $data = input('get.');
             if(isset($data['title'])) {
-                $list = Jieba::cut($data["title"]);
-                $q = '';
-                foreach ($list as $ss) {
-                    if (strlen($ss) > 1) {
-                        $q .= str_replace('%','',urlencode($ss)) . ' ';
-                    }
-                }
+                // 分词检索
+//                $list = Jieba::cut($data["title"]);
+//                $q = '';
+//                foreach ($list as $ss) {
+//                    if (strlen($ss) > 1) {
+//                        $q .= str_replace('%','',urlencode($ss)) . ' ';
+//                    }
+//                }
                 if(!isset($data['page']))
                     $data['page'] = 1;
                 $data['page'] = ($data['page']-1) * 10;
-                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+".$q." IN BOOLEAN MODE') limit ".$data['page']." , 10");
+//                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+".$q." IN BOOLEAN MODE') limit ".$data['page']." , 10");
+                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like `%".$data['title']."%`) limit ".$data['page']." , 10");
             }
             else if(isset($data['key'])) {
-                $list = Jieba::cut($data["key"]);
-                $q = '';
-                foreach ($list as $ss) {
-                    if (strlen($ss) > 1) {
-                        $q .= str_replace('%','',urlencode($ss)) . ' ';
-                    }
-                }
+//                $list = Jieba::cut($data["key"]);
+//                $q = '';
+//                foreach ($list as $ss) {
+//                    if (strlen($ss) > 1) {
+//                        $q .= str_replace('%','',urlencode($ss)) . ' ';
+//                    }
+//                }
                 if(!isset($data['page']))
                     $data['page'] = 1;
                 $data['page'] = ($data['page']-1) * 10;
-                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex,excerptindex,contentindex) AGAINST ('+".$q."') limit ".$data['page']." , 10");
+//                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex,excerptindex,contentindex) AGAINST ('+".$q."') limit ".$data['page']." , 10");
+                $news = Db::query("select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where (`title` like `%".$data['key']."%`) or (`content` like `%".$data['key']."%`) limit ".$data['page']." , 10");
             }
             else {
                 if(!isset($data['page']))

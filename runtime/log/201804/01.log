@@ -30201,3 +30201,402 @@
 [ info ] [ LOG ] INIT File
 [ sql ] [ DB ] CONNECT:[ UseTime:0.000763s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
 [ sql ] [ SQL ] select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+E58C97E4BAAC  IN BOOLEAN MODE') limit 0 , 10 [ RunTime:0.003316s ]
+---------------------------------------------------------------
+[ 2018-04-01T20:05:35+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97%E4%BA%AC [运行时间：0.414724s][吞吐率：2.41req/s] [内存消耗：235,263.63kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北京',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Allowed memory size of 268435456 bytes exhausted (tried to allocate 24294687 bytes)[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/fukuball/jieba-php/src/vendor/multi-array/MultiArray.php:64]
+---------------------------------------------------------------
+[ 2018-04-01T20:05:37+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97%E4%BA%AC [运行时间：0.419272s][吞吐率：2.39req/s] [内存消耗：235,264.27kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北京',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Allowed memory size of 268435456 bytes exhausted (tried to allocate 24294687 bytes)[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/fukuball/jieba-php/src/vendor/multi-array/MultiArray.php:64]
+---------------------------------------------------------------
+[ 2018-04-01T20:05:58+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97%E4%BA%AC [运行时间：1.633893s][吞吐率：0.61req/s] [内存消耗：520,814.55kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北京',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [1]Allowed memory size of 536870912 bytes exhausted (tried to allocate 2643381 bytes)[/Applications/XAMPP/xamppfiles/htdocs/think/vendor/fukuball/jieba-php/src/class/Finalseg.php:72]
+---------------------------------------------------------------
+[ 2018-04-01T20:06:08+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97%E4%BA%AC [运行时间：1.663314s][吞吐率：0.60req/s] [内存消耗：525,428.61kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+E58C97E4BAAC  IN BOOLEAN MODE') limit 0 , 10 [ RunTime:0.001360s ]
+---------------------------------------------------------------
+[ 2018-04-01T20:06:25+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97%E4%BA%AC
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97%E4%BA%AC [运行时间：1.715055s][吞吐率：0.58req/s] [内存消耗：525,429.98kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北京',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000802s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+E58C97E4BAAC  IN BOOLEAN MODE') limit 0 , 10 [ RunTime:0.001265s ]
+---------------------------------------------------------------
+[ 2018-04-01T20:11:12+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97 [运行时间：1.670419s][吞吐率：0.60req/s] [内存消耗：525,385.07kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001016s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ sql ] [ SQL ] select id, title, author, release_time, modify_time, excerpt, content, status, nature from news where MATCH (titleindex) AGAINST ('+E58C97  IN BOOLEAN MODE') limit 0 , 10 [ RunTime:0.000759s ]
+---------------------------------------------------------------
+[ 2018-04-01T20:23:12+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97 [运行时间：1.761547s][吞吐率：0.57req/s] [内存消耗：525,426.73kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000670s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '%北% limit 0 , 10' at line 1[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-01T20:24:14+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97 [运行时间：1.701402s][吞吐率：0.59req/s] [内存消耗：525,425.96kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002896s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column '%北%' in 'where clause'[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-01T20:24:40+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97 [运行时间：1.682750s][吞吐率：0.59req/s] [内存消耗：525,426.02kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000745s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column '%北%' in 'where clause'[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-01T20:25:19+08:00 ] 127.0.0.1 GET /api/news/search?title=%E5%8C%97
+[ info ] museum.xyz/api/news/search?title=%E5%8C%97 [运行时间：1.628146s][吞吐率：0.61req/s] [内存消耗：525,426.02kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'title' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000629s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column '%北%' in 'where clause'[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-01T20:26:31+08:00 ] 127.0.0.1 GET /api/news/search?key=%E5%8C%97
+[ info ] museum.xyz/api/news/search?key=%E5%8C%97 [运行时间：1.635040s][吞吐率：0.61req/s] [内存消耗：525,426.16kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'key' => '北',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000639s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column '%北%' in 'where clause'[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
+---------------------------------------------------------------
+[ 2018-04-01T20:27:08+08:00 ] 127.0.0.1 GET /api/news/search?key=d
+[ info ] museum.xyz/api/news/search?key=d [运行时间：1.662276s][吞吐率：0.60req/s] [内存消耗：525,426.19kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'NewsControlApi',
+    2 => 'search',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'museum.xyz',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
+  'cookie' => 'pgv_pvi=9729562624; _ga=GA1.2.1860628366.1522078189; PHPSESSID=rbsbajdfq0m107n58plaq5b9b5; pgv_si=s5844692992; _gid=GA1.2.1748532869.1522550574; _undeveloped_session=MHJCK2FXZUJQTlN4WWZYenBIb0FiMGNHWlhWYzlUOFlaaDVQYXFCWkZrTXR4WlZJdHZ3clVRbk1heldRNkRlWUtyOTczR0hvNjRvVTVUcTBudHRYY0t4d0RicGdVaVhxNUtKSkJham4zZ3I4VVY4MjlPVHpEb0hNaUx5b1pYS0FlbnVraVJIZGpxQS8weS9BZm5NcUhaVFMySHI0a0lYN3hyTnZ5QWFWaStjPS0tcTFUMVZkNysyWFFGQWI3VTNqVkQxdz09--56a65ca0c8a8d8aab883c8bcaeec4c853112675b',
+)
+[ info ] [ PARAM ] array (
+  'key' => 'd',
+)
+[ info ] [ RUN ] app\api\controller\NewsControlApi->search[ /Applications/XAMPP/xamppfiles/htdocs/think/application/api/controller/NewsControlApi.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000775s ] mysql:host=127.0.0.1;dbname=museumtest;charset=utf8
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column '%d%' in 'where clause'[/Applications/XAMPP/xamppfiles/htdocs/think/thinkphp/library/think/db/Connection.php:388]
