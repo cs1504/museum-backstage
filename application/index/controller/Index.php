@@ -5,7 +5,7 @@ use think\Controller;
 use think\Db;
 use app\common\controller\CommonController;
 
-class Index
+class Index extends CommonController
 {
     public function index()
     {

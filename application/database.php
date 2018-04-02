@@ -14,7 +14,7 @@ use \think\Env;
 if(!isset($_ENV['MYSQL_HOST'])) $_ENV['MYSQL_HOST'] = '127.0.0.1';
 if(!isset($_ENV['MYSQL_DBNAME'])) $_ENV['MYSQL_DBNAME'] = 'museumtest';
 if(!isset($_ENV['MYSQL_USERNAME'])) $_ENV['MYSQL_USERNAME'] = 'root';
-if(!isset($_ENV['MYSQL_PASSWORD'])) $_ENV['MYSQL_PASSWORD'] = 'root';
+if(!isset($_ENV['MYSQL_PASSWORD'])) $_ENV['MYSQL_PASSWORD'] = '';
 
 return [
     // 数据库类型
