@@ -130,4 +130,59 @@ class CommentControlApi extends Controller
         }
     }
 
+    public function museumcomments($id) {
+        if(request()->isGet()) {
+            $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
+            $res = Db::table('comment')
+                ->where('coption', '=', 1)
+                ->where('museum_id', '=', $id)
+                ->page($data['page'], 10)
+                ->select();
+            return json($res);
+        }
+    }
+
+    public function exhibitioncomments($id) {
+        if(request()->isGet()) {
+            $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
+            $res = Db::table('comment')
+                ->where('coption', '=', 2)
+                ->where('exhibition_id', '=', $id)
+                ->page($data['page'], 10)
+                ->select();
+            return json($res);
+        }
+    }
+
+    public function newscomments($id) {
+        if(request()->isGet()) {
+            $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
+            $res = Db::table('comment')
+                ->where('coption', '=', 3)
+                ->where('news_id', '=', $id)
+                ->page($data['page'], 10)
+                ->select();
+            return json($res);
+        }
+    }
+
+    public function audiocomments($id) {
+        if(request()->isGet()) {
+            $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
+            $res = Db::table('comment')
+                ->where('coption', '=', 4)
+                ->where('audio_id', '=', $id)
+                ->page($data['page'], 10)
+                ->select();
+            return json($res);
+        }
+    }
 }

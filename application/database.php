@@ -15,13 +15,13 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',
+    'hostname'        => Env::get('MYSQL.HOST','127.0.0.1'),
     // 数据库名
-    'database'        => 'museumtest',
+    'database'        => Env::get('MYSQL.DBNAME','museumtest'),
     // 用户名
-    'username'        => Env::get('database.username','root'),
+    'username'        => Env::get('MYSQL.USERNAME','root'),
     // 密码
-    'password'        => Env::get('database.password','root'),
+    'password'        => Env::get('MYSQL.PASSWORD','root'),
     // 端口
     'hostport'        => '',
     // 连接dsn

@@ -55,6 +55,10 @@ Route::post('api/audio/add/', 'api/AudioControlApi/add');
 
 Route::any('api/comment/:id', 'api/CommentControlApi/comment');
 Route::post('api/comments', 'api/CommentControlApi/comments');
+Route::get('api/comments/museum/:id', 'api/CommentControlApi/museumcomments');
+Route::get('api/comments/exhibition/:id', 'api/CommentControlApi/exhibitioncomments');
+Route::get('api/comments/news/:id', 'api/CommentControlApi/newscomments');
+Route::get('api/comments/audio/:id', 'api/CommentControlApi/audiocomments');
 
 Route::any('api/getqiniutoken', 'api/QiniuToken/getToken');
 

@@ -350,6 +350,7 @@ GET http://139.199.102.73:8080/api/audio/search
 POST http://139.199.102.73:8080/api/getqiniutoken
 ```
 
+返回 url 前缀，url 前缀加文件名即为文件的完整 url
 
 
 ### 添加音频 
@@ -377,6 +378,21 @@ POST http://139.199.102.73:8080/api/audio/add
 ```
 GET http://139.199.102.73:8080/api/comment/:id
 ```
+
+### 获取博物馆、展览、新闻、音频对应的评论
+
+``` 
+GET http://139.199.102.73:8080/api/comments/museum/:id
+GET http://139.199.102.73:8080/api/comments/exhibition/:id
+GET http://139.199.102.73:8080/api/comments/new/:id
+GET http://139.199.102.73:8080/api/comments/audio/:id
+```
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| page | 分页 | 选填 |
+
 
 ### 修改某条评论
 

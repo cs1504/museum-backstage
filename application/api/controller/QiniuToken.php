@@ -16,9 +16,10 @@ class QiniuToken extends Controller
             $secretKey = Db::table('options')->where('option_name', '=', 'SK')->value('option_value');
             $auth = new Auth($accessKey, $secretKey);
             $bucket = Db::table('options')->where('option_name', '=', 'bucket')->value('option_value');
+            $url_pre = Db::table('options')->where('option_name', '=', 'url_pre')->value('option_value');
             // 生成上传Token
             $token = $auth->uploadToken($bucket);
-            return json(['valid' => '1', 'msg' => 'token获取成功', 'token' => $token]);
+            return json(['valid' => '1', 'msg' => 'token获取成功', 'token' => $token, 'url_pre' => $url_pre]);
         }
     }
 }
