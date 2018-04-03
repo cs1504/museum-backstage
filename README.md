@@ -19,7 +19,9 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 
 需要什么 API 直接跟我说，我尽快写，尽快完善。
 
-网址改成 http://139.199.102.73:8080/
+网址改成 http://39.106.168.133:8080/
+
+ 预计一周后改成 https://csmuseum.xyz
 
 
 | 接口名称 | 请求方法 | url |
@@ -56,7 +58,7 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 ### 获取博物馆信息 
 
 ```
-GET http://139.199.102.73:8080/api/museum/:id
+GET http://39.106.168.133:8080/api/museum/:id
 ```
 
 返回
@@ -78,7 +80,7 @@ GET http://139.199.102.73:8080/api/museum/:id
 ### 搜索博物馆
 
 ```
-GET http://139.199.102.73:8080/api/museum/search/
+GET http://39.106.168.133:8080/api/museum/search/
 ```
 
 待完善
@@ -120,7 +122,7 @@ GET http://139.199.102.73:8080/api/museum/search/
 ### 获取最近的博物馆
 
 ```
-GET http://139.199.102.73:8080/api/museum/nearest
+GET http://39.106.168.133:8080/api/museum/nearest
 ```
 
 | 参数 | 意义 | 备注 |
@@ -133,14 +135,14 @@ GET http://139.199.102.73:8080/api/museum/nearest
 ### 获取展览信息 
 
 ```
-GET http://139.199.102.73:8080/api/exhibition/:id
+GET http://39.106.168.133:8080/api/exhibition/:id
 ```
 
 
 ### 搜索展览
 
 ```
-GET http://139.199.102.73:8080/api/exhibition/search/
+GET http://39.106.168.133:8080/api/exhibition/search/
 ```
 
 待完善
@@ -156,7 +158,7 @@ GET http://139.199.102.73:8080/api/exhibition/search/
 测试账号 admin 密码 123456
 
 ```
-POST http://139.199.102.73:8080/api/admin/login/
+POST http://39.106.168.133:8080/api/admin/login/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -176,7 +178,7 @@ POST http://139.199.102.73:8080/api/admin/login/
 ### 管理员注册 
 
 ```
-POST http://139.199.102.73:8080/api/admin/reg/
+POST http://39.106.168.133:8080/api/admin/reg/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -189,13 +191,13 @@ POST http://139.199.102.73:8080/api/admin/reg/
 ### 管理员注销 
 
 ```
-GET http://139.199.102.73:8080/api/admin/logout/
+GET http://39.106.168.133:8080/api/admin/logout/
 ```
 
 ### 获取管理员用户信息
 
 ```
-POST http://139.199.102.73:8080/api/admin/getinfo
+POST http://39.106.168.133:8080/api/admin/getinfo
 ```
 
 | 参数 | 意义 | 备注 |
@@ -207,7 +209,7 @@ POST http://139.199.102.73:8080/api/admin/getinfo
 测试账号 user001 密码 123456
 
 ```
-POST http://139.199.102.73:8080/api/user/login/
+POST http://39.106.168.133:8080/api/user/login/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -228,7 +230,7 @@ POST http://139.199.102.73:8080/api/user/login/
 ### 用户注册 
 
 ```
-POST http://139.199.102.73:8080/api/user/reg/
+POST http://39.106.168.133:8080/api/user/reg/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -240,20 +242,20 @@ POST http://139.199.102.73:8080/api/user/reg/
 ### 用户注销 
 
 ```
-GET http://139.199.102.73:8080/api/admin/logout/
+GET http://39.106.168.133:8080/api/admin/logout/
 ```
 
 ### 获取用户信息
 
 ```
-POST http://139.199.102.73:8080/api/admin/getinfo
+POST http://39.106.168.133:8080/api/admin/getinfo
 ```
 
 
 ### 获取新闻
 
 ```
-POST http://139.199.102.73:8080/api/news/:id
+POST http://39.106.168.133:8080/api/news/:id
 ```
 
 返回
@@ -278,7 +280,7 @@ POST http://139.199.102.73:8080/api/news/:id
 
 
 ```
-GET http://139.199.102.73:8080/api/news/search/
+GET http://39.106.168.133:8080/api/news/search/
 ```
 
 
@@ -292,7 +294,7 @@ GET http://139.199.102.73:8080/api/news/search/
 ### 获取最新新闻
 
 ```
-GET http://139.199.102.73:8080/api/news/latest/
+GET http://39.106.168.133:8080/api/news/latest/
 ```
 
 | 参数 | 意义 | 备注 |
@@ -305,7 +307,7 @@ GET http://139.199.102.73:8080/api/news/latest/
 
 
 ```
-GET http://139.199.102.73:8080/api/audio/:id
+GET http://39.106.168.133:8080/api/audio/:id
 ```
 
 返回 
@@ -330,14 +332,14 @@ GET http://139.199.102.73:8080/api/audio/:id
 
 
 ```
-GET http://139.199.102.73:8080/api/audiobyuser/:userid
+GET http://39.106.168.133:8080/api/audiobyuser/:userid
 ```
 
 
 ### 搜索音频
 
 ```
-GET http://139.199.102.73:8080/api/audio/search
+GET http://39.106.168.133:8080/api/audio/search
 ```
 
 待完善
@@ -352,7 +354,7 @@ GET http://139.199.102.73:8080/api/audio/search
 
 
 ```
-POST http://139.199.102.73:8080/api/getqiniutoken
+POST http://39.106.168.133:8080/api/getqiniutoken
 ```
 
 返回 url 前缀，url 前缀加文件名即为文件的完整 url
@@ -362,7 +364,7 @@ POST http://139.199.102.73:8080/api/getqiniutoken
 
 
 ```
-POST http://139.199.102.73:8080/api/audio/add
+POST http://39.106.168.133:8080/api/audio/add
 ```
 
 
@@ -381,16 +383,16 @@ POST http://139.199.102.73:8080/api/audio/add
 ### 获取某条评论消息
 
 ```
-GET http://139.199.102.73:8080/api/comment/:id
+GET http://39.106.168.133:8080/api/comment/:id
 ```
 
 ### 获取博物馆、展览、新闻、音频对应的评论
 
 ``` 
-GET http://139.199.102.73:8080/api/comments/museum/:id
-GET http://139.199.102.73:8080/api/comments/exhibition/:id
-GET http://139.199.102.73:8080/api/comments/new/:id
-GET http://139.199.102.73:8080/api/comments/audio/:id
+GET http://39.106.168.133:8080/api/comments/museum/:id
+GET http://39.106.168.133:8080/api/comments/exhibition/:id
+GET http://39.106.168.133:8080/api/comments/new/:id
+GET http://39.106.168.133:8080/api/comments/audio/:id
 ```
 
 
@@ -403,7 +405,7 @@ GET http://139.199.102.73:8080/api/comments/audio/:id
 
 
 ``` 
-PUT http://139.199.102.73:8080/api/comment/:id
+PUT http://39.106.168.133:8080/api/comment/:id
 ```
 
 | 参数 | 意义 | 备注 |
@@ -415,7 +417,7 @@ PUT http://139.199.102.73:8080/api/comment/:id
 
 
 ``` 
-DELETE http://139.199.102.73:8080/api/comment/:id
+DELETE http://39.106.168.133:8080/api/comment/:id
 ```
 
 
@@ -423,7 +425,7 @@ DELETE http://139.199.102.73:8080/api/comment/:id
 
 
 ```
-GET http://139.199.102.73:8080/api/comment
+GET http://39.106.168.133:8080/api/comment
 ```
 
 
