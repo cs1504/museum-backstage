@@ -7,11 +7,11 @@ use think\Controller;
 use app\api\model\News;
 use think\Db;
 
-ini_set('memory_limit', '1024M');
-use Fukuball\Jieba\Jieba;
-use Fukuball\Jieba\Finalseg;
-Jieba::init();
-Finalseg::init();
+//ini_set('memory_limit', '1024M');
+//use Fukuball\Jieba\Jieba;
+//use Fukuball\Jieba\Finalseg;
+//Jieba::init();
+//Finalseg::init();
 
 class NewsControlApi extends Controller
 {
