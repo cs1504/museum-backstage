@@ -8,6 +8,11 @@ jieba 中文分词 [https://github.com/fxsjy/jieba](https://github.com/fxsjy/jie
 
 七牛云 [https://developer.qiniu.com/kodo/sdk/1236/android](https://developer.qiniu.com/kodo/sdk/1236/android)  [https://developer.qiniu.com/kodo/sdk/1241/php](https://developer.qiniu.com/kodo/sdk/1241/php)
 
+
+https://lnmp.org/faq/lnmp-vhost-add-howto.html
+
+
+
 ## Api
 
 > 测试 api 可以使用 postman ，postman 是一个跨平台的 post|get 检测软件，很方便

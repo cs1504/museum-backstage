@@ -11,22 +11,18 @@
 
 use \think\Env;
 
-if(!isset($_ENV['MYSQL_HOST'])) $_ENV['MYSQL_HOST'] = '127.0.0.1';
-if(!isset($_ENV['MYSQL_DBNAME'])) $_ENV['MYSQL_DBNAME'] = 'museumtest';
-if(!isset($_ENV['MYSQL_USERNAME'])) $_ENV['MYSQL_USERNAME'] = 'root';
-if(!isset($_ENV['MYSQL_PASSWORD'])) $_ENV['MYSQL_PASSWORD'] = '';
 
 return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => $_ENV['MYSQL_HOST'],
+    'hostname'        => getenv('MYSQL_HOST'),
     // 数据库名
-    'database'        => $_ENV['MYSQL_DBNAME'],
+    'database'        => getenv('MYSQL_DBNAME'),
     // 用户名
-    'username'        => $_ENV['MYSQL_USERNAME'],
+    'username'        => getenv('MYSQL_USERNAME'),
     // 密码
-    'password'        => $_ENV['MYSQL_PASSWORD'],
+    'password'        => getenv('MYSQL_PASSWORD'),
     // 端口
     'hostport'        => '',
     // 连接dsn

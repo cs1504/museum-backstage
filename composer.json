@@ -25,7 +25,8 @@
         "topthink/think-migration": "1.*",
         "topthink/think-oracle": "1.*",
         "fukuball/jieba-php": "dev-master",
-        "qiniu/php-sdk": "^7.2"
+        "qiniu/php-sdk": "^7.2",
+        "rol/baksql": "dev-master"
     },
     "autoload": {
         "psr-4": {
