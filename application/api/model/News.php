@@ -3,6 +3,7 @@
 namespace app\api\model;
 
 use think\Model;
+use think\Db;
 
 class News extends Model
 {
@@ -11,7 +12,7 @@ class News extends Model
         if(!$res) {
             return json(['valid'=>0,'msg'=>'插入失败']);
         }
-        return json(['valid'=>1,'msg'=>'插入成功']);
+        return ['valid'=>1,'msg'=>'插入成功'];
     }
 
 }
