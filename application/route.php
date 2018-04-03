@@ -26,11 +26,11 @@ Route::any('logout', 'admin/Login/logout');
 
 
 Route::get('api/museum/:id','api/MuseumControlApi/museum');
-Route::get('api/museum/search','api/MuseumControlApi/search');
-Route::get('api/museum/nearest','api/MuseumControlApi/nearest');
+Route::get('api/museum/search/','api/MuseumControlApi/search');
+Route::get('api/museum/nearest/','api/MuseumControlApi/nearest');
 
 Route::get('api/exhibition/:id','api/ExhibitionControlApi/exhibition');
-Route::get('api/exhibition/search','api/ExhibitionControlApi/search');
+Route::get('api/exhibition/search/','api/ExhibitionControlApi/search');
 
 Route::any('api/admin/login/','api/AdminControlApi/login');
 Route::any('api/admin/reg/','api/AdminControlApi/reg');
@@ -45,7 +45,7 @@ Route::any('api/user/failed', 'api/UserControlApi/failed');
 Route::any('api/user/getinfo/','api/UserInfoControlApi/getUserInfo');
 
 Route::get('api/news/:id','api/NewsControlApi/news');
-Route::get('api/news/search','api/NewsControlApi/search');
+Route::get('api/news/search/','api/NewsControlApi/search');
 Route::get('api/news/latest/', 'api/NewsControlApi/latest');
 Route::post('api/news/insert/', 'api/NewsControlApi/insert');
 
@@ -55,7 +55,7 @@ Route::get('api/audio/search/', 'api/AudioControlApi/search');
 Route::post('api/audio/add/', 'api/AudioControlApi/add');
 
 Route::any('api/comment/:id', 'api/CommentControlApi/comment');
-Route::post('api/comments', 'api/CommentControlApi/comments');
+Route::post('api/comments/', 'api/CommentControlApi/comments');
 Route::get('api/comments/museum/:id', 'api/CommentControlApi/museumcomments');
 Route::get('api/comments/exhibition/:id', 'api/CommentControlApi/exhibitioncomments');
 Route::get('api/comments/news/:id', 'api/CommentControlApi/newscomments');
