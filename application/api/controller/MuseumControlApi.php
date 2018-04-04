@@ -18,7 +18,10 @@ class MuseumControlApi extends Controller
     {
         if(request()->isGet()) {
             $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
             $museum = Museum::where('name', 'like', '%'.$data['name'].'%')
+                ->page($data['page'], 10)
                 ->select();
             return json($museum);
         }

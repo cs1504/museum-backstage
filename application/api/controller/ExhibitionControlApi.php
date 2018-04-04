@@ -19,7 +19,10 @@ class ExhibitionControlApi extends Controller
     {
         if(request()->isGet()) {
             $data = input('get.');
+            if(!isset($data['page']))
+                $data['page'] = 1;
             $exhibition = Exhibition::where('name', 'like', '%'.$data['name'].'%')
+                ->page($data['page'], 10)
                 ->select();
             return json($exhibition);
         }
