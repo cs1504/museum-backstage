@@ -103,7 +103,7 @@ class Museum extends CommonController
             if($res)
                 $this->redirect('/museum/'.$id);
             else
-                return ['valid'=>0,'msg'=>'修改失败'];
+                $this->error('修改失败');exit;
         }
         return $this->fetch('modify');
     }
