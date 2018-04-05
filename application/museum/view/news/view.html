@@ -1,0 +1,29 @@
+{extend name='common@frame'/}
+
+{block name='title'}查看新闻{/block}
+
+
+{block name='content'}
+
+<section id="main-content">
+    <section class="wrapper site-min-height">
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="showback">
+                    <h1>{$news['title']}</h1>
+                    <br>
+                    <h5>{$news['author']} 发表于 {$news['release_time']}</h5>
+                    <br>
+                    <p>{$news['content']}</p>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+{/block}

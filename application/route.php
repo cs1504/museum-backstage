@@ -27,6 +27,14 @@ Route::any('museum/insert', 'museum/Museum/insert');
 Route::any('museum/modify/:id', 'museum/Museum/modify');
 
 
+Route::any('news/modify/:id', 'museum/News/modify');
+Route::any('news/:id', 'museum/News/news');
+Route::any('news', 'museum/News/index');
+Route::any('news/search', 'museum/News/search');
+Route::any('news/insert', 'museum/News/insert');
+Route::any('news/modify/:id', 'museum/News/modify');
+
+
 
 
 
