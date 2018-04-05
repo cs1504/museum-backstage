@@ -1,0 +1,113 @@
+{extend name='common@frame'/}
+
+{block name='title'}博物馆管理{/block}
+
+
+{block name='content'}
+
+<section id="main-content">
+    <section class="wrapper site-min-height">
+
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="form-panel">
+                    <h4 class="mb"><i class="fa fa-angle-right"></i> 修改博物馆信息</h4>
+                    <form class="form-horizontal style-form" method="post" action="/museum/modify/{$id}">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">博物馆名称</label>
+                            <div class="col-sm-10">
+                                <input name="name" type="text" class="form-control"
+                                       value="{$museum['name'] ?? '空'}" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">基本介绍</label>
+                            <div class="col-sm-10">
+                                <textarea name="introduce" id="introduce" class="form-control"
+                                          rows="3" required="required">{$museum['introduce'] ?? '空'}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">开放时间</label>
+                            <div class="col-sm-10">
+                                <textarea name="open_time" id="open_time" class="form-control"
+                                          rows="3" required="required">{$museum['open_time'] ?? '空'}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">教育活动</label>
+                            <div class="col-sm-10">
+                                <textarea name="edu_activity" id="edu_activity" class="form-control"
+                                          rows="3" required="required">{$museum['edu_activity'] ?? '空'}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">经典藏品信息</label>
+                            <div class="col-sm-10">
+                                <textarea name="collection" id="collection" class="form-control"
+                                          rows="3" required="required">{$museum['collection'] ?? '空'}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">学术研究信息</label>
+                            <div class="col-sm-10">
+                                <textarea name="academic" id="academic" class="form-control"
+                                          rows="3" required="required">{$museum['academic'] ?? '空'}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">经度</label>
+                            <div class="col-sm-4">
+                                <input name="lng" type="text" class="form-control"
+                                       value="{$museum['lng'] ?? '空'}" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">纬度</label>
+                            <div class="col-sm-4">
+                                <input name="lat" type="text" class="form-control"
+                                       value="{$museum['lat'] ?? '空'}" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">省份</label>
+                            <div class="col-sm-4">
+                                <input name="city" type="text" class="form-control"
+                                       value="{$museum['city'] ?? '空'}" required="required">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info">提交</button>
+                    </form>
+                </div>
+            </div><!-- col-lg-12-->
+        </div><!-- /row -->
+
+    </section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+
+
+<style>
+    textarea {
+        box-sizing: border-box;
+        max-height: 150px; /* optional, but recommended */
+        min-height: 30px;
+        overflow-x: hidden; /* for Firefox (issue #5) */
+    }
+</style>
+
+<script>
+    var introduce = document.getElementById("introduce");
+    autoTextArea(introduce);
+    var open_time = document.getElementById("open_time");
+    autoTextArea(open_time);
+    var edu_activity = document.getElementById("edu_activity");
+    autoTextArea(edu_activity);
+    var collection = document.getElementById("collection");
+    autoTextArea(collection);
+    var academic = document.getElementById("academic");
+    autoTextArea(academic);
+
+</script>
+
+
+{/block}

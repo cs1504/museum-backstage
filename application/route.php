@@ -19,17 +19,23 @@ Route::get('think', function () {
 Route::any('login', 'admin/Login/login');
 Route::any('logout', 'admin/Login/logout');
 
+Route::any('museum/modify/:id', 'museum/Museum/modify');
+Route::any('museum/:id', 'museum/Museum/museum');
+Route::any('museum', 'museum/Museum/index');
+Route::any('museum/search', 'museum/Museum/search');
+Route::any('museum/insert', 'museum/Museum/insert');
+Route::any('museum/modify/:id', 'museum/Museum/modify');
 
 
 
 
 
-
-Route::get('api/museum/:id','api/MuseumControlApi/museum');
+Route::any('api/museum/:id','api/MuseumControlApi/museum');
 Route::get('api/museum/search/','api/MuseumControlApi/search');
 Route::get('api/museum/nearest/','api/MuseumControlApi/nearest');
+Route::post('api/museum/insert/','api/MuseumControlApi/insert');
 
-Route::get('api/exhibition/:id','api/ExhibitionControlApi/exhibition');
+Route::any('api/exhibition/:id','api/ExhibitionControlApi/exhibition');
 Route::get('api/exhibition/search/','api/ExhibitionControlApi/search');
 
 Route::any('api/admin/login/','api/AdminControlApi/login');
@@ -49,7 +55,7 @@ Route::get('api/news/search','api/NewsControlApi/search');
 Route::get('api/news/latest', 'api/NewsControlApi/latest');
 Route::post('api/news/insert', 'api/NewsControlApi/insert');
 
-Route::get('api/audio/:id', 'api/AudioControlApi/audio');
+Route::any('api/audio/:id', 'api/AudioControlApi/audio');
 Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
 Route::get('api/audio/search/', 'api/AudioControlApi/search');
 Route::post('api/audio/add/', 'api/AudioControlApi/add');

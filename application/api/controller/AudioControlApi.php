@@ -11,8 +11,24 @@ class AudioControlApi extends Controller
 {
     public function audio($id)
     {
-        $audio = Audio::where('id', $id)->find();
-        return json($audio);
+        if($this->request->isGet()) {
+            $audio = Audio::where('id', $id)->find();
+            if(!$audio) {
+                return json(['valid'=>0,'msg'=>'没有此音频']);
+            }
+            return json($audio);
+        }
+        if($this->request->isDelete()) {
+            $res = Audio::where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此音频']);
+            }
+            $res = Db::table('audio')->delete($id);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'删除失败']);
+            return json(['valid'=>1,'msg'=>'删除音频成功']);
+        }
     }
 
     public function user($userid) {

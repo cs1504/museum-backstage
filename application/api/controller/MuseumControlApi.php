@@ -10,8 +10,24 @@ class MuseumControlApi extends Controller
 {
     public function museum($id)
     {
-        $museum = Museum::where('id', $id)->find();
-        return json($museum);
+        if($this->request->isGet()) {
+            $museum = Museum::where('id', $id)->find();
+            if(!$museum) {
+                return json(['valid'=>0,'msg'=>'没有此博物馆']);
+            }
+            return json($museum);
+        }
+        if($this->request->isDelete()) {
+            $res = Museum::where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此博物馆']);
+            }
+            $res = Db::table('museum')->delete($id);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'删除失败']);
+            return json(['valid'=>1,'msg'=>'删除博物馆成功']);
+        }
     }
 
     public function search()
@@ -42,4 +58,10 @@ class MuseumControlApi extends Controller
         }
     }
 
+    public function insert() {
+        if(request()->isPost()) {
+            $res = (new Museum())->insert(input('post.'));
+            return json($res);
+        }
+    }
 }

@@ -86,7 +86,6 @@ class NewsControlApi extends Controller
             }
             return json($news);
         }
-
     }
 
     public function insert() {
