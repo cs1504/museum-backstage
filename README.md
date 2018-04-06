@@ -383,7 +383,7 @@ POST http://39.106.168.133:8080/api/audio/add
 ### 获取某条评论消息
 
 ```
-GET http://39.106.168.133:8080/api/comment/:id
+GET http://39.106.168.133:8080/api/comments/:id
 ```
 
 ### 获取博物馆、展览、新闻、音频对应的评论
@@ -405,7 +405,7 @@ GET http://39.106.168.133:8080/api/comments/audio/:id
 
 
 ``` 
-PUT http://39.106.168.133:8080/api/comment/:id
+PUT http://39.106.168.133:8080/api/comments/:id
 ```
 
 | 参数 | 意义 | 备注 |
@@ -417,7 +417,7 @@ PUT http://39.106.168.133:8080/api/comment/:id
 
 
 ``` 
-DELETE http://39.106.168.133:8080/api/comment/:id
+DELETE http://39.106.168.133:8080/api/comments/:id
 ```
 
 
@@ -425,17 +425,18 @@ DELETE http://39.106.168.133:8080/api/comment/:id
 
 
 ```
-GET http://39.106.168.133:8080/api/comment
+POST http://39.106.168.133:8080/api/comments
 ```
 
 
 | 参数 | 意义 | 备注 |
 | --- | --- | --- |
 | coption | 评论种类，博物馆1，展览2，新闻3，音频4  | 必填 |
-| museum_id | 若coption=1,则必填 | |
-| exhibition_id | 若coption=2 则必填 | |
-| news_id | 若 coption=3 则必填 | |
-| audip_id | 若 coption=4 则必填 | |
+| museum_id | 若coption=1,则必填 | 四个里填一个 |
+| exhibition_id | 若coption=2 则必填 | 四个里填一个 |
+| news_id | 若 coption=3 则必填 | 四个里填一个 |
+| audip_id | 若 coption=4 则必填 | 四个里填一个 |
+| user_id | 用户 id | 必填 | 
 | content | 10 - 140 字的评论 | 必填 |
 
 

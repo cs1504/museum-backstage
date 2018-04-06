@@ -1,0 +1,271 @@
+{extend name='common@frame'/}
+
+{block name='title'}博物馆管理{/block}
+
+
+{block name='content'}
+<section id="main-content">
+    <section class="wrapper site-min-height">
+        <div class="row mt">
+            <div class="col-md-6">
+                <h3><i class="fa fa-angle-right"></i> 音频管理</h3>
+            </div>
+            <div class="col-md-6">
+                <form action="/news/search" method="get">
+                    <div class="input-group">
+                        <input name="name" type="text" class="form-control"
+                               placeholder="Search for..." required="required">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </form>
+            </div>
+        </div>
+
+
+        <div class="row mt">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                {foreach name='audio' item='item'}
+                <div class="showback">
+                    <p class="weixinAudo">
+                        <audio src="{$item['addr']}" id="media" width="1" height="1" preload></audio>
+                        <span id="audio_area" class="db audio_area">
+                            <span class="audio_wrp db">
+                                <span class="audio_play_area">
+                                    <i class="icon_audio_default"></i>
+                                    <i class="icon_audio_playing"></i>
+                                </span>
+                                <span id="audio_length" class="audio_length tips_global">3:07</span>
+                                <span class="db audio_info_area">
+                                    <strong class="db audio_title">{$item['user_name']}</strong>
+                                    <span class="audio_source tips_global">{$item['upload_time']} </span>
+                                    <span class="audio_source tips_global">{$item['museum_name']} </span>
+                                </span>
+                                <span id="audio_progress" class="progress_bar" style="width: 0%;"></span>
+                            </span>
+                        </span>
+                    </p>
+
+                    <a id="add-sticky" class="btn btn-success  btn-sm" href="/news/{$item['id']}">查看详细信息</a>
+                    <a id="add-without-image" class="btn btn-info  btn-sm" href="javascript:;">修改音频描述</a>
+                    <a id="" class="btn btn-info  btn-sm" href="javascript:;">审核通过</a>
+                    <a id="remove-all" class="btn btn-danger  btn-sm" href="general.html#">删除音频</a>
+                </div><!-- /showback -->
+                {/foreach}
+                <script>
+                    $('.weixinAudo').weixinAudio();
+                </script>
+
+            </div>
+        </div>
+
+
+        <nav class="centered" aria-label="Page navigation">
+            <ul class="pagination">
+                <li>
+                    <a href="/audio?page={$previous}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {for start="1" end="$pages+1" name='p'}
+                <li><a href="/audio?page={$p}">{$p}</a></li>
+                {/for}
+                <li>
+                    <a href="/audio?page={$next}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section><!-- /wrapper -->
+</section><!-- /MAIN CONTENT -->
+
+<!-- Modal -->
+<div class="modal fade" id="delete-warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">警告</h4>
+            </div>
+            <form action="">
+                <div class="modal-body">
+                    <input type="hidden" id="deleteurl">
+                    一旦删除此项就无法恢复，确认删除吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-danger" onclick="delete_museum()">确认删除</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    function check($this) {
+        var url = $($this).parent().parent().find('td:eq(0)').text();
+        url = '/audio/'+url;
+        window.open(url,'_self');
+    }
+
+    function modify($this) {
+        var url = $($this).parent().parent().find('td:eq(0)').text();
+        url = '/audio/modify/'+url;
+        window.open(url,'_self');
+    }
+
+    function confirmdelete($this) {
+        var url = $($this).parent().parent().find('td:eq(0)').text();
+        url = '/audio/'+url;
+        $("#deleteurl").val(url);
+        $("#delete-warning").modal('show');
+    }
+
+    function delete_museum() {
+        $.ajax({
+            url: $("#deleteurl").val(),
+            type: 'DELETE',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('删除失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
+        // $("#delete-warning").modal('hide');
+    }
+</script>
+
+<style type="text/css">
+    html {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .db {
+        display: block;
+    }
+    .weixinAudio {
+        line-height: 1.5;
+    }
+    .audio_area {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        margin: 0px 1px 0px 0;
+        font-size: 0;
+        position: relative;
+        font-weight: 400;
+        text-decoration: none;
+        -ms-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+    .audio_wrp {
+        border: 1px solid #ebebeb;
+        background-color: #fcfcfc;
+        overflow: hidden;
+        padding: 12px 20px 12px 12px;
+    }
+    .audio_play_area {
+        float: left;
+        margin: 9px 22px 10px 5px;
+        font-size: 0;
+        width: 18px;
+        height: 25px;
+    }
+    .playing .audio_play_area .icon_audio_default {
+        display: block;
+    }
+    .audio_play_area .icon_audio_default {
+        background: transparent url(__STATIC__/images/iconloop.png) no-repeat 0 0;
+        width: 18px;
+        height: 25px;
+        vertical-align: middle;
+        display: inline-block;
+        -webkit-background-size: 54px 25px;
+        background-size: 54px 25px;
+        background-position: -36px center;
+    }
+    .audio_play_area .icon_audio_playing {
+        background: transparent url(__STATIC__/images/iconloop.png) no-repeat 0 0;
+        width: 18px;
+        height: 25px;
+        vertical-align: middle;
+        display: inline-block;
+        -webkit-background-size: 54px 25px;
+        background-size: 54px 25px;
+        -webkit-animation: audio_playing 1s infinite;
+        background-position: 0px center;
+        display: none;
+    }
+    .audio_area .pic_audio_default {
+        display: none;
+        width: 18px;
+    }
+    .tips_global {
+        color: #8c8c8c;
+    }
+    .audio_area .audio_length {
+        float: right;
+        font-size: 14px;
+        margin-top: 3px;
+        margin-left: 1em;
+    }
+    .audio_info_area {
+        overflow: hidden;
+    }
+    .audio_area .audio_title {
+        font-weight: 400;
+        font-size: 17px;
+        margin-top: -2px;
+        margin-bottom: -3px;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+    }
+    .audio_area .audio_source {
+        font-size: 14px;
+    }
+    .audio_area .progress_bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #0cbb08;
+        height: 2px;
+    }
+    .playing .audio_play_area .icon_audio_default {
+        display: none;
+    }
+    .playing .audio_play_area .icon_audio_playing {
+        display: inline-block;
+    }
+    @-webkit-keyframes audio_playing {
+        30% {
+            background-position: 0px center;
+        }
+        31% {
+            background-position: -18px center;
+        }
+        61% {
+            background-position: -18px center;
+        }
+        61.5% {
+            background-position: -36px center;
+        }
+        100% {
+            background-position: -36px center;
+        }
+    }
+</style>
+
+{/block}

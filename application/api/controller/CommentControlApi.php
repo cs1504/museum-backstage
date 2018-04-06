@@ -9,7 +9,7 @@ use think\Db;
 
 class CommentControlApi extends Controller
 {
-    public function comments() {
+    public function comments($id=0) {
         if(request()->isPost()) {
             $data = input('post.');
 
@@ -66,13 +66,8 @@ class CommentControlApi extends Controller
             if(!$res) {
                 return json(['valid'=>0,'msg'=>'评论失败']);
             }
-            $id = Db::name('user')->getLastInsID();
+            $id = Db::name('comment')->getLastInsID();
             return json(['valid'=>1, 'id' => $id, 'msg'=>'评论成功']);
-        }
-    }
-    public function comment($id) {
-        if(request()->isPost()) {
-            return json(['valid'=>0,'msg'=>'非法访问']);
         }
         if(request()->isGet()) {
             $res = Comment::where('id', $id)
@@ -128,6 +123,7 @@ class CommentControlApi extends Controller
                 return json(['valid'=>0,'msg'=>'删除失败']);
             return json(['valid'=>1,'msg'=>'删除评论成功']);
         }
+
     }
 
     public function museumcomments($id) {

@@ -24,7 +24,6 @@ Route::any('museum/:id', 'museum/Museum/museum');
 Route::any('museum', 'museum/Museum/index');
 Route::any('museum/search', 'museum/Museum/search');
 Route::any('museum/insert', 'museum/Museum/insert');
-Route::any('museum/modify/:id', 'museum/Museum/modify');
 
 
 Route::any('news/modify/:id', 'museum/News/modify');
@@ -32,7 +31,13 @@ Route::any('news/:id', 'museum/News/news');
 Route::any('news', 'museum/News/index');
 Route::any('news/search', 'museum/News/search');
 Route::any('news/insert', 'museum/News/insert');
-Route::any('news/modify/:id', 'museum/News/modify');
+
+
+Route::any('audio/modify/:id', 'museum/Audio/modify');
+Route::any('audio/:id', 'museum/Audio/news');
+Route::any('audio', 'museum/Audio/index');
+Route::any('audio/search', 'museum/Audio/search');
+Route::any('audio/add', 'museum/Audio/add');
 
 
 
@@ -68,8 +73,8 @@ Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
 Route::get('api/audio/search/', 'api/AudioControlApi/search');
 Route::post('api/audio/add/', 'api/AudioControlApi/add');
 
-Route::any('api/comment/:id', 'api/CommentControlApi/comment');
-Route::post('api/comments/', 'api/CommentControlApi/comments');
+Route::any('api/comments/:id', 'api/CommentControlApi/comments');
+Route::any('api/comments', 'api/CommentControlApi/comments');
 Route::get('api/comments/museum/:id', 'api/CommentControlApi/museumcomments');
 Route::get('api/comments/exhibition/:id', 'api/CommentControlApi/exhibitioncomments');
 Route::get('api/comments/news/:id', 'api/CommentControlApi/newscomments');
