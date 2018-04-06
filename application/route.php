@@ -73,12 +73,13 @@ Route::get('api/audiobyuser/:userid', 'api/AudioControlApi/user');
 Route::get('api/audio/search/', 'api/AudioControlApi/search');
 Route::post('api/audio/add/', 'api/AudioControlApi/add');
 
-Route::any('api/comments/:id', 'api/CommentControlApi/comments');
-Route::any('api/comments', 'api/CommentControlApi/comments');
 Route::get('api/comments/museum/:id', 'api/CommentControlApi/museumcomments');
 Route::get('api/comments/exhibition/:id', 'api/CommentControlApi/exhibitioncomments');
 Route::get('api/comments/news/:id', 'api/CommentControlApi/newscomments');
 Route::get('api/comments/audio/:id', 'api/CommentControlApi/audiocomments');
+Route::any('api/comments/:id', 'api/CommentControlApi/comments');
+Route::any('api/comments', 'api/CommentControlApi/comments');
+
 
 Route::any('api/getqiniutoken', 'api/QiniuToken/getToken');
 
