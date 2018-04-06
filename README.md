@@ -51,7 +51,8 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
 | [删除某条评论](#修改某条评论) |  DELETE | /api/comment/:id |
 | [发布新的评论](#发布新的评论) | POST | /api/comments/ |
-
+| [给博物馆打分][#给博物馆打分] | POST | /api/star/ |
+| [获取博物馆分数][#获取博物馆分数] | GET | /api/getstar/ |
 
 
 
@@ -438,6 +439,56 @@ POST http://39.106.168.133:8080/api/comments
 | audip_id | 若 coption=4 则必填 | 四个里填一个 |
 | user_id | 用户 id | 必填 | 
 | content | 10 - 140 字的评论 | 必填 |
+
+
+
+### 给博物馆打分
+
+
+```
+POST http://39.106.168.133:8080/api/star
+```
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| user_id | 用户id | 必填 |
+| museum_id | 博物馆id | 必填 | 
+| exhibition_star | 展览分数 | 必填1-5的数字 |
+| service_star | 服务分数 | 必填1-5的数字 |
+| environment_star | 环境分数 | 必填1-5的数字 |
+
+
+### 获取博物馆分数
+
+```
+POST http://39.106.168.133:8080/api/getstar:id
+```
+
+id为博物馆 id
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| user_id | 用户id | 如果带了这个参数，返回的是该用户对这个博物馆的评分，如果不带这个参数，返回的是博物馆的平均分 |
+
+
+isuser 是个布尔值，说明是不是带了 user_id 参数。
+
+返回值：
+
+
+```json
+{
+    "isuser": false,
+    "exhibition_star": 4,
+    "service_star": 5,
+    "environment_star": 3
+}
+```
+
+
+----
 
 
 

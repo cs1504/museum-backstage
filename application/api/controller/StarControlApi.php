@@ -14,15 +14,25 @@ class StarControlApi
             $validate = new \app\api\validate\Star;
             //如果验证不通过
             if(!$validate->check($data)){
-                return ['valid'=>0,'msg'=>$validate->getError()];
+                return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
-            $res = Db::name('user')->insert($data);
+
+            $res = Db::table('star')
+                ->where('user_id', $data['user_id'])
+                ->where('museum_id', $data['museum_id'])
+                ->find();
+
+            if($res != null) {
+                return json(['valid' => 0, 'msg' => '您已经为此博物馆打过分数了']);
+            }
+
+            $res = Db::name('star')->insert($data);
             if(!$res) {
                 //说明在数据库未匹配到相关数据
-                return ['valid' => 0, 'msg' => '打分失败，未知原因'];
+                return json(['valid' => 0, 'msg' => '打分失败，未知原因']);
             }
-            return ['valid'=>1,'user_id' => $data['user_id'],
-                'museum_id' => $data['museum_id'],'msg'=>'打分成功'];
+            return json(['valid'=>1,'user_id' => $data['user_id'],
+                'museum_id' => $data['museum_id'],'msg'=>'打分成功']);
         }
         else {
             return json(['valid' => 0, 'msg' => '请用 post 方法']);
@@ -31,16 +41,34 @@ class StarControlApi
 
     public function getstar($id) {
         if(request()->isGet()) {
-            $exhibition_star = Db::table('star')
-                ->where('museum_id', $id)
-                ->avg('exhibition_star');
-            $service_star = Db::table('star')
-                ->where('museum_id', $id)
-                ->avg('service_star');
-            $environment_star = Db::table('star')
-                ->where('museum_id', $id)
-                ->avg('environment_star');
+            $data = input('get.');
+            if(isset($data['user_id'])) {
+                $exhibition_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->where('user_id', $data['user_id'])
+                    ->value('exhibition_star');
+                $service_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->where('user_id', $data['user_id'])
+                    ->value('service_star');
+                $environment_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->where('user_id', $data['user_id'])
+                    ->value('environment_star');
+            }
+            else {
+                $exhibition_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->avg('exhibition_star');
+                $service_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->avg('service_star');
+                $environment_star = Db::table('star')
+                    ->where('museum_id', $id)
+                    ->avg('environment_star');
+            }
             return json([
+                'isuser' => isset($data['user_id']),
                 'exhibition_star' => $exhibition_star,
                 'service_star' => $service_star,
                 'environment_star' => $environment_star
