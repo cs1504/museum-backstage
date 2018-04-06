@@ -36,7 +36,8 @@ class User extends Model
         session('loginname', $userInfo['loginname'], 'think_');
         session('nickname', $userInfo['nickname'], 'think_');
 
-        return ['valid'=>1,'msg'=>'登录成功'];
+        $user = Db::table('user')->where('loginname', $data['loginname'])->find();
+        return ['valid'=>1,'id' => (int)$user['id'], 'loginname' => $user['loginname'],'msg'=>'登录成功'];
     }
 
     public function reg($data) {

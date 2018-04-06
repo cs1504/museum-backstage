@@ -70,12 +70,17 @@ class CommentControlApi extends Controller
             return json(['valid'=>1, 'id' => $id, 'msg'=>'评论成功']);
         }
         if(request()->isGet()) {
-            $res = Comment::where('id', $id)
-                ->find();
-            if(!$res) {
-                return json(['valid'=>0,'msg'=>'没有此评论']);
+            if($id == 0) {
+//                $res
             }
-            return json($res);
+            else {
+                $res = Comment::where('id', $id)
+                    ->find();
+                if(!$res) {
+                    return json(['valid'=>0,'msg'=>'没有此评论']);
+                }
+                return json($res);
+            }
         }
         if(request()->isPut()) {
             $data = input('put.');
@@ -132,8 +137,13 @@ class CommentControlApi extends Controller
             if(!isset($data['page']))
                 $data['page'] = 1;
             $res = Db::table('comment')
+                ->alias('c')
                 ->where('coption', '=', 1)
                 ->where('museum_id', '=', $id)
+                ->join('user u', 'c.user_id = u.id')
+                ->join('museum m', 'c.museum_id = m.id')
+                ->field('comment.id, coption, museum_id, name as museum_name, 
+                user_id, loginname, nickname, user_ip, time, content, comment.status, parent')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);
@@ -148,6 +158,10 @@ class CommentControlApi extends Controller
             $res = Db::table('comment')
                 ->where('coption', '=', 2)
                 ->where('exhibition_id', '=', $id)
+                ->join('user u', 'c.user_id = u.id')
+                ->join('exhibition e', 'c.exhibition_id = e.id')
+                ->field('comment.id, coption, exhibition_id, name as exhibition_name, 
+                user_id, loginname, nickname, user_ip, time, content, comment.status, parent')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);
