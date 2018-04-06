@@ -60,6 +60,6 @@ class User extends Model
             //说明在数据库未匹配到相关数据
             return ['valid' => 0, 'msg' => '注册失败，未知原因'];
         }
-        return ['valid'=>1,'id' => $id, 'loginname' => $data['loginname'],'msg'=>'注册成功'];
+        return ['valid'=>1,'id' => (int)$id, 'loginname' => $data['loginname'],'msg'=>'注册成功'];
     }
 }
