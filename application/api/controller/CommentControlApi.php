@@ -156,12 +156,13 @@ class CommentControlApi extends Controller
             if(!isset($data['page']))
                 $data['page'] = 1;
             $res = Db::table('comment')
+                ->alias('c')
                 ->where('coption', '=', 2)
                 ->where('exhibition_id', '=', $id)
                 ->join('user u', 'c.user_id = u.id')
                 ->join('exhibition e', 'c.exhibition_id = e.id')
                 ->field('comment.id, coption, exhibition_id, name as exhibition_name, 
-                user_id, loginname, nickname, user_ip, time, content, comment.status, parent')
+                user_id, loginname, nickname, user_ip, comment.time, content, comment.status, parent')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);
@@ -174,8 +175,13 @@ class CommentControlApi extends Controller
             if(!isset($data['page']))
                 $data['page'] = 1;
             $res = Db::table('comment')
+                ->alias('c')
                 ->where('coption', '=', 3)
                 ->where('news_id', '=', $id)
+                ->join('user u', 'c.user_id = u.id')
+                ->join('news n', 'c.exhibition_id = n.id')
+                ->field('comment.id, coption, news_id, title, user_id, loginname, nickname,
+                 user_ip, comment.time, comment.content, comment.status, parent')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);
@@ -188,8 +194,13 @@ class CommentControlApi extends Controller
             if(!isset($data['page']))
                 $data['page'] = 1;
             $res = Db::table('comment')
+                ->alias('c')
                 ->where('coption', '=', 4)
                 ->where('audio_id', '=', $id)
+                ->join('user u', 'c.user_id = u.id')
+                ->join('audio a', 'c.exhibition_id = a.id')
+                ->field('comment.id, coption, audio_id, comment.user_id, loginname, nickname,
+                 user_ip, comment.time, comment.content, comment.status, parent')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);

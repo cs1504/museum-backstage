@@ -80,6 +80,9 @@ Route::get('api/comments/audio/:id', 'api/CommentControlApi/audiocomments');
 Route::any('api/comments/:id', 'api/CommentControlApi/comments');
 Route::any('api/comments', 'api/CommentControlApi/comments');
 
+Route::any('api/star', 'api/StarControlApi/star');
+Route::any('api/getstar/:id', 'api/StarControlApi/getstar');
+
 
 Route::any('api/getqiniutoken', 'api/QiniuToken/getToken');
 

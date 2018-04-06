@@ -22,6 +22,12 @@ class Star extends Validate
     ];
     protected $message = [
         'user_id.require'=>'请输入用户id',
-        '',
+        'museum_id.require' => '请输入博物馆id',
+        'exhibition_star.number' => '输入必须是数字',
+        'exhibition_star.between' => '打分只能在1-5之间',
+        'service_star.number' => '输入必须是数字',
+        'service_star.between' => '打分只能在1-5之间',
+        'environment_star.number' => '输入必须是数字',
+        'environment_star.between' => '打分只能在1-5之间',
     ];
 }
