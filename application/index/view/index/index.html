@@ -2,46 +2,543 @@
 
 {block name='title'}首页{/block}
 
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/index">首页</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
 
 {block name='content'}
-<section id="main-content">
-    <section class="wrapper site-min-height">
-        <h3><i class="fa fa-angle-right"></i> 数据总览</h3>
-        <div class="row mt">
-            <div class="col-md-4 mt">
-                <div class="content-panel centered">
-                    共有博物馆<h1 class="inline-block">{$count['museum']}</h1>家
+
+<!-- ajax layout which only needs content area -->
+<div class="page-header">
+    <h1>
+        数据总览
+    </h1>
+</div><!-- /.page-header -->
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">博物馆</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['museum']}</h1>家
+                        </div>
+                    </div>
                 </div>
+                <!-- /section:custom/widget-box -->
             </div>
-            <div class="col-md-4 mt">
-                <div class="content-panel centered">
-                    共有展览<h1 class="inline-block">{$count['exhibition']}</h1>场
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">展览</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['exhibition']}</h1>场
+                        </div>
+                    </div>
                 </div>
+                <!-- /section:custom/widget-box -->
             </div>
-            <div class="col-md-4 mt">
-                <div class="content-panel centered">
-                    共有新闻<h1 class="inline-block">{$count['news']}</h1>条
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">博物馆</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['museum']}</h1>家
+                        </div>
+                    </div>
                 </div>
+                <!-- /section:custom/widget-box -->
             </div>
-            <div class="col-md-4 mt">
-                <div class="content-panel centered">
-                    共有音频<h1 class="inline-block">{$count['audio']}</h1>个
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">新闻</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['news']}</h1>条
+                        </div>
+                    </div>
                 </div>
+                <!-- /section:custom/widget-box -->
             </div>
-            <div class="col-md-4 mt">
-                <div class="content-panel centered">
-                    共有用户<h1 class="inline-block">{$count['user']}</h1>人
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">音频</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['audio']}</h1>个
+                        </div>
+                    </div>
                 </div>
+                <!-- /section:custom/widget-box -->
             </div>
-        </div>
-        <h3><i class="fa fa-angle-right"></i> 服务器监控</h3>
-        <div class="row mt">
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">用户</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            共有<h1 class="inline">{$count['user']}</h1>个
+                        </div>
+                    </div>
+                </div>
+                <!-- /section:custom/widget-box -->
+            </div>
 
         </div>
-    </section><!-- /wrapper -->
-</section><!-- /MAIN CONTENT -->
+    </div>
+</div>
+
+<div class="page-header">
+    <h1>
+        服务器监控
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+        <!-- PAGE CONTENT BEGINS -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">CPU</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            占用率<h1 class="inline">35</h1>%
+                        </div>
+                    </div>
+                </div>
+                <!-- /section:custom/widget-box -->
+            </div>
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">内存</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            占用率<h1 class="inline">45</h1>%
+                        </div>
+                    </div>
+                </div>
+                <!-- /section:custom/widget-box -->
+            </div>
+            <div class="col-xs-12 col-sm-4 widget-container-col">
+                <!-- #section:custom/widget-box -->
+                <div class="widget-box">
+                    <div class="widget-header">
+                        <h3 class="widget-title">磁盘</h3>
+                        <!-- #section:custom/widget-box.toolbar -->
+                        <div class="widget-toolbar">
+                            <a href="#" data-action="fullscreen" class="orange2">
+                                <i class="ace-icon fa fa-expand"></i>
+                            </a>
+
+                            <a href="#" data-action="reload">
+                                <i class="ace-icon fa fa-refresh"></i>
+                            </a>
+
+                            <a href="#" data-action="collapse">
+                                <i class="ace-icon fa fa-chevron-up"></i>
+                            </a>
+
+                            <a href="#" data-action="close">
+                                <i class="ace-icon fa fa-times"></i>
+                            </a>
+                        </div>
+                        <!-- /section:custom/widget-box.toolbar -->
+                    </div>
+
+                    <div class="widget-body">
+                        <div class="widget-main center">
+                            占用率<h1 class="inline">5</h1>%
+                        </div>
+                    </div>
+                </div>
+                <!-- /section:custom/widget-box -->
+            </div>
+
+        </div>
+    </div>
+</div>
 
 
+<div class="row">
+    <div class="col-sm-12">
+        <div class="widget-box transparent" id="recent-box">
+            <div class="widget-header">
+                <h4 class="widget-title lighter smaller">
+                    <i class="ace-icon fa fa-rss orange"></i>最近活动
+                </h4>
 
+                <div class="widget-toolbar no-border">
+                    <ul class="nav nav-tabs" id="recent-tab">
+                        <li class="active">
+                            <a data-toggle="tab" href="#task-tab">任务</a>
+                        </li>
+
+                        <li>
+                            <a data-toggle="tab" href="#member-tab">活跃成员</a>
+                        </li>
+
+                        <li>
+                            <a data-toggle="tab" href="#comment-tab">最新评论</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="widget-body">
+                <div class="widget-main padding-4">
+                    <div class="tab-content padding-8">
+                        <div id="task-tab" class="tab-pane active">
+                            <h4 class="smaller lighter green">
+                                <i class="ace-icon fa fa-list"></i>
+                                任务列表
+                            </h4>
+
+                            <!-- #section:pages/dashboard.tasks -->
+                            <ul id="tasks" class="item-list">
+                                <li class="item-orange clearfix">
+                                    <label class="inline">
+                                        <input type="checkbox" class="ace" />
+                                        <span class="lbl">测试</span>
+                                    </label>
+
+                                    <div class="pull-right easy-pie-chart percentage" data-size="30" data-color="#ECCB71" data-percent="42">
+                                        <span class="percent">42</span>%
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- /section:pages/dashboard.tasks -->
+                        </div>
+
+                        <div id="member-tab" class="tab-pane">
+                            <!-- #section:pages/dashboard.members -->
+                            <div class="clearfix">
+                                <div class="itemdiv memberdiv">
+                                    <div class="user">
+                                        <img alt="Bob Doe's avatar" src="__STATIC__/assets/avatars/user.jpg" />
+                                    </div>
+
+                                    <div class="body">
+                                        <div class="name">
+                                            <a href="#">Bob Doe</a>
+                                        </div>
+
+                                        <div class="time">
+                                            <i class="ace-icon fa fa-clock-o"></i>
+                                            <span class="green">20 min</span>
+                                        </div>
+
+                                        <div>
+                                            <span class="label label-warning label-sm">pending</span>
+
+                                            <div class="inline position-relative">
+                                                <button class="btn btn-minier btn-yellow btn-no-border dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                    <i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+                                                </button>
+
+                                                <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                                    <li>
+                                                        <a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																	<span class="green">
+																		<i class="ace-icon fa fa-check bigger-110"></i>
+																	</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																	<span class="orange">
+																		<i class="ace-icon fa fa-times bigger-110"></i>
+																	</span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<span class="red">
+																		<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																	</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="center">
+                                <i class="ace-icon fa fa-users fa-2x green middle"></i>
+
+                                &nbsp;
+                                <a href="#" class="btn btn-sm btn-white btn-info">
+                                    查看所有用户
+                                    <i class="ace-icon fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="hr hr-double hr8"></div>
+
+                            <!-- /section:pages/dashboard.members -->
+                        </div><!-- /.#member-tab -->
+
+                        <div id="comment-tab" class="tab-pane">
+                            <!-- #section:pages/dashboard.comments -->
+                            <div class="comments">
+
+                                <div class="itemdiv commentdiv">
+                                    <div class="user">
+                                        <img alt="Jennifer's Avatar" src="__STATIC__/assets/avatars/avatar1.png" />
+                                    </div>
+
+                                    <div class="body">
+                                        <div class="name">
+                                            <a href="#">Jennifer</a>
+                                        </div>
+
+                                        <div class="time">
+                                            <i class="ace-icon fa fa-clock-o"></i>
+                                            <span class="blue">15 min</span>
+                                        </div>
+
+                                        <div class="text">
+                                            <i class="ace-icon fa fa-quote-left"></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+                                        </div>
+                                    </div>
+
+                                    <div class="tools">
+                                        <div class="action-buttons bigger-125">
+                                            <a href="#">
+                                                <i class="ace-icon fa fa-pencil blue"></i>
+                                            </a>
+
+                                            <a href="#">
+                                                <i class="ace-icon fa fa-trash-o red"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="hr hr8"></div>
+
+                            <div class="center">
+                                <i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+                                &nbsp;
+                                <a href="#" class="btn btn-sm btn-white btn-info">
+                                    查看所有评论
+                                    <i class="ace-icon fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+
+                            <div class="hr hr-double hr8"></div>
+
+                            <!-- /section:pages/dashboard.comments -->
+                        </div>
+                    </div>
+                </div><!-- /.widget-main -->
+            </div><!-- /.widget-body -->
+        </div><!-- /.widget-box -->
+    </div><!-- /.col -->
+</div>
 
 {/block}

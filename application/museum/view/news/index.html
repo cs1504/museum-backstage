@@ -1,60 +1,81 @@
-{extend name='common@frame'/}
+{extend name='common@base'/}
 
 {block name='title'}博物馆管理{/block}
 
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/news">新闻管理</a>
+    </li>
+
+    <li>
+        <a href="/news">查看和修改新闻</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
+
 
 {block name='content'}
-<section id="main-content">
-    <section class="wrapper site-min-height">
-        <div class="row mt">
-            <div class="col-md-6">
-                <h3><i class="fa fa-angle-right"></i> 新闻管理</h3>
-            </div>
-            <div class="col-md-6">
-                <form action="/news/search" method="get">
-                    <div class="input-group">
-                        <input name="name" type="text" class="form-control"
-                               placeholder="Search for..." required="required">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="submit">Go!</button>
-                        </span>
-                    </div><!-- /input-group -->
-                </form>
-            </div>
-        </div>
+
+<div class="page-header">
+    <h1>
+        查看和修改新闻
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            新闻总览
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row mt">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <form class="form-search" action="/news/search" method="get">
+            <span class="input-icon">
+                <input type="text" name="title" placeholder="Search ..." class="" autocomplete="off" />
+                <i class="ace-icon fa fa-search"></i>
+            </span>
+        </form>
+    </div>
+</div><!-- /.nav-search -->
+
+
         <div class="row mt">
             <div class="col-lg-12 col-md-12 col-sm-12">
                 {foreach name='news' item='item'}
-                <div class="showback">
-                    <h4><i class="fa fa-angle-right"></i> {$item['title']}</h4>
-                    <p>{$item['excerpt']}</p>
-                    <a id="add-sticky" class="btn btn-success  btn-sm" href="/news/{$item['id']}">查看全文</a>
-                    <a id="add-without-image" class="btn btn-info  btn-sm" href="javascript:;">修改新闻</a>
-                    <a id="remove-all" class="btn btn-danger  btn-sm" href="general.html#">删除新闻</a>
+                <div class="panel">
+                    <h3 class="header smaller lighter blue"><i class="fa fa-angle-right"></i>
+                        <a href="/news/{$item['id']}">{$item['title']}</a></h3>
+                    <div class="well well-sm">
+                        <p>{$item['excerpt']}</p>
+                    </div>
+
+                    <a id="add-sticky" class="btn btn-success btn-sm no-border" href="/news/{$item['id']}">查看全文</a>
+                    <a id="add-without-image" class="btn btn-info btn-sm no-border" href="/news/modify/{$item['id']}">修改新闻</a>
+                    <a id="remove-all" class="btn btn-danger btn-sm no-border" onclick="confirmdelete({$item['id']})">删除新闻</a>
                 </div><!-- /showback -->
+                <hr>
                 {/foreach}
             </div>
         </div>
 
-        <nav class="centered" aria-label="Page navigation">
-            <ul class="pagination">
-                <li>
-                    <a href="/news?page={$previous}" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                {for start="1" end="$pages+1" name='p'}
-                <li><a href="/news?page={$p}">{$p}</a></li>
-                {/for}
-                <li>
-                    <a href="/news?page={$next}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section><!-- /wrapper -->
-</section><!-- /MAIN CONTENT -->
+<nav class="centered" aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            <a href="/news?page={$previous}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {for start="1" end="$pages+1" name='p'}
+        <li><a href="/news?page={$p}">{$p}</a></li>
+        {/for}
+        <li>
+            <a href="/news?page={$next}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
 <!-- Modal -->
 <div class="modal fade" id="delete-warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -71,7 +92,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-danger" onclick="delete_museum()">确认删除</button>
+                    <button type="button" class="btn btn-danger" onclick="delete_news()">确认删除</button>
                 </div>
             </form>
         </div>
@@ -92,14 +113,13 @@
         window.open(url,'_self');
     }
 
-    function confirmdelete($this) {
-        var url = $($this).parent().parent().find('td:eq(0)').text();
-        url = '/news/'+url;
+    function confirmdelete($id) {
+        url = '/news/'+$id;
         $("#deleteurl").val(url);
         $("#delete-warning").modal('show');
     }
 
-    function delete_museum() {
+    function delete_news() {
         $.ajax({
             url: $("#deleteurl").val(),
             type: 'DELETE',

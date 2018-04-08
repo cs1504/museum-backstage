@@ -17,15 +17,6 @@ class StarControlApi
                 return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
 
-            $res = Db::table('star')
-                ->where('user_id', $data['user_id'])
-                ->where('museum_id', $data['museum_id'])
-                ->find();
-
-            if($res != null) {
-                return json(['valid' => 0, 'msg' => '您已经为此博物馆打过分数了']);
-            }
-
             $res = Db::name('star')->insert($data);
             if(!$res) {
                 //说明在数据库未匹配到相关数据

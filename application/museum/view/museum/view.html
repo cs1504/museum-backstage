@@ -1,115 +1,117 @@
-{extend name='common@frame'/}
+{extend name='common@base'/}
 
 {block name='title'}博物馆管理{/block}
 
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/museum">博物馆管理</a>
+    </li>
+
+    <li>
+        <a href="/museum/{$id}">查看博物馆详细信息</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
 
 {block name='content'}
 
-<section id="main-content">
-    <section class="wrapper site-min-height">
+<div class="page-header">
+    <h1>
+        查看博物馆详细信息
+    </h1>
+</div><!-- /.page-header -->
 
-        <div class="row mt">
-            <div class="col-lg-12">
-                <div class="form-panel">
-                    {empty name='museum'}
-                    <h3>查找不到 id 为 {$id} 的博物馆</h3>
-                    {else /}
-                    <h4 class="mb"><i class="fa fa-angle-right"></i> 查看博物馆详细信息</h4>
-                    <form class="form-horizontal style-form">
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">博物馆名称</label>
-                            <div class="col-sm-10">
-                                <input name="name" type="text" class="form-control"
-                                       value="{$museum['name'] ?? '空'}" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">基本介绍</label>
-                            <div class="col-sm-10">
-                                <textarea name="introduce" id="introduce" class="form-control"
-                                          rows="3" readonly>{$museum['introduce'] ?? '空'}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">开放时间</label>
-                            <div class="col-sm-10">
-                                <textarea name="open_time" id="open_time" class="form-control"
-                                          rows="3" readonly>{$museum['open_time'] ?? '空'}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">教育活动</label>
-                            <div class="col-sm-10">
-                                <textarea name="edu_activity" id="edu_activity" class="form-control"
-                                          rows="3" readonly>{$museum['edu_activity'] ?? '空'}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">经典藏品信息</label>
-                            <div class="col-sm-10">
-                                <textarea name="collection" id="collection" class="form-control"
-                                          rows="3" readonly>{$museum['collection'] ?? '空'}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">学术研究信息</label>
-                            <div class="col-sm-10">
-                                <textarea name="academic" id="academic" class="form-control"
-                                          rows="3" readonly>{$museum['academic'] ?? '空'}</textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">经度</label>
-                            <div class="col-sm-4">
-                                <input name="lng" type="text" class="form-control"
-                                       value="{$museum['lng'] ?? '空'}" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">纬度</label>
-                            <div class="col-sm-4">
-                                <input name="lat" type="text" class="form-control"
-                                       value="{$museum['lat'] ?? '空'}" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 col-sm-2 control-label">省份</label>
-                            <div class="col-sm-4">
-                                <input name="city" type="text" class="form-control"
-                                       value="{$museum['city'] ?? '空'}" readonly>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-danger" onclick="window.location.href='/museum/modify/{$id}'">修改</button>
-                        <button type="button" class="btn btn-info" onclick="window.location.href='/museum'">返回博物馆信息首页</button>
-                    </form>
-                    {/empty}
+<div class="row">
+    <div class="col-xs-12">
+        {empty name='museum'}
+        <h3>查找不到 id 为 {$id} 的博物馆</h3>
+        {else /}
+        <form class="form-horizontal style-form">
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">博物馆名称</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" class="form-control"
+                           value="{$museum['name'] ?? '空'}" readonly>
                 </div>
-            </div><!-- col-lg-12-->
-        </div><!-- /row -->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">基本介绍</label>
+                <div class="col-sm-10">
+                                <textarea name="introduce" id="introduce" class="autosize-transition form-control"
+                                          rows="3" readonly>{$museum['introduce'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">开放时间</label>
+                <div class="col-sm-10">
+                                <textarea name="open_time" id="open_time" class="autosize-transition form-control"
+                                          rows="3" readonly>{$museum['open_time'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">教育活动</label>
+                <div class="col-sm-10">
+                                <textarea name="edu_activity" id="edu_activity" class="autosize-transition form-control"
+                                          rows="3" readonly>{$museum['edu_activity'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">经典藏品信息</label>
+                <div class="col-sm-10">
+                                <textarea name="collection" id="collection" class="autosize-transition form-control"
+                                          rows="3" readonly>{$museum['collection'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">学术研究信息</label>
+                <div class="col-sm-10">
+                                <textarea name="academic" id="academic" class="autosize-transition form-control"
+                                          rows="3" readonly>{$museum['academic'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">经度</label>
+                <div class="col-sm-4">
+                    <input name="lng" type="text" class="form-control"
+                           value="{$museum['lng'] ?? '空'}" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">纬度</label>
+                <div class="col-sm-4">
+                    <input name="lat" type="text" class="form-control"
+                           value="{$museum['lat'] ?? '空'}" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">省份</label>
+                <div class="col-sm-4">
+                    <input name="city" type="text" class="form-control"
+                           value="{$museum['city'] ?? '空'}" readonly>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger no-border" onclick="window.location.href='/museum/modify/{$id}'">修改</button>
+            <button type="button" class="btn btn-info no-border" onclick="window.location.href='/museum'">返回博物馆信息首页</button>
+        </form>
+        {/empty}
+    </div><!-- /row -->
+</div>
+{/block}
 
-    </section><!-- /wrapper -->
-</section><!-- /MAIN CONTENT -->
+{block name='script'}
+<script src="__STATIC__/assets/js/jquery.autosize.js"></script>
+<script src="__STATIC__/assets/js/jquery.inputlimiter.1.3.1.js"></script>
 
-<style>
-    textarea {
-        box-sizing: border-box;
-        max-height: 150px; /* optional, but recommended */
-        min-height: 30px;
-        overflow-x: hidden; /* for Firefox (issue #5) */
-    }
-</style>
-<script>
-    var introduce = document.getElementById("introduce");
-    autoTextArea(introduce);
-    var open_time = document.getElementById("open_time");
-    autoTextArea(open_time);
-    var edu_activity = document.getElementById("edu_activity");
-    autoTextArea(edu_activity);
-    var collection = document.getElementById("collection");
-    autoTextArea(collection);
-    var academic = document.getElementById("academic");
-    autoTextArea(academic);
-
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+        $('textarea[class*=autosize]').autosize({append: "\n"});
+        $('textarea.limited').inputlimiter({
+            remText: '%n character%s remaining...',
+            limitText: 'max allowed : %n.'
+        });
+    });
 </script>
-
 {/block}

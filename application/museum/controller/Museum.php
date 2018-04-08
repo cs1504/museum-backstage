@@ -11,21 +11,7 @@ class Museum extends CommonController
     public function index() {
         if($this->request->isGet()) {
             $data = input('get.');
-            if(!isset($data['page']))
-                $data['page'] = 1;
-            $this->assign('page', $data['page']);
-            $count['museum'] = Db::table('museum')->count();
-            $pages = ceil($count['museum'] / 20);
-            $this->assign('pages', $pages);
-            $previous = $data['page'] - 1;
-            $next = $data['page'] + 1;
-            if($previous < 1)
-                $previous = 1;
-            if($next > $pages)
-                $next = $pages;
-            $this->assign('previous', $previous);
-            $this->assign('next', $next);
-            $museum = \app\api\model\Museum::page($data['page'], 20)->select();
+            $museum = \app\api\model\Museum::select();
             $this->assign('museum', $museum);
             return $this->fetch('index');
         }

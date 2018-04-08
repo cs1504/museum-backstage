@@ -1,0 +1,89 @@
+{extend name='common@base'/}
+
+{block name='title'}查看展览{/block}
+
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/exhibition">展览管理</a>
+    </li>
+
+    <li>
+        <a href="/exhibition/{$id}">查看展览详细信息</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
+
+{block name='content'}
+
+<div class="page-header">
+    <h1>
+        查看展览详细信息
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+        {empty name='exhibition'}
+        <h3>查找不到 id 为 {$id} 的展览</h3>
+        {else /}
+        <form class="form-horizontal style-form">
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">展览名称</label>
+                <div class="col-sm-10">
+                    <input name="name" type="text" class="form-control"
+                           value="{$exhibition['name'] ?? '空'}" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">博物馆名称</label>
+                <div class="col-sm-10">
+                    <input name="museum_name" type="text" class="form-control"
+                           value="{$exhibition['museum_name'] ?? '空'}" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">展览时间</label>
+                <div class="col-sm-10">
+                    <textarea name="time" id="time" class="autosize-transition form-control"
+                              rows="3" readonly>{$exhibition['time'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">展览地点</label>
+                <div class="col-sm-10">
+                    <textarea name="address" id="address" class="autosize-transition form-control"
+                              rows="3" readonly>{$exhibition['address'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">展览介绍</label>
+                <div class="col-sm-10">
+                    <textarea name="introduce" id="introduce" class="autosize-transition form-control"
+                              rows="3" readonly>{$exhibition['introduce'] ?? '空'}</textarea>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger no-border" onclick="window.location.href='/exhibition/modify/{$id}'">修改</button>
+            <button type="button" class="btn btn-info no-border" onclick="window.location.href='/exhibition'">返回博物馆信息首页</button>
+        </form>
+        {/empty}
+    </div><!-- /row -->
+</div>
+{/block}
+
+{block name='script'}
+<script src="__STATIC__/assets/js/jquery.autosize.js"></script>
+<script src="__STATIC__/assets/js/jquery.inputlimiter.1.3.1.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function($) {
+        $('textarea[class*=autosize]').autosize({append: "\n"});
+        $('textarea.limited').inputlimiter({
+            remText: '%n character%s remaining...',
+            limitText: 'max allowed : %n.'
+        });
+    });
+</script>
+{/block}

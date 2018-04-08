@@ -51,8 +51,8 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [修改某条评论](#修改某条评论) | PUT | /api/comment/:id |
 | [删除某条评论](#修改某条评论) |  DELETE | /api/comment/:id |
 | [发布新的评论](#发布新的评论) | POST | /api/comments/ |
-| [给博物馆打分][#给博物馆打分] | POST | /api/star/ |
-| [获取博物馆分数][#获取博物馆分数] | GET | /api/getstar/ |
+| [给博物馆打分](#给博物馆打分) | POST | /api/star/ |
+| [获取博物馆分数](#获取博物馆分数) | GET | /api/getstar/ |
 
 
 
@@ -454,6 +454,7 @@ POST http://39.106.168.133:8080/api/star
 | --- | --- | --- |
 | user_id | 用户id | 必填 |
 | museum_id | 博物馆id | 必填 | 
+| comment_id | 评论id | 选填 |
 | exhibition_star | 展览分数 | 必填1-5的数字 |
 | service_star | 服务分数 | 必填1-5的数字 |
 | environment_star | 环境分数 | 必填1-5的数字 |

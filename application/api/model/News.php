@@ -12,7 +12,8 @@ class News extends Model
         if(!$res) {
             return json(['valid'=>0,'msg'=>'插入失败']);
         }
-        return ['valid'=>1,'msg'=>'插入成功'];
+        $id = Db::name('museum')->getLastInsID();
+        return ['valid'=>1,'id' => $id, 'title' => $data['title'], 'msg'=>'插入成功'];
     }
 
 }

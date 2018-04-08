@@ -1,0 +1,106 @@
+{extend name='common@base'/}
+
+{block name='title'}音频审核{/block}
+
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-home home-icon"></i>
+        <a href="/audio">评论管理</a>
+    </li>
+
+    <li>
+        <a href="/audio">评论审核</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
+
+
+{block name='content'}
+
+<div class="page-header">
+    <h1>
+        评论审核
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            评论总览
+        </small>
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row mt">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <form class="form-search" action="/audio/search" method="get">
+            <span class="input-icon">
+                <input type="text" name="key" placeholder="Search ..." class="" autocomplete="off" />
+                <i class="ace-icon fa fa-search"></i>
+            </span>
+        </form>
+    </div>
+</div><!-- /.nav-search -->
+
+<hr>
+
+<div class="row mt">
+    <div class="comments col-lg-12 col-md-12 col-sm-12">
+        {foreach name='comment' item='item'}
+        <div class="itemdiv commentdiv">
+            <div class="user">
+                <img alt="{$item['nickname']}" src="static/images/avatar.png" />
+            </div>
+
+            <div class="body">
+                <div class="name">
+                    <a href="#">{$item['nickname']}</a>
+                </div>
+
+                <div class="time">
+                    <i class="ace-icon fa fa-clock-o"></i>
+                    <span class="blue">{$item['time']}</span>
+                </div>
+
+                <div class="text">
+                    <i class="ace-icon fa fa-quote-left"></i>
+                    {$item['content']}
+                </div>
+            </div>
+
+            <div class="tools">
+                <div class="action-buttons bigger-125">
+                    <a href="#">
+                        <i class="ace-icon fa fa-pencil blue"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="ace-icon fa fa-trash-o red"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {/foreach}
+    </div>
+
+    <div class="hr hr8"></div>
+</div>
+
+
+<nav class="centered" aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            <a href="/comments?page={$previous}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {for start="1" end="$pages+1" name='p'}
+        <li><a href="/comments?page={$p}">{$p}</a></li>
+        {/for}
+        <li>
+            <a href="/comments?page={$next}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+{/block}

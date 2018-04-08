@@ -46,7 +46,15 @@ class News extends CommonController
         }
 
         if($this->request->isDelete()) {
-
+            $res = Db::table('news')->where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此新闻']);
+            }
+            $res = Db::table('news')->delete($id);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'删除失败']);
+            return json(['valid'=>1,'msg'=>'删除新闻成功']);
         }
     }
 
@@ -58,13 +66,27 @@ class News extends CommonController
 
     public function insert() {
         if($this->request->isPost()) {
-
+            $res = (new \app\api\model\News())->insert(input('post.'));
+            $this->redirect('/news/'.$res['id']);
         }
+        return $this->fetch('insert');
     }
 
     public function modify() {
+        $museum = Db::table('museum')->where('id', '=', $id)->find();
+        $this->assign('museum', $museum);
+        $this->assign('id', $id);
         if($this->request->isPost()) {
-
+            $date = input('post.');
+            $res = Db::table('museum')->where('id', $id)
+                ->update(['name' => $date['name'], 'introduce' => $date['introduce'], 'open_time' => $date['open_time'],
+                    'edu_activity' => $date['edu_activity'], 'collection' => $date['collection'], 'academic' => $date['academic'],
+                    'lng' => $date['lng'], 'lat' => $date['lat'], 'city' => $date['city']]);
+            if($res)
+                $this->redirect('/museum/'.$id);
+            else
+                $this->error('修改失败');exit;
         }
+        return $this->fetch('modify');
     }
 }

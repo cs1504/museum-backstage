@@ -32,12 +32,34 @@ Route::any('news', 'museum/News/index');
 Route::any('news/search', 'museum/News/search');
 Route::any('news/insert', 'museum/News/insert');
 
+Route::any('exhibition/modify/:id', 'museum/Exhibition/modify');
+Route::any('exhibition/:id', 'museum/Exhibition/exhibition');
+Route::any('exhibition', 'museum/Exhibition/index');
+Route::any('exhibition/search', 'museum/Exhibition/search');
+Route::any('exhibition/insert', 'museum/Exhibition/insert');
+
 
 Route::any('audio/modify/:id', 'museum/Audio/modify');
 Route::any('audio/:id', 'museum/Audio/news');
 Route::any('audio', 'museum/Audio/index');
 Route::any('audio/search', 'museum/Audio/search');
 Route::any('audio/add', 'museum/Audio/add');
+
+Route::any('user/modify/:id', 'museum/User/modify');
+Route::any('user/:id', 'museum/User/user');
+Route::any('user', 'museum/User/index');
+Route::any('user/add', 'museum/User/add');
+
+Route::any('comments', 'museum/Comments/index');
+
+
+Route::any('admin/modify/:id', 'museum/Admin/modify');
+Route::any('admin/:id', 'museum/Admin/admin');
+Route::any('admin', 'museum/Admin/index');
+Route::any('admin/add', 'museum/Admin/add');
+
+
+Route::any('setting', 'museum/System/setting');
 
 
 

@@ -44,4 +44,33 @@ class Audio extends CommonController
         }
     }
 
+    public function audio($id) {
+        if($this->request->isGet()) {
+            $audio = Db::table('audio')->where('id', $id)->find();
+            $this->assign('museum', $audio);
+            $this->assign('id', $id);
+            return $this->fetch('view');
+        }
+
+        if($this->request->isDelete()) {
+            $res = Db::table('audio')->where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此音频']);
+            }
+            $res = Db::table('audio')->delete($id);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'删除失败']);
+            return json(['valid'=>1,'msg'=>'删除音频成功']);
+        }
+    }
+
+    public function add() {
+        if($this->request->isPost()) {
+            $res = (new \app\api\model\Audio())->insert(input('post.'));
+            $this->redirect('/audio/'.$res['id']);
+        }
+        return $this->fetch('insert');
+    }
+
 }
