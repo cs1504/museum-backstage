@@ -72,7 +72,7 @@ class News extends CommonController
         return $this->fetch('insert');
     }
 
-    public function modify() {
+    public function modify($id) {
         $museum = Db::table('museum')->where('id', '=', $id)->find();
         $this->assign('museum', $museum);
         $this->assign('id', $id);
