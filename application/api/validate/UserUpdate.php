@@ -10,6 +10,6 @@ class UserUpdate extends Validate
         'id'=>'require'
     ];
     protected $message = [
-        'id.require'=>'请输入用户名'
+        'id.require'=>'请输入id'
     ];
 }

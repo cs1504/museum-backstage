@@ -274,6 +274,9 @@ POST http://39.106.168.133:8080/api/user/updateinfo
 | avatar | image file | 选填 |
 | intro | 介绍 | 选填 |
 
+avatar 为相对地址 需在前面加 http://39.106.168.133:8080/  
+
+例如 [http://39.106.168.133:8080/static/upload/avatar/15234315276.png](http://39.106.168.133:8080/static/upload/avatar/15234315276.png)
 
 ### 获取新闻
 
