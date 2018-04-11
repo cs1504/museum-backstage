@@ -15,4 +15,14 @@ class UserInfoControlApi extends UserControlCommon
             return json(['valid' => 0, 'msg' => '请用 post 方法']);
         }
     }
+
+    public function updateUserInfo() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            $pic = $_FILES['pic']['tmp_name'];
+            if($pic) {
+
+            }
+        }
+    }
 }

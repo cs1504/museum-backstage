@@ -52,7 +52,7 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [删除某条评论](#修改某条评论) |  DELETE | /api/comment/:id |
 | [发布新的评论](#发布新的评论) | POST | /api/comments/ |
 | [给博物馆打分](#给博物馆打分) | POST | /api/star/ |
-| [获取博物馆分数](#获取博物馆分数) | GET | /api/getstar/ |
+| [获取博物馆分数及评论总数](#获取博物馆分数及评论总数) | GET | /api/getstar/ |
 | [评论并且打分](#评论并且打分) | POST | /api/commentandstar |
 | [获取评论和打分](#获取评论和打分) | GET | /api/getcommentandstar |
 | [获取某一评论和打分](#获取某一评论和打分) | GET | /api/getcommentandstar/:id |
@@ -462,7 +462,7 @@ POST http://39.106.168.133:8080/api/star
 | environment_star | 环境分数 | 必填1-5的数字 |
 
 
-### 获取博物馆分数
+### 获取博物馆分数及评论总数
 
 ```
 POST http://39.106.168.133:8080/api/getstar:id
@@ -486,7 +486,9 @@ isuser 是个布尔值，说明是不是带了 user_id 参数。
     "isuser": false,
     "exhibition_star": 4,
     "service_star": 5,
-    "environment_star": 3
+    "environment_star": 3,
+    "avg": 3.6666666666667,
+    "comment_count": 2
 }
 ```
 
