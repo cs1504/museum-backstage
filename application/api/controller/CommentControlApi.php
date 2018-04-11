@@ -230,11 +230,14 @@ class CommentControlApi extends Controller
             $res = Db::table('comment')
                 ->alias('c')
                 ->where('coption', '=', 1)
-                ->where('museum_id', '=', $id)
+                ->where('c.museum_id', '=', $id)
                 ->join('user u', 'c.user_id = u.id')
                 ->join('museum m', 'c.museum_id = m.id')
-                ->field('comment.id, coption, museum_id, name as museum_name, 
-                user_id, loginname, nickname, user_ip, time, content, comment.status, parent')
+                ->join('star s', 'c.id = s.comment_id')
+                ->field('c.id, c.museum_id, m.name as museum_name, 
+                        c.user_id, u.loginname, u.nickname, c.user_ip, c.time, 
+                        c.content, c.status, c.parent, 
+                        s.exhibition_star, s.service_star, s.environment_star')
                 ->page($data['page'], 10)
                 ->select();
             return json($res);
