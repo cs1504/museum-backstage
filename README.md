@@ -39,6 +39,7 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [用户注册](#用户注册) | POST | /api/user/reg/ |
 | [用户注销](#用户注销) | GET | /api/user/logout |
 | [获取用户信息](#获取用户用户信息) | POST | /api/user/getinfo |
+| [设置用户信息](#设置用户信息) | POST | api/user/updateinfo |
 | [获取新闻](#获取新闻) | GET | /api/news/:id |
 | [搜索新闻](#搜索新闻) | GET | /api/news/search/ |
 | [获取最新新闻](#获取最新新闻) | GET | /api/news/latest/ |
@@ -253,6 +254,25 @@ GET http://39.106.168.133:8080/api/admin/logout/
 ```
 POST http://39.106.168.133:8080/api/admin/getinfo
 ```
+
+### 设置用户信息
+
+```
+POST http://39.106.168.133:8080/api/user/updateinfo
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| id |  用户 id | 必填 |
+| password | 密码 | 必填 | 
+| sex | 性别 | 1男2女 | 
+| nickname | 昵称 | 选填 |
+| phone | 手机 | 选填 |
+| email | 邮箱 | 选填 |
+| wechat | 微信 | 选填 |
+| qq |  QQ | 选填 |
+| avatar | image file | 选填 |
+| intro | 介绍 | 选填 |
 
 
 ### 获取新闻

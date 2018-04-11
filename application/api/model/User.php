@@ -33,8 +33,8 @@ class User extends Model
         }
         // cookie session
 
-        session('loginname', $userInfo['loginname'], 'think_');
-        session('nickname', $userInfo['nickname'], 'think_');
+        session('loginname', $userInfo['loginname']);
+        session('nickname', $userInfo['nickname']);
 
         $user = Db::table('user')->where('loginname', $data['loginname'])->find();
         return ['valid'=>1,'id' => (int)$user['id'], 'loginname' => $user['loginname'],'msg'=>'登录成功'];

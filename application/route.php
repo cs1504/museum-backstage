@@ -84,6 +84,8 @@ Route::any('api/user/reg/','api/UserControlApi/reg');
 Route::any('api/user/logout/','api/UserControlApi/logout');
 Route::any('api/user/failed', 'api/UserControlApi/failed');
 Route::any('api/user/getinfo/','api/UserInfoControlApi/getUserInfo');
+Route::any('api/user/updateinfo/','api/UserInfoControlApi/updateUserInfo');
+
 
 //Route::get('api/news/:id','api/NewsControlApi/news');
 Route::get('api/news/search','api/NewsControlApi/search');
