@@ -99,6 +99,9 @@ Route::get('api/comments/museum/:id', 'api/CommentControlApi/museumcomments');
 Route::get('api/comments/exhibition/:id', 'api/CommentControlApi/exhibitioncomments');
 Route::get('api/comments/news/:id', 'api/CommentControlApi/newscomments');
 Route::get('api/comments/audio/:id', 'api/CommentControlApi/audiocomments');
+Route::any('api/commentandstar', 'api/CommentControlApi/commentandstar');
+Route::any('api/getcommentandstar/:id', 'api/CommentControlApi/getcommentandstar');
+Route::any('api/getcommentandstar', 'api/CommentControlApi/getcommentandstar');
 Route::any('api/comments/:id', 'api/CommentControlApi/comments');
 Route::any('api/comments', 'api/CommentControlApi/comments');
 

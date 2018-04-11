@@ -53,7 +53,9 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [发布新的评论](#发布新的评论) | POST | /api/comments/ |
 | [给博物馆打分](#给博物馆打分) | POST | /api/star/ |
 | [获取博物馆分数](#获取博物馆分数) | GET | /api/getstar/ |
-
+| [评论并且打分](#评论并且打分) | POST | /api/commentandstar |
+| [获取评论和打分](#获取评论和打分) | GET | /api/getcommentandstar |
+| [获取某一评论和打分](#获取某一评论和打分) | GET | /api/getcommentandstar/:id |
 
 
 ### 获取博物馆信息 
@@ -488,6 +490,59 @@ isuser 是个布尔值，说明是不是带了 user_id 参数。
 }
 ```
 
+### 评论并且打分
+ 
+ 
+```
+POST  http://39.106.168.133:8080/api/commentandstar
+```
+ 
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| coption | 博物馆评论 | 填写 1 |
+| user_id | 用户 id | |
+| content | 评论内容 | 10-140字符 |
+| museum_id | 博物馆 ID | |
+| exhibition_star | 展览分数 | 必填1-5的数字 |
+| service_star | 服务分数 | 必填1-5的数字 |
+| environment_star | 环境分数 | 必填1-5的数字 |
+
+
+成功的返回值 
+
+```json
+{
+    "valid": 1,
+    "comment_id": "7",
+    "msg": "评论成功"
+}
+```
+
+
+### 获取评论和打分
+
+```
+GET  http://39.106.168.133:8080/api/getcommentandstar
+```
+
+默认返回前十条
+
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| page | 分页 | 选填 |
+
+
+
+### 获取某一评论和打分
+ 
+```
+GET | http://39.106.168.133:8080/api/getcommentandstar/:id
+```
+
+| 参数 | 意义 | 备注 |
+| --- | --- | --- |
+| id |  评论id | 必填 |
 
 ----
 

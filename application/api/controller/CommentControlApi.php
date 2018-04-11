@@ -9,6 +9,97 @@ use think\Db;
 
 class CommentControlApi extends Controller
 {
+    public function commentandstar() {
+        if($this->request->isPost()) {
+            $data = input('post.');
+            //1.执行验证
+            $validate = new \app\api\validate\CommentsAndStar();
+            //如果验证不通过
+            if(!$validate->check($data)){
+                return json(['valid'=>0,'msg'=>$validate->getError()]);
+            }
+            $res = Db::name('museum')
+                ->where('id', $data['museum_id'])
+                ->find();
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'没有此博物馆']);
+            $data['user_ip'] = request()->ip();
+            if(!isset($data['parent'])) {
+                $data['parent']=0;
+            }
+            $res = Db::name('comment')
+                ->data([
+                    'coption'=>$data['coption'],
+                    'museum_id'=>$data['museum_id'],
+                    'user_id'=>$data['user_id'],
+                    'user_ip'=>$data['user_ip'],
+                    'content'=>$data['content'],
+                    'parent'=>$data['parent']
+                    ])
+                ->insert();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'评论失败']);
+            }
+            $id = Db::name('comment')->getLastInsID();
+            $res = Db::table('star')
+                ->data([
+                    'user_id'=>$data['user_id'],
+                    'comment_id'=>$id,
+                    'museum_id'=>$data['museum_id'],
+                    'exhibition_star'=>$data['exhibition_star'],
+                    'service_star'=>$data['service_star'],
+                    'environment_star'=>$data['environment_star']
+                ])
+                ->insert();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'打分失败']);
+            }
+            return json(['valid'=>1, 'comment_id' => $id, 'msg'=>'评论成功']);
+        }
+    }
+
+    public function getcommentandstar($id=0){
+        if($this->request->isGet()) {
+            if($id != 0) {
+                $comment = Db::table('comment')
+                        ->alias('c')
+                        ->where('c.id', $id)
+                        ->join('user u', 'c.user_id = u.id')
+                        ->join('museum m', 'c.museum_id = m.id')
+                        ->join('star s', 'c.id = s.comment_id')
+                        ->field('c.id, c.museum_id, m.name as museum_name, 
+                        c.user_id, u.loginname, u.nickname, c.user_ip, c.time, 
+                        c.content, c.status, c.parent, 
+                        s.exhibition_star, s.service_star, s.environment_star')
+                        ->find();
+                if(!$comment) {
+                    return json(['valid'=>0,'msg'=>'没有此评论']);
+                }
+                return json($comment);
+            }
+            else if($id == 0) {
+                $data = input('get.');
+                if(!isset($data['page']))
+                    $data['page'] = 1;
+                $comment = Db::table('comment')
+                    ->alias('c')
+                    ->join('user u', 'c.user_id = u.id')
+                    ->join('museum m', 'c.museum_id = m.id')
+                    ->join('star s', 'c.id = s.comment_id')
+                    ->field('c.id, c.museum_id, m.name as museum_name, 
+                        c.user_id, u.loginname, u.nickname, c.user_ip, c.time, 
+                        c.content, c.status, c.parent, 
+                        s.exhibition_star, s.service_star, s.environment_star')
+                    ->page($data['page'], 10)
+                    ->select();
+                if(!$comment) {
+                    return json(['valid'=>0,'msg'=>'没有评论']);
+                }
+                return json($comment);
+            }
+        }
+    }
+
     public function comments($id=0) {
         if(request()->isPost()) {
             $data = input('post.');
