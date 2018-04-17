@@ -58,7 +58,7 @@ class StarControlApi
                     ->where('museum_id', $id)
                     ->avg('environment_star');
             }
-            $avg = ($environment_star+$service_star+$environment_star)/3;
+            $avg = round((($environment_star+$service_star+$environment_star)/3)*2, 1);
             $comment_count = Db::table('comment')
                 ->where('museum_id', $id)
                 ->count();

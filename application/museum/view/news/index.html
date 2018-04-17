@@ -5,7 +5,7 @@
 {block name='breadcrumb'}
 <ul class="breadcrumb">
     <li>
-        <i class="ace-icon fa fa-home home-icon"></i>
+        <i class="ace-icon fa fa-list-alt home-icon"></i>
         <a href="/news">新闻管理</a>
     </li>
 
@@ -46,14 +46,23 @@
                 <div class="panel">
                     <h3 class="header smaller lighter blue"><i class="fa fa-angle-right"></i>
                         <a href="/news/{$item['id']}">{$item['title']}</a></h3>
-                    <div class="well well-sm">
-                        <p>{$item['excerpt']}</p>
+                    <div class="row mt">
+                        <div class="hidden-xs" style="float:left; margin-left: 20px; margin-bottom: 10px;">
+                            <span class="profile-picture">
+                            <img width="100%" style="height: 120px; width: 200px" src="{$item['img_url']}" alt="">
+                            </span>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                            <div class="well well-sm">
+                                <p>{$item['excerpt']}</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <a id="add-sticky" class="btn btn-success btn-sm no-border" href="/news/{$item['id']}">查看全文</a>
-                    <a id="add-without-image" class="btn btn-info btn-sm no-border" href="/news/modify/{$item['id']}">修改新闻</a>
-                    <a id="remove-all" class="btn btn-danger btn-sm no-border" onclick="confirmdelete({$item['id']})">删除新闻</a>
                 </div><!-- /showback -->
+                <a id="add-sticky" class="btn btn-success btn-sm no-border" href="/news/{$item['id']}">查看全文</a>
+                <a id="add-without-image" class="btn btn-info btn-sm no-border" href="/news/modify/{$item['id']}">修改新闻</a>
+                <a id="remove-all" class="btn btn-danger btn-sm no-border" onclick="confirmdelete({$item['id']})">删除新闻</a>
                 <hr>
                 {/foreach}
             </div>

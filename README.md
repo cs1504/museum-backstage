@@ -246,13 +246,13 @@ POST http://39.106.168.133:8080/api/user/reg/
 ### 用户注销 
 
 ```
-GET http://39.106.168.133:8080/api/admin/logout/
+GET http://39.106.168.133:8080/api/user/logout/
 ```
 
 ### 获取用户信息
 
 ```
-POST http://39.106.168.133:8080/api/admin/getinfo
+POST http://39.106.168.133:8080/api/user/getinfo
 ```
 
 ### 设置用户信息
