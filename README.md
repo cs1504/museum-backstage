@@ -488,7 +488,7 @@ POST http://39.106.168.133:8080/api/star
 ### 获取博物馆分数及评论总数
 
 ```
-POST http://39.106.168.133:8080/api/getstar:id
+GET http://39.106.168.133:8080/api/getstar:id
 ```
 
 id为博物馆 id
