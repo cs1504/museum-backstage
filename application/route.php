@@ -45,6 +45,8 @@ Route::any('audio', 'museum/Audio/index');
 Route::any('audio/search', 'museum/Audio/search');
 Route::any('audio/add', 'museum/Audio/add');
 
+Route::any('user/ban/:id', 'museum/User/ban');
+Route::any('user/cban/:id', 'museum/User/cban');
 Route::any('user/modify/:id', 'museum/User/modify');
 Route::any('user/:id', 'museum/User/user');
 Route::any('user', 'museum/User/index');
@@ -72,6 +74,9 @@ Route::post('api/museum/insert/','api/MuseumControlApi/insert');
 
 Route::any('api/exhibition/:id','api/ExhibitionControlApi/exhibition');
 Route::get('api/exhibition/search/','api/ExhibitionControlApi/search');
+
+Route::any('api/exhibits/:id','api/ExhibitsControlApi/exhibits');
+Route::get('api/exhibits/search/','api/ExhibitsControlApi/search');
 
 Route::any('api/admin/login/','api/AdminControlApi/login');
 Route::any('api/admin/reg/','api/AdminControlApi/reg');

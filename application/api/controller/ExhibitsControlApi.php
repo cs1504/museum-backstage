@@ -3,32 +3,30 @@
 namespace app\api\controller;
 
 
-
 use think\Controller;
-use app\api\model\Exhibition;
 use think\Db;
 
-class ExhibitionControlApi extends Controller
+class ExhibitsControlApi extends Controller
 {
-    public function exhibition($id)
+    public function exhibits($id)
     {
         if($this->request->isGet()) {
-            $exhibition = Exhibition::where('id', $id)->find();
-            if(!$exhibition) {
-                return json(['valid'=>0,'msg'=>'没有此展览']);
+            $exhibits = Db::table('exhibits')->where('museum_id', $id)->select();
+            if(!$exhibits) {
+                return json(['valid'=>0,'msg'=>'没有此展品']);
             }
-            return json($exhibition);
+            return json($exhibits);
         }
         if($this->request->isDelete()) {
-            $res = Exhibition::where('id', $id)
+            $res = Db::table('exhibits')->where('id', $id)
                 ->find();
             if(!$res) {
-                return json(['valid'=>0,'msg'=>'没有此展览']);
+                return json(['valid'=>0,'msg'=>'没有此展品']);
             }
-            $res = Db::table('exhibition')->delete($id);
+            $res = Db::table('exhibits')->delete($id);
             if(!$res)
                 return json(['valid'=>0,'msg'=>'删除失败']);
-            return json(['valid'=>1,'msg'=>'删除展览成功']);
+            return json(['valid'=>1,'msg'=>'删除展品成功']);
         }
 
     }
@@ -39,14 +37,14 @@ class ExhibitionControlApi extends Controller
             $data = input('get.');
             if(!isset($data['page']))
                 $data['page'] = 1;
-            $exhibition = Db::table('exhibition')
+            $exhibits = Db::table('exhibits')
                 ->alias('e')
                 ->where('e.name', 'like', '%'.$data['name'].'%')
                 ->join('museum m', 'e.museum_id = m.id')
                 ->page($data['page'], 10)
-                ->field('e.id, e.name, m.name as museum, m.id as museum_id, e.time, e.address, e.introduce')
+                ->field('e.id, e.name, m.name as museum, m.id as museum_id, e.introduce')
                 ->select();
-            return json($exhibition);
+            return json($exhibits);
         }
     }
 }

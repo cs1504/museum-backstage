@@ -43,10 +43,22 @@
 
 <div class="row mt">
     <div class="comments col-lg-12 col-md-12 col-sm-12">
+        <style>
+            .itemdiv > .body > .text:after {
+                border: none;
+            }
+            .itemdiv {
+                border-bottom: 1px solid #E4ECF3;
+                margin-bottom: 15px;
+            }
+            .itemdiv.commentdiv .tools {
+                right: 20px;
+            }
+        </style>
         {foreach name='comment' item='item'}
         <div class="itemdiv commentdiv">
             <div class="user">
-                <img alt="{$item['nickname']}" src="static/images/avatar.png" />
+                <img alt="{$item['nickname']}" src="/static/images/avatar.png" />
             </div>
 
             <div class="body">
@@ -73,6 +85,10 @@
 
                     <a href="#">
                         <i class="ace-icon fa fa-trash-o red"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="ace-icon fa fa-ban red"></i>
                     </a>
                 </div>
             </div>
@@ -103,4 +119,11 @@
     </ul>
 </nav>
 
+{/block}
+
+
+{block name='script'}
+<script>
+    $("#sidebar ul li").eq(16).addClass("active");
+</script>
 {/block}

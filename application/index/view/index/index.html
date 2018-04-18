@@ -1,4 +1,4 @@
-{extend name='common@frame'/}
+{extend name='common@base'/}
 
 {block name='title'}首页{/block}
 
@@ -541,4 +541,13 @@
     </div><!-- /.col -->
 </div>
 
+{/block}
+
+
+{block name='script'}
+<script>
+    jQuery(function($) {
+        $("#sidebar ul li").eq(0).addClass("active");
+    })
+</script>
 {/block}

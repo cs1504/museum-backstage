@@ -232,3 +232,12 @@
     }
 </style>
 {/block}
+
+{block name='script'}
+<script>
+    jQuery(function() {
+        $("#sidebar ul li").eq(4).addClass("open");
+        $("#sidebar ul li").eq(4).find("ul li").eq(1).addClass("active");
+    })
+</script>
+{/block}

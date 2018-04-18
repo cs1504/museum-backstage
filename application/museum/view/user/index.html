@@ -80,21 +80,27 @@
 
                             <td>
                                 <div class="action-buttons">
-                                    <a class="blue" href="#" onclick="check(this)">
+                                    <a class="blue" href="#" onclick="check(this)" data-toggle="tooltip" title="查看用户详细资料">
                                         <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                     </a>
 
-                                    <a class="green" href="#" onclick="modify(this)">
+                                    <a class="green" href="#" onclick="modify(this)"  data-toggle="tooltip" title="修改用户资料">
                                         <i class="ace-icon fa fa-pencil bigger-130"></i>
                                     </a>
 
-                                    <a class="red" href="#" onclick="confirmdelete(this)">
+                                    <a class="red" href="#" onclick="confirmdelete(this)" data-toggle="tooltip" title="删除用户" >
                                         <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                     </a>
 
-                                    <a class="red" href="#" onclick="">
-                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                    {if condition='$item.status==0'}
+                                    <a class="red" href="#" onclick="ban({$item.id})" data-toggle="tooltip" title="禁止该用户评论" >
+                                        <i class="ace-icon fa fa-ban bigger-130"></i>
                                     </a>
+                                    {else}
+                                    <a class="grey" href="#" onclick="cban({$item.id})" data-toggle="tooltip" title="恢复该用户评论" >
+                                        <i class="ace-icon fa fa-ban bigger-130 "></i>
+                                    </a>
+                                    {/if}
                                 </div>
 
                             </td>
@@ -124,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary no-border" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-danger no-border" onclick="delete_museum()">确认删除</button>
+                    <button type="button" class="btn btn-danger no-border" onclick="delete_user()">确认删除</button>
                 </div>
             </form>
         </div>
@@ -152,7 +158,7 @@
         $("#delete-warning").modal('show');
     }
 
-    function delete_museum() {
+    function delete_user() {
         $.ajax({
             url: $("#deleteurl").val(),
             type: 'DELETE',
@@ -168,7 +174,42 @@
                 }
             }
         });
-        // $("#delete-warning").modal('hide');
+    }
+
+    function ban($id) {
+        $.ajax({
+            url: '/user/ban/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert(result.msg);
+                    return false;
+                }
+            }
+        });
+    }
+
+    function cban($id) {
+        $.ajax({
+            url: '/user/cban/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('修改失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
     }
 </script>
 
@@ -183,7 +224,9 @@
 
 
 {block name='script'}
+
 <script type="text/javascript">
+
     jQuery(function($) {
         //initiate dataTables plugin
         var oTable1 =
@@ -398,6 +441,9 @@
             if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
             return 'left';
         }
+
+        $("#sidebar ul li").eq(13).addClass("open");
+        $("#sidebar ul li").eq(13).find("ul li").eq(0).addClass("active");
 
     })
 </script>

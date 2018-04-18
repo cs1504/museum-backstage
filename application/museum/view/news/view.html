@@ -33,3 +33,13 @@
 <button type="button" class="btn btn-danger no-border" onclick="window.location.href='/news/modify/{$id}'">修改</button>
 <button type="button" class="btn btn-info no-border" onclick="window.location.href='/news'">返回新闻首页</button>
 {/block}
+
+
+{block name='script'}
+<script>
+    jQuery(function() {
+        $("#sidebar ul li").eq(4).addClass("open");
+        $("#sidebar ul li").eq(4).find("ul li").eq(0).addClass("active");
+    })
+</script>
+{/block}

@@ -1,0 +1,98 @@
+{extend name='common@base'/}
+
+{block name='title'}修改用户{/block}
+
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-user home-icon"></i>
+        <a href="/user">用户管理</a>
+    </li>
+
+    <li>
+        <a href="/user/insert">修改用户</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
+
+{block name='content'}
+
+<div class="page-header">
+    <h1>
+        修改用户
+    </h1>
+</div><!-- /.page-header -->
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <form class="form-horizontal style-form" method="post" action="/user/modify/{$id}">
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">登录名</label>
+                <div class="col-sm-10">
+                    <input name="loginname" type="text" class="form-control" required="required" value="{$user.loginname}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">昵称</label>
+                <div class="col-sm-10">
+                    <input name="nickname" type="text" class="form-control" required="required" value="{$user.nickname}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">手机</label>
+                <div class="col-sm-10">
+                    <input name="phone" type="text" class="form-control" required="required" value="{$user.phone}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">邮箱</label>
+                <div class="col-sm-10">
+                    <input name="email" type="email" class="form-control" required="required" value="{$user.email}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">QQ</label>
+                <div class="col-sm-10">
+                    <input name="qq" type="text" class="form-control" required="required" value="{$user.qq}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">微信</label>
+                <div class="col-sm-10">
+                    <input name="wechat" type="text" class="form-control" required="required" value="{$user.wechat}">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input name="password" type="text" class="form-control" required="required" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-9">
+                    <button type="submit" class="btn btn-info no-border btn-sm">提交</button>
+                </div>
+            </div>
+        </form>
+    </div><!-- /row -->
+</div>
+{/block}
+
+{block name='specificscript'}
+{/block}
+
+
+{block name='script'}
+<script>
+    $("#sidebar ul li").eq(13).addClass("open");
+    $("#sidebar ul li").eq(13).find("ul li").eq(1).addClass("active");
+</script>
+{/block}

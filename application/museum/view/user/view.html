@@ -1,0 +1,298 @@
+{extend name='common@base'/}
+
+{block name='title'}查看用户信息{/block}
+
+{block name='breadcrumb'}
+<ul class="breadcrumb">
+    <li>
+        <i class="ace-icon fa fa-user home-icon"></i>
+        <a href="/user">用户管理</a>
+    </li>
+
+    <li>
+        <a href="/user/{$id}">查看用户信息</a>
+    </li>
+</ul><!-- /.breadcrumb -->
+{/block}
+
+{block name='content'}
+
+<div class="page-header">
+    <h1>
+        查看用户信息
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="tabbable user-panel">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active">
+            <a data-toggle="tab" href="#profile">
+                用户信息
+            </a>
+        </li>
+        <li>
+            <a data-toggle="tab" href="#comments">
+                用户评论
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="tab-content">
+        <div id="profile" class="tab-pane fade in active">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 center">
+                    <span class="profile-picture">
+                        <img class="editable img-responsive" alt="Alex's Avatar" id="avatar2"
+                             src="{if condition="$user.avatar !=null AND $user.avatar != ''"} {$user.avatar}
+                             {else}https://i.loli.net/2018/04/01/5ac0c4b6f28c2.png{/if}"
+                             style="width: 200px; height: 200px;"/>
+                    </span>
+
+                    <div class="space space-4"></div>
+
+                    <!--<a href="#" class="btn btn-sm btn-block btn-success">-->
+                        <!--<i class="ace-icon fa fa-plus-circle bigger-120"></i>-->
+                        <!--<span class="bigger-110">Add as a friend</span>-->
+                    <!--</a>-->
+
+                    <!--<a href="#" class="btn btn-sm btn-block btn-primary">-->
+                        <!--<i class="ace-icon fa fa-envelope-o bigger-110"></i>-->
+                        <!--<span class="bigger-110">Send a message</span>-->
+                    <!--</a>-->
+                </div><!-- /.col -->
+                <div class="col-xs-12 col-sm-9">
+                    <h4 class="blue">
+                        <span class="middle">{$user.nickname} &nbsp;</span>
+
+                        <span class="label label-purple arrowed-in-right">
+                            <i class="ace-icon fa fa-circle smaller-80 align-middle"></i>
+                            online
+                        </span>
+                    </h4>
+                    <div class="profile-user-info">
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 用户 ID </div>
+
+                            <div class="profile-info-value">
+                                <span>{$user.id}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 登录名 </div>
+
+                            <div class="profile-info-value">
+                                <span>{$user.loginname}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 手机 <i class="fa fa-phone blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+                                <span>{$user.phone ?? "空"}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 邮箱 <i class="fa fa-envelope blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+
+                                <span>{$user.email ?? "空"}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> QQ <i class="fa fa-qq blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+
+                                <span>{$user.qq ?? "空"}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 微信 <i class="fa fa-weixin blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+
+                                <span>{$user.wechat ?? "空"}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 注册时间 <i class="fa fa-calendar blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+
+                                <span>{$user.register_time ?? "空"}</span>
+                            </div>
+                        </div>
+
+                        <div class="profile-info-row">
+                            <div class="profile-info-name"> 状态 <i class="fa fa-info-circle blue bigger-110"></i></div>
+                            <div class="profile-info-value">
+
+                                <span>{if condition='$user.status == 0'} 正常 {else } 禁止评论 {/if}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="">
+                            <button class="btn btn-info  btn-no-border" onclick="window.history.back()">返回</button>
+
+                            <button class="btn btn-danger  btn-no-border" onclick="window.location.href='/user/modify/{$id}'">修改</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="comments" class="tab-pane fade">
+            <style>
+                .itemdiv > .body > .text:after {
+                    border: none;
+                }
+                .itemdiv {
+                    border-bottom: 1px solid #E4ECF3;
+                    margin-bottom: 15px;
+                }
+                .itemdiv.commentdiv .tools {
+                    right: 20px;
+                }
+            </style>
+            {foreach name='comment' item='item'}
+            <div class="itemdiv commentdiv">
+                <div class="user">
+                    <img alt="{$item['nickname']}" src="/static/images/avatar.png" />
+                </div>
+
+                <div class="body">
+                    <div class="name">
+                        <a href="#">{$item['nickname']}</a>
+                    </div>
+
+                    <div class="time">
+                        <i class="ace-icon fa fa-clock-o"></i>
+                        <span class="blue">{$item['time']}</span>
+                    </div>
+
+                    <div class="text">
+                        <i class="ace-icon fa fa-quote-left"></i>
+                        {$item['content']}
+                    </div>
+                </div>
+
+                <div class="tools">
+                    <div class="action-buttons bigger-125">
+                        <a href="#">
+                            <i class="ace-icon fa fa-pencil blue"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-trash-o red"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-ban red"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {/foreach}
+
+        </div>
+    </div>
+</div>
+
+
+{/block}
+
+{block name='specificscript'}
+{/block}
+
+
+{block name='script'}
+<script>
+    $("#sidebar ul li").eq(13).addClass("open");
+    $("#sidebar ul li").eq(13).find("ul li").eq(0).addClass("active");
+    jQuery(function () {
+        $('#avatar2').on('click', function(){
+            var modal =
+                '<div class="modal fade">\
+                  <div class="modal-dialog">\
+                   <div class="modal-content">\
+                    <div class="modal-header">\
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>\
+                        <h4 class="blue">Change Avatar</h4>\
+                    </div>\
+                    \
+                    <form class="no-margin">\
+                     <div class="modal-body">\
+                        <div class="space-4"></div>\
+                        <div style="width:75%;margin-left:12%;"><input type="file" name="file-input" /></div>\
+                     </div>\
+                    \
+                     <div class="modal-footer center">\
+                        <button type="submit" class="btn btn-sm btn-success"><i class="ace-icon fa fa-check"></i> Submit</button>\
+                        <button type="button" class="btn btn-sm" data-dismiss="modal"><i class="ace-icon fa fa-times"></i> Cancel</button>\
+                     </div>\
+                    </form>\
+                  </div>\
+                 </div>\
+                </div>';
+
+
+            var modal = $(modal);
+            modal.modal("show").on("hidden", function(){
+                modal.remove();
+            });
+
+            var working = false;
+
+            var form = modal.find('form:eq(0)');
+            var file = form.find('input[type=file]').eq(0);
+            file.ace_file_input({
+                style:'well',
+                btn_choose:'Click to choose new avatar',
+                btn_change:null,
+                no_icon:'ace-icon fa fa-picture-o',
+                thumbnail:'small',
+                before_remove: function() {
+                    //don't remove/reset files while being uploaded
+                    return !working;
+                },
+                allowExt: ['jpg', 'jpeg', 'png', 'gif'],
+                allowMime: ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+            });
+
+            form.on('submit', function(){
+                if(!file.data('ace_input_files')) return false;
+
+                file.ace_file_input('disable');
+                form.find('button').attr('disabled', 'disabled');
+                form.find('.modal-body').append("<div class='center'><i class='ace-icon fa fa-spinner fa-spin bigger-150 orange'></i></div>");
+
+                var deferred = new $.Deferred;
+                working = true;
+                deferred.done(function() {
+                    form.find('button').removeAttr('disabled');
+                    form.find('input[type=file]').ace_file_input('enable');
+                    form.find('.modal-body > :last-child').remove();
+
+                    modal.modal("hide");
+
+                    var thumb = file.next().find('img').data('thumb');
+                    if(thumb) $('#avatar2').get(0).src = thumb;
+
+                    working = false;
+                });
+
+
+                setTimeout(function(){
+                    deferred.resolve();
+                } , parseInt(Math.random() * 800 + 800));
+
+                return false;
+            });
+
+        });
+    })
+</script>
+{/block}

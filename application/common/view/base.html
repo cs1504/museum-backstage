@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="__STATIC__/assets/css/bootstrap.css" />
     <link rel="stylesheet" href="__STATIC__/assets/css/font-awesome.css" />
 
+
     <!-- page specific plugin styles -->
 
     <!-- text fonts -->
@@ -621,6 +622,14 @@
 
 
 {block name='script'}{/block}
+
+<script>
+    jQuery(function($) {
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    })
+</script>
 
 </body>
 </html>

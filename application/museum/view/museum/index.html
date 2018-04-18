@@ -80,15 +80,15 @@
 
                             <td>
                                 <div class="action-buttons">
-                                    <a class="blue" href="#" onclick="check(this)">
+                                    <a class="blue" href="#" onclick="check(this)" data-toggle="tooltip" title="查看博物馆详细资料">
                                         <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                     </a>
 
-                                    <a class="green" href="#" onclick="modify(this)">
+                                    <a class="green" href="#" onclick="modify(this)" data-toggle="tooltip" title="修改博物馆资料">
                                         <i class="ace-icon fa fa-pencil bigger-130"></i>
                                     </a>
 
-                                    <a class="red" href="#" onclick="confirmdelete(this)">
+                                    <a class="red" href="#" onclick="confirmdelete(this)" data-toggle="tooltip" title="删除博物馆">
                                         <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                     </a>
                                 </div>
@@ -399,7 +399,9 @@
             if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
             return 'left';
         }
-
+        $("#sidebar ul li").eq(1).addClass("open");
+        $("#sidebar ul li").eq(1).find("ul li").eq(0).addClass("active");
     })
 </script>
+
 {/block}
