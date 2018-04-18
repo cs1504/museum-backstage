@@ -21,8 +21,6 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 
 网址改成 http://39.106.168.133:8080/
 
- 预计一周后改成 https://csmuseum.xyz
-
 
 | 接口名称 | 请求方法 | url |
 | --- | --- | --- |
@@ -31,6 +29,8 @@ https://lnmp.org/faq/lnmp-vhost-add-howto.html
 | [获取最近的博物馆](#获取最近的博物馆) | GET | /api/museum/nearest |
 | [获取展览信息](#获取展览信息) | GET | /api/exhibition/:id |
 | [搜索展览](#搜索展览) | GET | /api/exhibition/search/ |
+| [获取展品信息](#获取展品信息) | GET | /api/exhibits/:id |
+| [搜索展品](#搜索展品) | GET | /api/exhibits/search/ |
 | [管理员登录](#管理员登录) | POST | /api/admin/login/ |
 | [管理员注册](#管理员注册) | POST | /api/admin/reg/ |
 | [管理员注销](#管理员注销) | GET | /api/admin/logout |
