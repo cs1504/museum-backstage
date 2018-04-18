@@ -11,7 +11,11 @@ class ExhibitsControlApi extends Controller
     public function exhibits($id)
     {
         if($this->request->isGet()) {
-            $exhibits = Db::table('exhibits')->where('museum_id', $id)->select();
+            $exhibits = Db::table('exhibits')
+                ->alias('e')
+                ->where('museum_id', $id)
+                ->field('e.id, e.name, e.museum_id, e.introduce')
+                ->select();
             if(!$exhibits) {
                 return json(['valid'=>0,'msg'=>'没有此展品']);
             }
@@ -42,7 +46,7 @@ class ExhibitsControlApi extends Controller
                 ->where('e.name', 'like', '%'.$data['name'].'%')
                 ->join('museum m', 'e.museum_id = m.id')
                 ->page($data['page'], 10)
-                ->field('e.id, e.name, m.name as museum, m.id as museum_id, e.introduce')
+                ->field('e.id, e.name as title, m.name as museum, m.id as museum_id, e.introduce')
                 ->select();
             return json($exhibits);
         }
