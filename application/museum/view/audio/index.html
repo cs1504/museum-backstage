@@ -64,19 +64,19 @@
                 </span>
             </p>
 
-            <button class="btn btn-success btn-sm no-border" href="/audio/{$item['id']}">查看详细信息</button>
-            <button class="btn btn-info btn-sm no-border" href="/audio/modify/{$item['id']}">修改音频描述</button>
+            <a class="btn btn-success btn-sm no-border" href="/audio/{$item['id']}">查看详细信息</a>
+            <a class="btn btn-info btn-sm no-border" href="/audio/modify/{$item['id']}">修改音频描述</a>
             {eq name="item['status']" value="1"}
             <button class="btn btn-success btn-sm no-border disabled">已审核通过</button>
-            <button class="btn btn-danger btn-sm no-border" onclick="">取消通过</button>
+            <button class="btn btn-danger btn-sm no-border" onclick="cancelcheck({$item['id']})">取消通过</button>
             {/eq}
             {eq name="item['status']" value="0"}
             <button class="btn btn-sucess btn-sm no-border disabled">未审核</button>
-            <button class="btn btn-info btn-sm no-border">通过审核</button>
+            <button class="btn btn-info btn-sm no-border" onclick="passcheck({$item['id']})">通过审核</button>
             {/eq}
             {eq name="item['status']" value="2"}
             <button class="btn btn-sucess btn-sm no-border disabled">审核未通过</button>
-            <button class="btn btn-info btn-sm no-border">通过审核</button>
+            <button class="btn btn-info btn-sm no-border" onclick="passcheck({$item['id']})">通过审核</button>
             {/eq}
             <button class="btn btn-danger btn-sm no-border" onclick="confirmdelete({$item['id']})">删除音频</button>
         </div><!-- /showback -->
@@ -141,6 +141,42 @@
         var url = $($this).parent().parent().find('td:eq(0)').text();
         url = '/audio/modify/'+url;
         window.open(url,'_self');
+    }
+
+    function passcheck($id) {
+        $.ajax({
+            url: '/audio/check/pass/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('修改失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
+    }
+
+    function cancelcheck($id) {
+        $.ajax({
+            url: '/audio/check/cancel/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('修改失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
     }
 
     function confirmdelete($id) {
