@@ -1,0 +1,5 @@
+.xctips{position:fixed; top:0; left:0; width:100%; height:44px; z-index:999; background:#3498db; color:#FFF; line-height:44px; text-align:center; vertical-align:middle; font-size:16px; transition:background .2s linear;-webkit-transition:background .2s linear; font-family: "Microsoft YaHei", "微软细黑", "微软雅黑 Light" , "微软雅黑", "Arial", "SimSun", "宋体";}
+.xctips.info{background:#3498db;}
+.xctips.success{background:#2ecc71;}
+.xctips.error{background:#ff9090;}
+.xctips.loading{background:#F93;}

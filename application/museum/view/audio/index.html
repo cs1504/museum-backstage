@@ -44,7 +44,7 @@
 <div class="row mt">
     <div class="col-lg-12 col-md-12 col-sm-12">
         {foreach name='audio' item='item'}
-        <div class="showback">
+        <div class="showback" id="audio-{$item['id']}">
             <p class="weixinAudo">
                 <audio src="{$item['addr']}" id="media" width="1" height="1" preload></audio>
                 <span id="audio_area" class="db audio_area">
@@ -66,18 +66,22 @@
 
             <a class="btn btn-success btn-sm no-border" href="/audio/{$item['id']}">查看详细信息</a>
             <a class="btn btn-info btn-sm no-border" href="/audio/modify/{$item['id']}">修改音频描述</a>
-            {eq name="item['status']" value="1"}
-            <button class="btn btn-success btn-sm no-border disabled">已审核通过</button>
-            <button class="btn btn-danger btn-sm no-border" onclick="cancelcheck({$item['id']})">取消通过</button>
-            {/eq}
-            {eq name="item['status']" value="0"}
-            <button class="btn btn-sucess btn-sm no-border disabled">未审核</button>
-            <button class="btn btn-info btn-sm no-border" onclick="passcheck({$item['id']})">通过审核</button>
-            {/eq}
-            {eq name="item['status']" value="2"}
-            <button class="btn btn-sucess btn-sm no-border disabled">审核未通过</button>
-            <button class="btn btn-info btn-sm no-border" onclick="passcheck({$item['id']})">通过审核</button>
-            {/eq}
+
+            <button class="btn btn-sucess btn-sm no-border disabled
+            {neq name="item['status']" value="0"}hidden{/neq}">未审核</button>
+
+            <button class="btn btn-success btn-sm no-border disabled
+            {neq name="item['status']" value="1"}hidden{/neq}">已审核通过</button>
+
+            <button class="btn btn-sucess btn-sm no-border disabled
+            {neq name="item['status']" value="2"}hidden{/neq}">审核未通过</button>
+
+            <button class="btn btn-danger btn-sm no-border
+            {neq name="item['status']" value="1"}hidden{/neq}"
+                    onclick="cancelcheck({$item['id']})">取消审核</button>
+            <button class="btn btn-info btn-sm no-border
+            {eq name="item['status']" value="1"}hidden{/eq}"
+            onclick="passcheck({$item['id']})">通过审核</button>
             <button class="btn btn-danger btn-sm no-border" onclick="confirmdelete({$item['id']})">删除音频</button>
         </div><!-- /showback -->
         <hr>
@@ -129,81 +133,6 @@
 </div>
 
 
-<script>
-
-    function check($this) {
-        var url = $($this).parent().parent().find('td:eq(0)').text();
-        url = '/audio/'+url;
-        window.open(url,'_self');
-    }
-
-    function modify($this) {
-        var url = $($this).parent().parent().find('td:eq(0)').text();
-        url = '/audio/modify/'+url;
-        window.open(url,'_self');
-    }
-
-    function passcheck($id) {
-        $.ajax({
-            url: '/audio/check/pass/'+$id,
-            type: 'POST',
-            dataType: 'json',
-            success: function(result) {
-                if(result.valid == 1) {
-                    window.location.reload();
-                }
-                else
-                {
-                    alert('修改失败，请稍后重试');
-                    return false;
-                }
-            }
-        });
-    }
-
-    function cancelcheck($id) {
-        $.ajax({
-            url: '/audio/check/cancel/'+$id,
-            type: 'POST',
-            dataType: 'json',
-            success: function(result) {
-                if(result.valid == 1) {
-                    window.location.reload();
-                }
-                else
-                {
-                    alert('修改失败，请稍后重试');
-                    return false;
-                }
-            }
-        });
-    }
-
-    function confirmdelete($id) {
-        url = '/audio/'+$id;
-        $("#deleteurl").val(url);
-        $("#delete-warning").modal('show');
-    }
-
-    function delete_audio() {
-        $.ajax({
-            url: $("#deleteurl").val(),
-            type: 'DELETE',
-            dataType: 'json',
-            success: function(result) {
-                if(result.valid == 1) {
-                    window.location.reload();
-                }
-                else
-                {
-                    alert('删除失败，请稍后重试');
-                    return false;
-                }
-            }
-        });
-        // $("#delete-warning").modal('hide');
-    }
-</script>
 
 <style type="text/css">
     html {
@@ -336,6 +265,113 @@
 {/block}
 
 {block name='script'}
+<link rel="stylesheet" href="__STATIC__/css/jquery.xctips.css">
+<script src="__STATIC__/js/jquery.xctips.js"></script>
+
+<script>
+
+    function check($this) {
+        var url = $($this).parent().parent().find('td:eq(0)').text();
+        url = '/audio/'+url;
+        window.open(url,'_self');
+    }
+
+    function modify($this) {
+        var url = $($this).parent().parent().find('td:eq(0)').text();
+        url = '/audio/modify/'+url;
+        window.open(url,'_self');
+    }
+
+    function passcheck($id) {
+        $.ajax({
+            url: '/audio/check/pass/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            async: true,
+            success: function(result) {
+                if(result.valid == 1) {
+                    $("#audio-"+$id+" button").eq(0).addClass('hidden');
+                    $("#audio-"+$id+" button").eq(2).addClass('hidden');
+                    $("#audio-"+$id+" button").eq(1).removeClass('hidden');
+                    $("#audio-"+$id+" button").eq(4).addClass('hidden');
+                    $("#audio-"+$id+" button").eq(3).removeClass('hidden');
+                    xcsoft.success(result.msg, 1500);
+                }
+                else
+                {
+                    xcsoft.error(result.msg, 2000);
+                    return false;
+                }
+            },
+            error: function () {
+                xcsoft.error('出现错误，请稍后再试', 2000);
+                return false;
+            }
+        });
+    }
+
+    function cancelcheck($id) {
+        $.ajax({
+            url: '/audio/check/cancel/'+$id,
+            type: 'POST',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    $("#audio-"+$id+" button").eq(1).addClass('hidden');
+                    $("#audio-"+$id+" button").eq(2).removeClass('hidden');
+                    $("#audio-"+$id+" button").eq(3).addClass('hidden');
+                    $("#audio-"+$id+" button").eq(4).removeClass('hidden');
+                    xcsoft.success(result.msg, 1500);
+                }
+                else
+                {
+                    xcsoft.error(result.msg, 2000);
+                    return false;
+                }
+            },
+            error: function () {
+                xcsoft.error('出现错误，请稍后再试', 2000);
+                return false;
+            }
+        });
+    }
+
+    function confirmdelete($id) {
+        url = '/audio/'+$id;
+        $("#deleteurl").val(url);
+        $("#delete-warning").modal('show');
+    }
+
+    function delete_audio() {
+        $.ajax({
+            url: $("#deleteurl").val(),
+            type: 'DELETE',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('删除失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
+        // $("#delete-warning").modal('hide');
+    }
+
+
+    //为 tips 提示框自定义 CSS,以下为默认
+    xcsoft.tipsCss = {
+        height: '44px',
+        fontSize: '16px',
+        zIndex: '9999'
+    };
+    //隐藏、显示速度 ，默认 fast
+    xcsoft.tipsHide=xcsoft.tipsShow=100;
+
+</script>
 
 <script>
     $('.weixinAudo').weixinAudio();

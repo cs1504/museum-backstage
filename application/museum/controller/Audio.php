@@ -73,4 +73,38 @@ class Audio extends CommonController
         return $this->fetch('insert');
     }
 
+    public function pass($id) {
+        if($this->request->isPost()) {
+            $res = Db::table('audio')
+                ->where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此音频']);
+            }
+            $res = Db::table('audio')
+                ->where('id', $id)
+                ->update(['status' => 1]);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'修改失败']);
+            return json(['valid'=>1,'msg'=>'已标记为通过审核']);
+        }
+    }
+
+    public function cancel($id) {
+        if($this->request->isPost()) {
+            $res = Db::table('audio')->where('id', $id)
+                ->find();
+            if(!$res) {
+                return json(['valid'=>0,'msg'=>'没有此音频']);
+            }
+            $res = Db::table('audio')
+                ->where('id', $id)
+                ->update(['status' => 2]);
+            if(!$res)
+                return json(['valid'=>0,'msg'=>'修改失败']);
+            return json(['valid'=>1,'msg'=>'已标记为审核未通过']);
+        }
+    }
+
+
 }
