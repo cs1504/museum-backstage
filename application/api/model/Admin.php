@@ -2,7 +2,6 @@
 
 namespace app\api\model;
 
-
 use think\Model;
 use think\Db;
 use think\Session;

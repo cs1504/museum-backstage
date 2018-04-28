@@ -28,7 +28,7 @@
 <hr>
 <h5>{$news['author']} 发表于 {$news['release_time']}</h5>
 <br>
-<p>{$news['content']}</p>
+<div id="news-content" class="hidden">{$news['content']}</div>
 <hr>
 <button type="button" class="btn btn-danger no-border" onclick="window.location.href='/news/modify/{$id}'">修改</button>
 <button type="button" class="btn btn-info no-border" onclick="window.location.href='/news'">返回新闻首页</button>
@@ -41,5 +41,21 @@
         $("#sidebar ul li").eq(4).addClass("open");
         $("#sidebar ul li").eq(4).find("ul li").eq(0).addClass("active");
     })
+
+    var scripts = [null,"__STATIC__/assets/js/jquery-ui.custom.js",
+        "__STATIC__/assets/js/jquery.ui.touch-punch.js",
+        "__STATIC__/assets/js/markdown/markdown.js",
+        "__STATIC__/assets/js/markdown/bootstrap-markdown.js",
+        "__STATIC__/assets/js/jquery.hotkeys.js",
+        "__STATIC__/assets/js/bootstrap-wysiwyg.js",
+        "__STATIC__/assets/js/bootbox.js", null]
+    $('.page-content').ace_ajax('loadScripts', scripts, function () {
+        jQuery(function($){
+            md_content = $('#news-content').text();
+            $('#news-content').html(markdown.toHTML(md_content));
+            $('#news-content').removeClass('hidden');
+        });
+    });
+
 </script>
 {/block}

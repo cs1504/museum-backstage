@@ -66,7 +66,8 @@ class News extends CommonController
 
     public function insert() {
         if($this->request->isPost()) {
-            $res = (new \app\api\model\News())->insert(input('post.'));
+            $data = input('post.');
+            $res = (new \app\api\model\News())->insert($data);
             $this->redirect('/news/'.$res['id']);
         }
         return $this->fetch('insert');

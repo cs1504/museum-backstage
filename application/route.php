@@ -16,8 +16,13 @@ Route::get('think', function () {
 });
 
 
-Route::any('login', 'admin/Login/login');
-Route::any('logout', 'admin/Login/logout');
+
+
+Route::any('login', 'museum/Login/login');
+Route::any('logout', 'museum/Login/logout');
+
+Route::any('', 'museum/Index/index');
+Route::any('index', 'museum/Index/index');
 
 Route::any('museum/modify/:id', 'museum/Museum/modify');
 Route::any('museum/:id', 'museum/Museum/museum');
@@ -63,6 +68,7 @@ Route::any('admin/add', 'museum/Admin/add');
 
 
 Route::any('setting', 'museum/System/setting');
+Route::any('log', 'museum/System/log');
 
 
 

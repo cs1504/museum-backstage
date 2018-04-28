@@ -22,7 +22,19 @@ class System extends CommonController
         }
     }
 
-    public function log() {
+    public function log($id=0) {
+        if($this->request->isGet()) {
+            if($id == 0) {
+                $logs = Db::table('logs')
+                    ->alias('l')
+                    ->join('admin a', 'l.operator = a.id')
+                    ->field('l.id, l.operator as operator_id, a.loginname, a.nickname,
+                    l.description, l.operate_time, l.ip, l.status')
+                    ->select();
+                $this->assign('logs', $logs);
+                return $this->fetch('log');
+            }
+        }
 
     }
 

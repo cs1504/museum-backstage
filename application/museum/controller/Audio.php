@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WYH
- * Date: 06/04/2018
- * Time: 12:24 AM
- */
 
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
 use think\Db;
+use think\Session;
 
 class Audio extends CommonController
 {
@@ -84,8 +79,12 @@ class Audio extends CommonController
             $res = Db::table('audio')
                 ->where('id', $id)
                 ->update(['status' => 1]);
-            if(!$res)
+
+            if(!$res) {
+                $this->Addlog('将id为'.$id.'的音频标记为审核通过', 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
+            }
+            $this->Addlog('将id为'.$id.'的音频标记为审核通过', 0);
             return json(['valid'=>1,'msg'=>'已标记为通过审核']);
         }
     }
@@ -100,8 +99,11 @@ class Audio extends CommonController
             $res = Db::table('audio')
                 ->where('id', $id)
                 ->update(['status' => 2]);
-            if(!$res)
+            if(!$res) {
+                $this->Addlog('将id为'.$id.'的音频标记为审核未通过', 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
+            }
+            $this->Addlog('将id为'.$id.'的音频标记为审核未通过', 0);
             return json(['valid'=>1,'msg'=>'已标记为审核未通过']);
         }
     }

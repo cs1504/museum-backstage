@@ -1,5 +1,5 @@
 <?php
-namespace app\index\controller;
+namespace app\museum\controller;
 
 use think\Controller;
 use think\Db;
@@ -10,6 +10,7 @@ class Index extends CommonController
     public function index()
     {
         $count['museum'] = Db::table('museum')->count();
+        $count['exhibits'] = Db::table('exhibits')->count();
         $count['exhibition'] = Db::table('exhibition')->count();
         $count['news'] = Db::table('news')->count();
         $count['audio'] = Db::table('audio')->count();

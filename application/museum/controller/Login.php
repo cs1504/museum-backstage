@@ -6,7 +6,7 @@
  * Time: 8:59 PM
  */
 
-namespace app\admin\controller;
+namespace app\museum\controller;
 
 
 use app\api\model\Admin;
