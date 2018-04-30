@@ -20,6 +20,8 @@ Route::get('think', function () {
 
 Route::any('login', 'museum/Login/login');
 Route::any('logout', 'museum/Login/logout');
+Route::any('forgotpasswd', 'museum/Login/forgotpasswd');
+Route::any('resetpasswd', 'museum/Login/resetpasswd');
 
 Route::any('', 'museum/Index/index');
 Route::any('index', 'museum/Index/index');

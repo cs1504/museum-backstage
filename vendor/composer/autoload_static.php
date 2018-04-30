@@ -46,6 +46,7 @@ class ComposerStaticInitf9a4edff7ca5d83a52a9242e688ac24a
         'P' => 
         array (
             'Phinx\\' => 6,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
@@ -95,6 +96,10 @@ class ComposerStaticInitf9a4edff7ca5d83a52a9242e688ac24a
         'Phinx\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-migration/phinx/src/Phinx',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 
