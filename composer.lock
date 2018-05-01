@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c83f222a3aebff35688379063a7e37c2",
+    "content-hash": "cb43fd9ff75dfec45b9f634f8821bc69",
     "packages": [
         {
             "name": "fukuball/jieba-php",
@@ -172,42 +172,6 @@
                 "storage"
             ],
             "time": "2018-02-20T13:59:54+00:00"
-        },
-        {
-            "name": "rol/baksql",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/R0L/Baksql.git",
-                "reference": "903f33812c6e5ea496c9019b60bacf578cea8201"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/R0L/Baksql/zipball/903f33812c6e5ea496c9019b60bacf578cea8201",
-                "reference": "903f33812c6e5ea496c9019b60bacf578cea8201",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ROL\\Baksql\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "ROL",
-                    "email": "2080775740@qq.com"
-                }
-            ],
-            "description": "This is a baksql from thinkphp5",
-            "time": "2016-12-29T12:56:39+00:00"
         },
         {
             "name": "topthink/framework",
@@ -570,8 +534,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fukuball/jieba-php": 20,
-        "rol/baksql": 20
+        "fukuball/jieba-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

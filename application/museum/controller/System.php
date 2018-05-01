@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WYH
- * Date: 08/04/2018
- * Time: 2:14 PM
- */
 
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
 use think\Db;
+use app\common\Baksql;
 
 
 class System extends CommonController
@@ -39,6 +34,45 @@ class System extends CommonController
     }
 
     public function backup() {
+        $config = array(
+            'path' => 'static/databak/',
+            //数据库备份路径
+            'part' => 20971520,
+            //数据库备份卷大小
+            'compress' => 0,
+            //数据库备份文件是否启用压缩 0不压缩 1 压缩
+            'level' => 9,
+        );
+        $sql = new Baksql($config);
 
+        if($this->request->isPost()) {
+            $file=['name'=>date('Ymd-His'),'part'=>1];
+            $res = $sql->setFile($file)->backupDatabase();
+            return json($res);
+        }
+
+        $this->assign('list', $sql->fileList());
+        return $this->fetch('backup');
     }
+
+    public function downloadSqlFile() {
+        if($this->request->isPost()) {
+            if(input('?post.time')) {
+                $time = input('post.time');
+                $config = array(
+                    'path' => 'static/databak/',
+                    //数据库备份路径
+                    'part' => 20971520,
+                    //数据库备份卷大小
+                    'compress' => 0,
+                    //数据库备份文件是否启用压缩 0不压缩 1 压缩
+                    'level' => 9,
+                );
+                $sql = new Baksql($config);
+
+                $sql->downloadFile($time);
+            }
+        }
+    }
+
 }

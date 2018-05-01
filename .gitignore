@@ -2,3 +2,4 @@
 .idea
 update.sh
 runtime
+.sql

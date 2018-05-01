@@ -71,6 +71,8 @@ Route::any('admin/add', 'museum/Admin/add');
 
 Route::any('setting', 'museum/System/setting');
 Route::any('log', 'museum/System/log');
+Route::any('backup', 'museum/System/backup');
+Route::any('downloadsql', 'museum/System/downloadSqlFile');
 
 
 

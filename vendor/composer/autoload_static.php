@@ -35,10 +35,6 @@ class ComposerStaticInitf9a4edff7ca5d83a52a9242e688ac24a
         array (
             'app\\' => 4,
         ),
-        'R' => 
-        array (
-            'ROL\\Baksql\\' => 11,
-        ),
         'Q' => 
         array (
             'Qiniu\\' => 6,
@@ -84,10 +80,6 @@ class ComposerStaticInitf9a4edff7ca5d83a52a9242e688ac24a
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/application',
-        ),
-        'ROL\\Baksql\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/rol/baksql/src',
         ),
         'Qiniu\\' => 
         array (
