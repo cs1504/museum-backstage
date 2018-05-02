@@ -78,8 +78,15 @@
                                     <a class="blue" onclick="downloadsql({$item['time']})" data-toggle="tooltip" title="下载备份文件">
                                         <i class="ace-icon fa fa-download bigger-130"></i>
                                     </a>
-                                    <a class="red" href="#" onclick="confirmdelete(this)" data-toggle="tooltip" title="删除备份文件">
+                                    <a class="red" href="#"
+                                       onclick="confirmdelete({$item['time']})"
+                                       data-toggle="tooltip" title="删除备份文件">
                                         <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                    </a>
+                                    <a class="red" href="#"
+                                       onclick=""
+                                       data-toggle="tooltip" title="还原数据库">
+                                        <i class="ace-icon fa  fa-refresh bigger-130"></i>
                                     </a>
                                 </div>
 
@@ -105,12 +112,12 @@
             </div>
             <form action="">
                 <div class="modal-body">
-                    <input type="hidden" id="deleteurl">
+                    <input type="hidden" id="deletetime">
                     一旦删除此项就无法恢复，确认删除吗？
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary no-border" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-danger no-border" onclick="delete_museum()">确认删除</button>
+                    <button type="button" class="btn btn-danger no-border" onclick="deletesql()">确认删除</button>
                 </div>
             </form>
         </div>
@@ -151,7 +158,51 @@
     }
 
     function downloadsql($time) {
-        
+        $("#downloadform").remove();
+        var form = $("<form>");//定义一个form表单
+        form.attr("id", "downloadform");
+        form.attr("style", "display:none");
+        form.attr("target", "");
+        form.attr("method", "post");
+        form.attr("action", "/downloadsql");
+        var input1 = $("<input>");
+        input1.attr("type", "hidden");
+        input1.attr("name", "time");
+        input1.attr("value", $time);
+        form.append(input1);
+        $("body").append(form);//将表单放置在web中
+
+        form.submit();//表单提交
+    }
+
+    function confirmdelete($time) {
+        $("#deletetime").val($time);
+        $("#delete-warning").modal('show');
+    }
+
+    function deletesql() {
+        $.ajax({
+            url: '/deletesql',
+            type: 'DELETE',
+            data: {time : $("#deletetime").val()},
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    xcsoft.error('出现错误，请稍后再试', 2000);
+                    $("#delete-warning").modal('hide');
+                    return false;
+                }
+            },
+            error: function () {
+                xcsoft.error('出现错误，请稍后再试', 2000);
+                $("#delete-warning").modal('hide');
+                return false;
+            }
+        });
     }
 </script>
 
