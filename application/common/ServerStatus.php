@@ -66,14 +66,9 @@ class ServerStatus
         } elseif (isset($memInfo['MemFree'])) {
             $memAvailable = $memInfo['MemFree'];
         }
-        if ( ! isset($memInfo['SwapTotal']) || ! isset($memInfo['SwapFree']) || ! isset($memInfo['SwapCached'])) {
-            $memInfo['SwapTotal'] = 1;
-            $memInfo['SwapFree'] = 0;
-            $memInfo['SwapCached'] = 0;
-        }
+
         return [
             'mem' => round(($memInfo['MemTotal'] - $memAvailable)/$memInfo['MemTotal']*100 , 1),
-            'swap' => round(($memInfo['SwapTotal'] - $memInfo['SwapFree'] - $memInfo['SwapCached'])/$memInfo['SwapTotal']*100, 1 )
             ];
     }
 
