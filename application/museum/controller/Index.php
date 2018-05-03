@@ -23,6 +23,8 @@ class Index extends CommonController
         if($cpu == null)
             $cpu = '无法检测';
         $this->assign('cpu', $cpu);
+        $mem = \app\common\ServerStatus::getMemoryUsage();
+        $this->assign('mem', $mem);
         return $this->fetch('index');
     }
 

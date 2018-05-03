@@ -34,4 +34,38 @@ class ServerStatus
         }
         return $cpu['user'] + $cpu['nice'] + $cpu['sys'];
     }
+
+    public static function getMemoryUsage()
+    {
+
+        static $memInfo = null;
+        if (null === $memInfo) {
+            $memInfoFile = '/proc/meminfo';
+            if (!\is_readable($memInfoFile)) {
+                $memInfo = 0;
+                return 0;
+            }
+            $memInfo = \file_get_contents($memInfoFile);
+            $memInfo = \str_replace(array(
+                ' kB',
+                '  ',
+            ), '', $memInfo);
+            $lines = array();
+            foreach (\explode("\n", $memInfo) as $line) {
+                if (!$line) {
+                    continue;
+                }
+                $line = \explode(':', $line);
+                $lines[$line[0]] = (int)$line[1];
+            }
+            $memInfo = $lines;
+        }
+        $memAvailable = 0;
+        if (isset($memInfo['MemAvailable'])) {
+            $memAvailable = $memInfo['MemAvailable'];
+        } elseif (isset($memInfo['MemFree'])) {
+            $memAvailable = $memInfo['MemFree'];
+        }
+        return $memInfo['MemTotal'] - $memAvailable;
+    }
 }
