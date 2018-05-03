@@ -32,6 +32,6 @@ class ServerStatus
         foreach ($dif as $x => $y) {
             $cpu[$x] = \round($y / $total * 100, 1);
         }
-        return $cpu;
+        return $cpu['user'] + $cpu['nice'] + $cpu['sys'];
     }
 }

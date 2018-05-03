@@ -20,7 +20,8 @@ class Index extends CommonController
         $this->assign('count', $count);
 
         $cpu = \app\common\ServerStatus::getCpuUsage();
-        dump($cpu);
+        if($cpu == null)
+            $cpu = '无法检测';
         $this->assign('cpu', $cpu);
         return $this->fetch('index');
     }
