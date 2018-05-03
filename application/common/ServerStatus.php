@@ -66,6 +66,6 @@ class ServerStatus
         } elseif (isset($memInfo['MemFree'])) {
             $memAvailable = $memInfo['MemFree'];
         }
-        return $memInfo['MemTotal'] - $memAvailable;
+        return round(($memInfo['MemTotal'] - $memAvailable)/$memInfo['MemTotal']*100 , 1);
     }
 }
