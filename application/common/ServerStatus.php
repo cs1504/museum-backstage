@@ -67,7 +67,7 @@ class ServerStatus
             $memAvailable = $memInfo['MemFree'];
         }
         if ( ! isset($memInfo['SwapTotal']) || ! isset($memInfo['SwapFree']) || ! isset($memInfo['SwapCached'])) {
-            $memInfo['SwapTotal'] = 0;
+            $memInfo['SwapTotal'] = 1;
             $memInfo['SwapFree'] = 0;
             $memInfo['SwapCached'] = 0;
         }
