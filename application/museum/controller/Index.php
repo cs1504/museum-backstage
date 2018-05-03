@@ -19,6 +19,9 @@ class Index extends CommonController
 
         $this->assign('count', $count);
 
+        $cpu = \app\common\ServerStatus::getCpuUsage();
+        dump($cpu);
+        $this->assign('cpu', $cpu);
         return $this->fetch('index');
     }
 

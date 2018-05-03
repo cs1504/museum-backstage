@@ -79,6 +79,8 @@ Route::any('deletesql', 'museum/System/deletesql');
 
 
 
+
+
 Route::any('api/museum/:id','api/MuseumControlApi/museum');
 Route::get('api/museum/search/','api/MuseumControlApi/search');
 Route::get('api/museum/nearest/','api/MuseumControlApi/nearest');
