@@ -21,10 +21,13 @@ class Index extends CommonController
 
         $cpu = \app\common\ServerStatus::getCpuUsage();
         if($cpu == null)
-            $cpu = '无法检测';
+            $cpu = 0;
         $this->assign('cpu', $cpu);
         $mem = \app\common\ServerStatus::getMemoryUsage();
-        $this->assign('mem', $mem);
+        $this->assign('mem', $mem['mem']);
+        $disk['free'] = \app\common\ServerStatus::getDiskFreeSpace(true);
+        $disk['total'] = \app\common\ServerStatus::getDiskTotalSpace(true);
+        $this->assign('disk', $disk);
         return $this->fetch('index');
     }
 

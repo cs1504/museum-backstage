@@ -66,6 +66,58 @@ class ServerStatus
         } elseif (isset($memInfo['MemFree'])) {
             $memAvailable = $memInfo['MemFree'];
         }
-        return round(($memInfo['MemTotal'] - $memAvailable)/$memInfo['MemTotal']*100 , 1);
+        if ( ! isset($memInfo['SwapTotal']) || ! isset($memInfo['SwapFree']) || ! isset($memInfo['SwapCached'])) {
+            $memInfo['SwapTotal'] = 0;
+            $memInfo['SwapFree'] = 0;
+            $memInfo['SwapCached'] = 0;
+        }
+        return [
+            'mem' => round(($memInfo['MemTotal'] - $memAvailable)/$memInfo['MemTotal']*100 , 1),
+            'swap' => round(($memInfo['SwapTotal'] - $memInfo['SwapFree'] - $memInfo['SwapCached'])/$memInfo['SwapTotal']*100, 1 )
+            ];
+    }
+
+    public static function getDiskTotalSpace($human = false)
+    {
+        static $space = null;
+        if (null === $space) {
+            $space = \disk_total_space('/');
+        }
+        if ( ! $space) {
+            return 0;
+        }
+        if (true === $human) {
+            return self::formatBytes($space);
+        }
+        return $space;
+    }
+
+    public static function getDiskFreeSpace($human = false)
+    {
+        static $space = null;
+        if (null === $space) {
+            try {
+                $space = \disk_free_space('/');
+            } catch (\Exception $e) {
+                $space = 0;
+            }
+        }
+        if ( ! $space) {
+            return 0;
+        }
+        if (true === $human) {
+            return self::formatBytes($space);
+        }
+        return $space;
+    }
+
+    public static function formatBytes($bytes, $precision = 2)
+    {
+        if ( ! $bytes) {
+            return 0;
+        }
+        $base     = \log($bytes, 1024);
+        $suffixes = array('', ' K', ' M', ' G', ' T');
+        return \round(\pow(1024, $base - \floor($base)), $precision) . $suffixes[\floor($base)];
     }
 }
