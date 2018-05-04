@@ -18,7 +18,7 @@ return [
     // 服务器地址
     'hostname'        => getenv('MYSQL_HOST'),
     // 数据库名
-    'database'        => getenv('MYSQL_DBNAME'),
+    'database'        => 'museumtest',
     // 用户名
     'username'        => getenv('MYSQL_USERNAME'),
     // 密码

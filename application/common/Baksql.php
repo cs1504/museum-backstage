@@ -93,7 +93,7 @@ class Baksql
             $this->file = ['name' => date('Ymd-His'), 'part' => 1];
         } else {
             if (!array_key_exists("name", $file) && !array_key_exists("part", $file)) {
-                $this->file = $file['1'];
+                $this->file = $file[1];
             } else {
                 $this->file = $file;
             }

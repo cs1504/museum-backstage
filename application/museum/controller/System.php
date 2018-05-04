@@ -55,6 +55,7 @@ class System extends CommonController
         return $this->fetch('backup');
     }
 
+
     public function downloadSqlFile() {
         if($this->request->isPost()) {
             if(input('?post.time')) {
@@ -93,4 +94,13 @@ class System extends CommonController
         }
     }
 
+
+    public function restoresql() {
+        if($this->request->isPost()) {
+            $time = input('post.time');
+            // 将数据从文件中一条一条读出来，执行
+            sleep(2);
+            return json(['valid' => 1, 'msg' => '还原成功']);
+        }
+    }
 }

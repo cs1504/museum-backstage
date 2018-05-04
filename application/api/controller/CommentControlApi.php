@@ -6,6 +6,7 @@ namespace app\api\controller;
 use think\Controller;
 use app\api\model\Comment;
 use think\Db;
+use app\common\TextCheck;
 
 class CommentControlApi extends Controller
 {
@@ -18,6 +19,15 @@ class CommentControlApi extends Controller
             if(!$validate->check($data)){
                 return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
+
+            $textcheck = new TextCheck();
+            $checkres = $textcheck->text($data['content']);
+
+            if(isset($checkres['suggestion'])) {
+                if($checkres['suggestion'] == 'block')
+                    return json(['valid' => 0, 'msg' => $checkres['labeltext']]);
+            }
+
             $res = Db::name('museum')
                 ->where('id', $data['museum_id'])
                 ->find();
@@ -111,6 +121,14 @@ class CommentControlApi extends Controller
                 return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
 
+            $textcheck = new TextCheck();
+            $checkres = $textcheck->text($data['content']);
+
+            if(isset($checkres['suggestion'])) {
+                if($checkres['suggestion'] == 'block')
+                    return json(['valid' => 0, 'msg' => $checkres['labeltext']]);
+            }
+
             switch ($data['coption']) {
                 case 1:
                     if(!isset($data['museum_id']))
@@ -181,14 +199,24 @@ class CommentControlApi extends Controller
             if(!$validate->check($data)){
                 return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
+
+            $textcheck = new TextCheck();
+            $checkres = $textcheck->text($data['content']);
+
+            if(isset($checkres['suggestion'])) {
+                if($checkres['suggestion'] == 'block')
+                    return json(['valid' => 0, 'msg' => $checkres['labeltext']]);
+            }
+
             $res = Comment::where('id', $id)
                 ->find();
             if(!$res) {
                 return json(['valid'=>0,'msg'=>'没有此评论']);
             }
+
             $res = false;
+
             if(isset($data['content'])) {
-                dump(input('content'));
                 $res = Db::table('comment')
                     ->update(['content' => $data['content'], 'id'=>$id]);
                 if(!$res)
