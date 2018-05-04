@@ -6,13 +6,13 @@ use think\Loader;
 Loader::import('aliyuncs.aliyun-php-sdk-core.Config');
 use Green\Request\V20170825 as Green;
 date_default_timezone_set("PRC");
-
+use think\Db;
 
 class TextCheck
 {
     public function text($content) {
-        $ak["accessKeyId"] = 'LTAIOGvwNGlBoif3';
-        $ak["accessKeySecret"] = 'LLW8id0YOxYbwT0T4hoVFEHLLN0pq0';
+        $ak["accessKeyId"] = Db::table('options')->where('option_name', 'aliyunak')->value('option_value');
+        $ak["accessKeySecret"] = Db::table('options')->where('option_name', 'aliyunsk')->value('option_value');;
         //请替换成你自己的accessKeyId、accessKeySecret
         $iClientProfile = \DefaultProfile::getProfile("cn-shanghai", $ak["accessKeyId"], $ak["accessKeySecret"]); // TODO
         \DefaultProfile::addEndpoint("cn-shanghai", "cn-shanghai", "Green", "green.cn-shanghai.aliyuncs.com");
