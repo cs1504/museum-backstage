@@ -22,13 +22,4 @@ class CommonController extends Controller
             $admin['avatar'] = "/static/images/avatar.png";
         $this->assign('admin', $admin);
     }
-
-    public function Addlog($description, $status = 0) {
-        Db::table('logs')->insert([
-            'operator' => Session::get('id'),
-            'url' => $this->request->url(true),
-            'description' => $description,
-            'ip' => $this->request->ip(),
-            'status' => $status]);
-    }
 }

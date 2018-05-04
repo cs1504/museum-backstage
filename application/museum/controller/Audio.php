@@ -3,6 +3,7 @@
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 use think\Session;
 
@@ -84,7 +85,7 @@ class Audio extends CommonController
                 $this->Addlog('将id为'.$id.'的音频标记为审核通过', 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
             }
-            $this->Addlog('将id为'.$id.'的音频标记为审核通过', 0);
+            SysLog::Addlog('将id为'.$id.'的音频标记为审核通过', $this->request,0);
             return json(['valid'=>1,'msg'=>'已标记为通过审核']);
         }
     }
@@ -103,7 +104,7 @@ class Audio extends CommonController
                 $this->Addlog('将id为'.$id.'的音频标记为审核未通过', 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
             }
-            $this->Addlog('将id为'.$id.'的音频标记为审核未通过', 0);
+            SysLog::Addlog('将id为'.$id.'的音频标记为审核未通过', $this->request, 0);
             return json(['valid'=>1,'msg'=>'已标记为审核未通过']);
         }
     }

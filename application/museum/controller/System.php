@@ -22,7 +22,8 @@ class System extends CommonController
             if($id == 0) {
                 $logs = Db::table('logs')
                     ->alias('l')
-                    ->join('admin a', 'l.operator = a.id')
+                    ->join('admin a', 'l.operator = a.id', 'LEFT')
+                    ->order('l.operate_time desc')
                     ->field('l.id, l.operator as operator_id, a.loginname, a.nickname,
                     l.description, l.operate_time, l.ip, l.status')
                     ->select();
@@ -54,7 +55,6 @@ class System extends CommonController
         $this->assign('list', $sql->fileList());
         return $this->fetch('backup');
     }
-
 
     public function downloadSqlFile() {
         if($this->request->isPost()) {

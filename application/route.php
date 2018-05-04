@@ -75,6 +75,7 @@ Route::any('backup', 'museum/System/backup');
 Route::any('downloadsql', 'museum/System/downloadSqlFile');
 Route::any('deletesql', 'museum/System/deletesql');
 Route::any('restoresql', 'museum/System/restoresql');
+Route::any('autobackup', 'museum/Auto/autobackup');
 
 Route::any('test', 'museum/Test/index');
 
