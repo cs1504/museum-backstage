@@ -33,7 +33,7 @@ class Audio extends CommonController
                 ->order('upload_time desc')
                 ->page($data['page'], 10)
                 ->field('audio.id, loginname as user_name, name as museum_name, audio.status, upload_time, 
-                pass_time, addr, description')
+                pass_time, addr, description, suggestion, totext, labeltext')
                 ->select();
 //            dump($audio);
             $this->assign('audio', $audio);
