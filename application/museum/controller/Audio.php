@@ -30,6 +30,7 @@ class Audio extends CommonController
                 ->alias('a')
                 ->join('user u', 'a.user_id = u.id')
                 ->join('museum m', 'a.museum_id = m.id')
+                ->order('upload_time desc')
                 ->page($data['page'], 10)
                 ->field('audio.id, loginname as user_name, name as museum_name, audio.status, upload_time, 
                 pass_time, addr, description')
