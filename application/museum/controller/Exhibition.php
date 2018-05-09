@@ -9,6 +9,7 @@
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 
 class Exhibition extends CommonController
@@ -22,6 +23,7 @@ class Exhibition extends CommonController
                 ->select();
 
             $this->assign('exhibition', $exhibition);
+            SysLog::Addlog('查看展览总览页面', $this->request, 0);
             return $this->fetch('index');
         }
     }
@@ -36,6 +38,7 @@ class Exhibition extends CommonController
                 ->find();
             $this->assign('exhibition', $exhibition);
             $this->assign('id', $id);
+            SysLog::Addlog('查看 id 为'.$id.'的展览的详细信息', $this->request, 0);
             return $this->fetch('view');
         }
 
@@ -46,8 +49,11 @@ class Exhibition extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此展览']);
             }
             $res = Db::table('exhibition')->delete($id);
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('删除ID 为'.$id.'的展览', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'删除失败']);
+            }
+            SysLog::Addlog('删除ID 为'.$id.'的展览', $this->request, 0);
             return json(['valid'=>1,'msg'=>'删除展览成功']);
         }
     }
@@ -61,6 +67,7 @@ class Exhibition extends CommonController
     public function insert() {
         if($this->request->isPost()) {
             $res = (new \app\api\model\Exhibition())->insert(input('post.'));
+            SysLog::Addlog('添加了新的展览，ID 为'.$res['id'], $this->request, 0);
             $this->redirect('/exhibition/'.$res['id']);
         }
         return $this->fetch('insert');
@@ -75,10 +82,14 @@ class Exhibition extends CommonController
             $res = Db::table('exhibition')->where('id', $id)
                 ->update(['name' => $data['name'], 'introduce' => $data['introduce'], 'time' => $data['time'],
                     'address' => $data['address']]);
-            if($res)
+            if($res) {
+                SysLog::Addlog('修改 ID 为'.$id.'的展览', $this->request, 0);
                 $this->redirect('/exhibition/'.$id);
-            else
+            }
+            else {
+                SysLog::Addlog('修改 ID 为'.$id.'的展览', $this->request, 1);
                 $this->error('修改失败');exit;
+            }
         }
         return $this->fetch('modify');
     }

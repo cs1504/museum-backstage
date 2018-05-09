@@ -7,9 +7,12 @@ use think\Session;
 
 class SysLog
 {
-    public static function Addlog($description, $request, $status = 0) {
+    public static function Addlog($description, $request, $status = 0, $operator = null) {
+        if($operator == null) {
+            $operator = Session::get('id') == null ? 0 : Session::get('id');
+        }
         Db::table('logs')->insert([
-            'operator' => Session::get('id') == null ? 0 : Session::get('id'),
+            'operator' => $operator,
             'url' => $request->url(true),
             'description' => $description,
             'ip' => $request->ip(),

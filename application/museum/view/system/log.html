@@ -51,11 +51,11 @@
                                 </label>
                             </th>
                             <th>id</th>
-                            <th>操作者登录名</th>
+                            <th class="hidden-480">操作者登录名</th>
                             <th class="hidden-480">昵称</th>
-                            <th class="hidden-480">操作</th>
+                            <th>操作</th>
                             <th class="hidden-480">时间</th>
-                            <th></th>
+                            <th>结果</th>
                         </tr>
                         </thead>
 
@@ -72,27 +72,15 @@
                             <td>
                                 <a href="#">{$item['id']}</a>
                             </td>
-                            <td>{$item['loginname']}</td>
+                            <td class="hidden-480">{$item['loginname']}</td>
                             <td class="hidden-480">{$item['nickname']}</td>
-                            <td class="hidden-480">{$item['description']}</td>
+                            <td>{$item['description']}</td>
                             <td class="hidden-480">{$item['operate_time']}</td>
 
 
                             <td>
-                                <div class="action-buttons">
-                                    <a class="blue" href="#" onclick="check(this)" data-toggle="tooltip" title="查看博物馆详细资料">
-                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                    </a>
-
-                                    <a class="green" href="#" onclick="modify(this)" data-toggle="tooltip" title="修改博物馆资料">
-                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
-                                    </a>
-
-                                    <a class="red" href="#" onclick="confirmdelete(this)" data-toggle="tooltip" title="删除博物馆">
-                                        <i class="ace-icon fa fa-trash-o bigger-130"></i>
-                                    </a>
-                                </div>
-
+                                {if $item['status']==0}<span class="label label-success label-white middle">成功</span>
+                                {else}<span class="label label-danger label-white middle">失败</span>{/if}
                             </td>
                         </tr>
                         {/foreach}

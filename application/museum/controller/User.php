@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: WYH
- * Date: 08/04/2018
- * Time: 1:04 PM
- */
 
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 
 class User extends CommonController
@@ -17,6 +12,7 @@ class User extends CommonController
         if($this->request->isGet()) {
             $user = \app\api\model\User::select();
             $this->assign('user', $user);
+            SysLog::Addlog('查看用户总览', $this->request, 0);
             return $this->fetch('index');
         }
     }
@@ -34,6 +30,7 @@ class User extends CommonController
             $this->assign('user', $user);
             $this->assign('comment', $comment);
             $this->assign('id', $id);
+            SysLog::Addlog('查看 ID 为'.$id.'的用户', $this->request, 0);
             return $this->fetch('view');
         }
 
@@ -43,8 +40,11 @@ class User extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此用户']);
             }
             $res = Db::table('user')->where('id', $id)->delete();
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('查看 ID 为'.$id.'的用户', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'删除失败']);
+            }
+            SysLog::Addlog('查看 ID 为'.$id.'的用户', $this->request, 0);
             return json(['valid'=>1,'msg'=>'删除用户成功']);
         }
     }
@@ -52,6 +52,7 @@ class User extends CommonController
     public function add() {
         if($this->request->isPost()) {
             $res = (new \app\api\model\User())->reg(input('post.'));
+            SysLog::Addlog('添加用户，id 为'.$res['id'], $this->request,0);
             $this->redirect('/user/'.$res['id']);
         }
 
@@ -71,10 +72,14 @@ class User extends CommonController
             if(isset($data['password']))
                 $data['password'] = md5('museum'.$data['password']);
             $res = Db::table('user')->where('id', $id)->update($data);
-            if($res)
+            if($res) {
+                SysLog::Addlog('修改 ID 为'.$id.'的用户', $this->request, 0);
                 $this->redirect('/user/'.$id);
-            else
+            }
+            else {
+                SysLog::Addlog('修改 ID 为'.$id.'的用户', $this->request, 1);
                 $this->error('修改失败');exit;
+            }
         }
 
         return $this->fetch('modify');
@@ -87,10 +92,14 @@ class User extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此用户']);
             }
             $res = Db::table('user')->where('id', $id)->update(['status' => 1]);
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('禁止 ID 为'.$id.'的用户发表评论', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
-            else
+            }
+            else {
+                SysLog::Addlog('禁止 ID 为'.$id.'的用户发表评论', $this->request, 0);
                 return json(['valid'=>1,'msg'=>'修改成功']);
+            }
         }
     }
 
@@ -101,10 +110,14 @@ class User extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此用户']);
             }
             $res = Db::table('user')->where('id', $id)->update(['status' => 0]);
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('取消禁止 ID 为'.$id.'的用户发表评论', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'修改失败']);
-            else
+            }
+            else {
+                SysLog::Addlog('取消禁止 ID 为'.$id.'的用户发表评论', $this->request, 0);
                 return json(['valid'=>1,'msg'=>'修改成功']);
+            }
         }
     }
 

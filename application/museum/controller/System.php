@@ -3,6 +3,7 @@
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 use app\common\Baksql;
 
@@ -13,6 +14,7 @@ class System extends CommonController
         if($this->request->isGet()) {
             $options = Db::table('options')->select();
             $this->assign('options', $options);
+            SysLog::Addlog('查看系统配置项', $this->request, 0);
             return $this->fetch('setting');
         }
     }
@@ -28,6 +30,7 @@ class System extends CommonController
                     l.description, l.operate_time, l.ip, l.status')
                     ->select();
                 $this->assign('logs', $logs);
+                SysLog::Addlog('查看系统日志', $this->request, 0);
                 return $this->fetch('log');
             }
         }
@@ -49,10 +52,12 @@ class System extends CommonController
         if($this->request->isPost()) {
             $file=['name'=>date('Ymd-His'),'part'=>1];
             $res = $sql->setFile($file)->backupDatabase();
+            SysLog::Addlog('手动备份数据库', $this->request, 0);
             return json($res);
         }
 
         $this->assign('list', $sql->fileList());
+        SysLog::Addlog('查看数据库备份情况', $this->request, 0);
         return $this->fetch('backup');
     }
 
@@ -70,7 +75,7 @@ class System extends CommonController
                     'level' => 9,
                 );
                 $sql = new Baksql($config);
-
+                SysLog::Addlog('下载数据库备份'.input('post.time'), $this->request, 0);
                 $sql->downloadFile($time);
             }
         }
@@ -90,6 +95,7 @@ class System extends CommonController
             );
             $sql = new Baksql($config);
             $res = $sql->delFile($time);
+            SysLog::Addlog('删除数据库备份'.input('delete.time'), $this->request, 0);
             return json(['valid' => 1, 'msg' => $res]);
         }
     }
@@ -100,6 +106,7 @@ class System extends CommonController
             $time = input('post.time');
             // 将数据从文件中一条一条读出来，执行
             sleep(2);
+            SysLog::Addlog('还原数据库'.input('post.time'), $this->request, 0);
             return json(['valid' => 1, 'msg' => '还原成功']);
         }
     }

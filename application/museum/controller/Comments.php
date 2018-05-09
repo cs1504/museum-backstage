@@ -9,6 +9,7 @@
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 
 class Comments extends CommonController
@@ -39,6 +40,7 @@ class Comments extends CommonController
                 ->select();
 //            dump($comment);
             $this->assign('comment', $comment);
+            SysLog::Addlog('查看评论总览页面', $this->request, 0);
             return $this->fetch('index');
         }
     }

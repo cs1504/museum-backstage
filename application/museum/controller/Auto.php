@@ -31,11 +31,11 @@ class Auto extends Controller
         $file=['name'=>date('Ymd-His'),'part'=>1];
         $res = $sql->setFile($file)->backupDatabase();
         if($res['valid'] == 1) {
-            SysLog::Addlog('系统自动备份数据库成功', $this->request, 0);
+            SysLog::Addlog('系统自动备份数据库', $this->request, 0);
             print_r('系统自动备份数据库成功');
         }
         else{
-            SysLog::Addlog('系统自动备份数据库失败', $this->request, 1);
+            SysLog::Addlog('系统自动备份数据库', $this->request, 1);
             print_r('系统自动备份数据库失败');
         }
     }
@@ -90,5 +90,6 @@ class Auto extends Controller
                 }
             }
         }
+        SysLog::Addlog('系统自动提交音频审核', $this->request, 0);
     }
 }

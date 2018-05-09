@@ -4,11 +4,13 @@ namespace app\museum\controller;
 
 
 use app\api\model\Admin;
+use app\common\SysLog;
 use think\Controller;
 use app\api\controller\AdminControlApi;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use think\Db;
+use think\Session;
 
 class Login extends Controller
 {
@@ -19,9 +21,11 @@ class Login extends Controller
             if($res['valid'])
             {
                 //说明登录成功
+                SysLog::Addlog('管理员'.Session::get('loginname').'登录', $this->request, 0);
                 $this->success($res['msg'],'/index');exit;
             }else{
                 //说明登录失败
+                SysLog::Addlog('管理员'.input('post.loginname').'登录', $this->request, 1);
                 $this->error($res['msg']);exit;
             }
         }
@@ -30,12 +34,19 @@ class Login extends Controller
     }
 
     public function logout() {
+        $user = Session::get('loginname');
+        $id = Session::get('id');
         $res = AdminControlApi::logout();
         $res = json_decode($res->getContent(), true);
-        if($res['valid'])
+
+        if($res['valid']) {
+            SysLog::Addlog('管理员'.$user.'退出登录', $this->request, 0, $id);
             $this->redirect('/login');
-        else
+        }
+        else{
+            SysLog::Addlog('管理员'.$user.'退出登录', $this->request, 0, $id);
             $this->error($res['msg']);exit;
+        }
     }
 
     public function index() {
@@ -86,8 +97,10 @@ class Login extends Controller
 //                $mail->AltBody = '不支持回复哈哈哈哈This is the body in plain text for non-HTML mail clients';
 
                 $mail->send();
+                SysLog::Addlog('系统向'.$res['email'].'发送了重置密码的邮件', $this->request, 0);
                 return json(['valid' => 1, 'msg' => '已成功发送邮件，请登录邮箱重置密码，邮件有效期为1小时']);
             } catch (Exception $e) {
+                SysLog::Addlog('系统向'.$res['email'].'发送了重置密码的邮件', $this->request, 1);
                 return json(['valid' => 1, 'msg' => '发送邮件失败，'.$mail->ErrorInfo]);
             }
         }
@@ -108,8 +121,10 @@ class Login extends Controller
                 ->where('email', $res['email'])
                 ->update(['password' => md5('museum'.$data['password'])]);
             if(!$res) {
+                SysLog::Addlog($data['email'].'更改密码', $this->request, 1);
                 $this->error('与之前密码相同', '/');
             }
+            SysLog::Addlog($data['email'].'更改密码', $this->request, 0);
             $this->success('修改成功，请重新登录', '/');
         }
 

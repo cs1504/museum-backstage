@@ -1,6 +1,7 @@
 <?php
 namespace app\museum\controller;
 
+use app\common\SysLog;
 use think\Controller;
 use think\Db;
 use app\common\controller\CommonController;
@@ -28,6 +29,7 @@ class Index extends CommonController
         $disk['free'] = \app\common\ServerStatus::getDiskFreeSpace(true);
         $disk['total'] = \app\common\ServerStatus::getDiskTotalSpace(true);
         $this->assign('disk', $disk);
+        SysLog::Addlog('查看首页', $this->request, 0);
         return $this->fetch('index');
     }
 

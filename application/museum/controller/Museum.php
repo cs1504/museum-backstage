@@ -4,6 +4,7 @@ namespace app\museum\controller;
 
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 
 class Museum extends CommonController
@@ -13,6 +14,7 @@ class Museum extends CommonController
             $data = input('get.');
             $museum = \app\api\model\Museum::select();
             $this->assign('museum', $museum);
+            SysLog::Addlog('查看博物馆总览', $this->request, 0);
             return $this->fetch('index');
         }
 
@@ -23,6 +25,7 @@ class Museum extends CommonController
             $museum = Db::table('museum')->where('id', $id)->find();
             $this->assign('museum', $museum);
             $this->assign('id', $id);
+            SysLog::Addlog('查看 id 为'.$id.'的博物馆', $this->request, 0);
             return $this->fetch('view');
         }
 
@@ -33,8 +36,11 @@ class Museum extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此博物馆']);
             }
             $res = Db::table('museum')->delete($id);
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('删除 id 为'.$id.'的博物馆', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'删除失败']);
+            }
+            SysLog::Addlog('删除 id 为'.$id.'的博物馆', $this->request, 0);
             return json(['valid'=>1,'msg'=>'删除博物馆成功']);
         }
     }
@@ -64,6 +70,7 @@ class Museum extends CommonController
                 ->page($data['page'], 20)
                 ->select();
             $this->assign('museum', $museum);
+
             return $this->fetch('search');
         }
     }
@@ -71,6 +78,7 @@ class Museum extends CommonController
     public function insert() {
         if($this->request->isPost()) {
             $res = (new \app\api\model\Museum())->insert(input('post.'));
+            SysLog::Addlog('添加新博物馆，id 为'.$res['id'], $this->request, 0);
             $this->redirect('/museum/'.$res['id']);
         }
         return $this->fetch('insert');
@@ -86,10 +94,14 @@ class Museum extends CommonController
                 ->update(['name' => $date['name'], 'introduce' => $date['introduce'], 'open_time' => $date['open_time'],
                     'edu_activity' => $date['edu_activity'], 'collection' => $date['collection'], 'academic' => $date['academic'],
                     'lng' => $date['lng'], 'lat' => $date['lat'], 'city' => $date['city']]);
-            if($res)
+            if($res) {
+                SysLog::Addlog('修改 id 为'.$id.'的博物馆', $this->request, 0);
                 $this->redirect('/museum/'.$id);
-            else
+            }
+            else {
+                SysLog::Addlog('修改 id 为'.$id.'的博物馆', $this->request, 1);
                 $this->error('修改失败');exit;
+            }
         }
         return $this->fetch('modify');
     }

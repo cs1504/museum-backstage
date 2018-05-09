@@ -37,6 +37,7 @@ class Audio extends CommonController
                 ->select();
 //            dump($audio);
             $this->assign('audio', $audio);
+            SysLog::Addlog('查看音频总览页面', $this->request, 0);
             return $this->fetch('index');
         }
     }
@@ -56,8 +57,11 @@ class Audio extends CommonController
                 return json(['valid'=>0,'msg'=>'没有此音频']);
             }
             $res = Db::table('audio')->delete($id);
-            if(!$res)
+            if(!$res) {
+                SysLog::Addlog('删除 ID 为'.$id.'的音频', $this->request, 1);
                 return json(['valid'=>0,'msg'=>'删除失败']);
+            }
+            SysLog::Addlog('删除 ID 为'.$id.'的音频', $this->request, 0);
             return json(['valid'=>1,'msg'=>'删除音频成功']);
         }
     }
@@ -65,6 +69,7 @@ class Audio extends CommonController
     public function add() {
         if($this->request->isPost()) {
             $res = (new \app\api\model\Audio())->insert(input('post.'));
+            SysLog::Addlog('添加音频，ID 为'.$res['id'], $this->request, 0);
             $this->redirect('/audio/'.$res['id']);
         }
         return $this->fetch('insert');

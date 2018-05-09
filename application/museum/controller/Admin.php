@@ -9,6 +9,7 @@
 namespace app\museum\controller;
 
 use app\common\controller\CommonController;
+use app\common\SysLog;
 use think\Db;
 
 class Admin extends CommonController
@@ -17,6 +18,7 @@ class Admin extends CommonController
         if($this->request->isGet()) {
             $adminuser = \app\api\model\Admin::select();
             $this->assign('adminuser', $adminuser);
+            SysLog::Addlog('查看管理员总览页面', $this->request, 0);
             return $this->fetch('index');
         }
     }
