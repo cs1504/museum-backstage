@@ -20,7 +20,7 @@ class Comments extends CommonController
             if(!isset($data['page']))
                 $data['page'] = 1;
             $this->assign('page', $data['page']);
-            $count['comment'] = Db::table('comment')->count();
+            $count['comment'] = Db::table('comment')->where('museum_id', '<>', 'null')->count();
             $pages = ceil($count['comment'] / 10);
             $this->assign('pages', $pages);
             $previous = $data['page'] - 1;
