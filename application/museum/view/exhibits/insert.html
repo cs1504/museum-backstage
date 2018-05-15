@@ -1,16 +1,16 @@
 {extend name='common@base'/}
 
-{block name='title'}添加音频{/block}
+{block name='title'}添加展览{/block}
 
 {block name='breadcrumb'}
 <ul class="breadcrumb">
     <li>
-        <i class="ace-icon fa fa-headphones home-icon"></i>
-        <a href="/audio">音频管理</a>
+        <i class="ace-icon fa fa-eye home-icon"></i>
+        <a href="/exhibits">藏品管理</a>
     </li>
 
     <li>
-        <a href="/audio/insert">添加音频</a>
+        <a href="/exhibits/insert">添加藏品</a>
     </li>
 </ul><!-- /.breadcrumb -->
 {/block}
@@ -19,27 +19,19 @@
 
 <div class="page-header">
     <h1>
-        添加音频
+        添加藏品
     </h1>
 </div><!-- /.page-header -->
 
 <div class="row">
     <div class="col-xs-12">
-        <form class="form-horizontal style-form" method="post" action="/audio/add">
+        <form class="form-horizontal style-form" method="post" action="/exhibition/insert">
             <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">音频 url</label>
+                <label class="col-sm-2 col-sm-2 control-label">藏品名称</label>
                 <div class="col-sm-10">
-                    <input name="addr" type="text" class="form-control" required="required">
+                    <input name="name" type="text" class="form-control" required="required">
                 </div>
             </div>
-
-            <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">用户id</label>
-                <div class="col-sm-10">
-                    <input name="user_id" type="text" class="form-control" required="required">
-                </div>
-            </div>
-
             <div class="form-group">
                 <label class="col-sm-2 col-sm-2 control-label">博物馆id</label>
                 <div class="col-sm-10">
@@ -48,12 +40,12 @@
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 col-sm-2 control-label">基本介绍</label>
+                <label class="col-sm-2 col-sm-2 control-label">藏品介绍</label>
                 <div class="col-sm-10">
-                    <textarea name="description" class="autosize-transition form-control" rows="3" required="required"></textarea>
+                    <textarea name="introduce" id="edu_activity" class="autosize-transition form-control"
+                              rows="3" required="required"></textarea>
                 </div>
             </div>
-
             <button type="submit" class="btn btn-info no-border">提交</button>
         </form>
     </div><!-- /row -->
@@ -72,8 +64,9 @@
             remText: '%n character%s remaining...',
             limitText: 'max allowed : %n.'
         });
-        $("#sidebar ul li").eq(13).addClass("open");
-        $("#sidebar ul li").eq(13).find("ul li").eq(1).addClass("active");
+        $("#sidebar ul li").eq(10).addClass("open");
+        $("#sidebar ul li").eq(10).find("ul li").eq(1).addClass("active");
+
     });
 </script>
 {/block}

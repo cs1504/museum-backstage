@@ -399,6 +399,8 @@
             if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
             return 'left';
         }
+        $("#sidebar ul li").eq(20).addClass("open");
+        $("#sidebar ul li").eq(20).find("ul li").eq(0).addClass("active");
 
     })
 </script>

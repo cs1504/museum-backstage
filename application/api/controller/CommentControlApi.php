@@ -20,6 +20,14 @@ class CommentControlApi extends Controller
                 return json(['valid'=>0,'msg'=>$validate->getError()]);
             }
 
+            $status = Db::table('user')
+                ->where('id', $data['id'])
+                ->value('status');
+
+            if($status == 1) {
+                return json(['valid' => 0, 'msg' => '您已经被管理员禁止了评论']);
+            }
+
             $textcheck = new TextCheck();
             $checkres = $textcheck->text($data['content']);
 

@@ -1,14 +1,17 @@
 {extend name='common@base'/}
 
-{block name='title'}数据库备份管理{/block}
+{block name='title'}展览管理{/block}
 
 {block name='breadcrumb'}
 <ul class="breadcrumb">
     <li>
-        <i class="ace-icon fa fa-database home-icon"></i>
-        <a href="/backup">数据库备份管理</a>
+        <i class="ace-icon fa fa-eye home-icon"></i>
+        <a href="/exhibits">藏品管理</a>
     </li>
 
+    <li>
+        <a href="/exhibition">查看和修改藏品信息</a>
+    </li>
 </ul><!-- /.breadcrumb -->
 {/block}
 
@@ -17,24 +20,23 @@
 
 <div class="page-header">
     <h1>
-        备份管理
+        查看和修改藏品信息
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            藏品总览
+        </small>
     </h1>
 </div><!-- /.page-header -->
-
 
 <div class="row">
     <div class="col-xs-12">
         <div class="row">
-
             <div class="col-xs-12">
-
                 <div class="clearfix">
-                    <button type="button" class="btn btn-info btn-no-border" onclick="backup()">添加备份</button>
                     <div class="pull-right tableTools-container"></div>
                 </div>
-
                 <div class="table-header">
-                    备份文件总览
+                    藏品总览
                 </div>
 
                 <div>
@@ -47,17 +49,17 @@
                                     <span class="lbl"></span>
                                 </label>
                             </th>
-                            <th>文件名</th>
-                            <th>备份时间</th>
-                            <th class="hidden-480">时间（s）</th>
-                            <th class="hidden-480">大小</th>
-                            <th hidden></th>
+                            <th>id</th>
+                            <th>藏品名称</th>
+                            <th class="hidden-480">博物馆</th>
+                            <th class="hidden"></th>
+                            <th class="hidden"></th>
                             <th></th>
                         </tr>
                         </thead>
 
                         <tbody>
-                        {foreach name='list' item='item'}
+                        {foreach name='exhibits' item='item'}
                         <tr>
                             <td class="center">
                                 <label class="pos-rel">
@@ -67,29 +69,26 @@
                             </td>
 
                             <td>
-                                <a href="">{$item['name']}</a>
+                                <a href="#">{$item['id']}</a>
                             </td>
-                            <td>{$key}</td>
-                            <td class="hidden-480">{$item['time']}</td>
-                            <td class="hidden-480">{$item['size']/1024 | intval} KB</td>
-                            <td hidden></td>
+                            <td>{$item['name']}</td>
+                            <td class="hidden-480">{$item['museum_name']}</td>
+                            <td class="hidden"></td>
+                            <td class="hidden"></td>
                             <td>
                                 <div class="action-buttons">
-                                    <a class="blue" onclick="downloadsql({$item['time']})" data-toggle="tooltip" title="下载备份文件">
-                                        <i class="ace-icon fa fa-download bigger-130"></i>
+                                    <a class="blue" href="#" onclick="check(this)" data-toggle="tooltip" title="查看藏品详细资料">
+                                        <i class="ace-icon fa fa-search-plus bigger-130"></i>
                                     </a>
-                                    <a class="red" href="#"
-                                       onclick="confirmdelete({$item['time']})"
-                                       data-toggle="tooltip" title="删除备份文件">
+
+                                    <a class="green" href="#" onclick="modify(this)" data-toggle="tooltip" title="修改藏品资料">
+                                        <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                    </a>
+
+                                    <a class="red" href="#" onclick="confirmdelete(this)" data-toggle="tooltip" title="删除藏品">
                                         <i class="ace-icon fa fa-trash-o bigger-130"></i>
                                     </a>
-                                    <a class="red" href="#"
-                                       onclick="restoresql({$item['time']})"
-                                       data-toggle="tooltip" title="还原数据库">
-                                        <i class="ace-icon fa  fa-refresh bigger-130"></i>
-                                    </a>
                                 </div>
-
                             </td>
                         </tr>
                         {/foreach}
@@ -112,18 +111,58 @@
             </div>
             <form action="">
                 <div class="modal-body">
-                    <input type="hidden" id="deletetime">
+                    <input type="hidden" id="deleteurl">
                     一旦删除此项就无法恢复，确认删除吗？
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary no-border" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-danger no-border" onclick="deletesql()">确认删除</button>
+                    <button type="button" class="btn btn-danger no-border" onclick="delete_museum()">确认删除</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+
+<script>
+    function check($this) {
+        var url = $($this).parent().parent().parent().find('td:eq(1)').text().trim();
+        url = '/exhibition/'+url;
+        window.open(url,'_self');
+    }
+
+    function modify($this) {
+        var url = $($this).parent().parent().parent().find('td:eq(1)').text().trim();
+        url = '/exhibition/modify/'+url;
+        window.open(url,'_self');
+    }
+
+    function confirmdelete($this) {
+        var url = $($this).parent().parent().parent().find('td:eq(1)').text().trim();
+        url = '/exhibition/'+url;
+        $("#deleteurl").val(url);
+        $("#delete-warning").modal('show');
+    }
+
+    function delete_museum() {
+        $.ajax({
+            url: $("#deleteurl").val(),
+            type: 'DELETE',
+            dataType: 'json',
+            success: function(result) {
+                if(result.valid == 1) {
+                    window.location.reload();
+                }
+                else
+                {
+                    alert('删除失败，请稍后重试');
+                    return false;
+                }
+            }
+        });
+        // $("#delete-warning").modal('hide');
+    }
+</script>
 
 {/block}
 
@@ -134,95 +173,7 @@
 <script src="__STATIC__/assets/js/dataTables/extensions/ColVis/js/dataTables.colVis.js"></script>
 {/block}
 
-
 {block name='script'}
-<link rel="stylesheet" href="__STATIC__/css/jquery.xctips.css">
-<script src="__STATIC__/js/jquery.xctips.js"></script>
-<script>
-    function backup() {
-        $.ajax({
-            url: '/backup',
-            type: 'POST',
-            datatype: 'json',
-            success: function (result) {
-                if(result.valid == 1) {
-                    xcsoft.success(result.msg, 1500);
-                    window.location.reload();
-                }
-            },
-            error: function () {
-                xcsoft.error('出现错误，请稍后再试', 2000);
-                return false;
-            }
-        })
-    }
-
-    function restoresql($time) {
-        $.ajax({
-            url: '/restoresql',
-            type: 'POST',
-            datatype: 'json',
-            success: function (result) {
-                if(result.valid == 1) {
-                    xcsoft.success(result.msg, 1500);
-                }
-            },
-            error: function () {
-                xcsoft.error('出现错误，请稍后再试', 2000);
-                return false;
-            }
-        })
-    }
-    function downloadsql($time) {
-        $("#downloadform").remove();
-        var form = $("<form>");//定义一个form表单
-        form.attr("id", "downloadform");
-        form.attr("style", "display:none");
-        form.attr("target", "");
-        form.attr("method", "post");
-        form.attr("action", "/downloadsql");
-        var input1 = $("<input>");
-        input1.attr("type", "hidden");
-        input1.attr("name", "time");
-        input1.attr("value", $time);
-        form.append(input1);
-        $("body").append(form);//将表单放置在web中
-
-        form.submit();//表单提交
-    }
-
-
-    function confirmdelete($time) {
-        $("#deletetime").val($time);
-        $("#delete-warning").modal('show');
-    }
-
-    function deletesql() {
-        $.ajax({
-            url: '/deletesql',
-            type: 'DELETE',
-            data: {time : $("#deletetime").val()},
-            dataType: 'json',
-            success: function(result) {
-                if(result.valid == 1) {
-                    window.location.reload();
-                }
-                else
-                {
-                    xcsoft.error('出现错误，请稍后再试', 2000);
-                    $("#delete-warning").modal('hide');
-                    return false;
-                }
-            },
-            error: function () {
-                xcsoft.error('出现错误，请稍后再试', 2000);
-                $("#delete-warning").modal('hide');
-                return false;
-            }
-        });
-    }
-</script>
-
 <script type="text/javascript">
     jQuery(function($) {
         //initiate dataTables plugin
@@ -438,9 +389,9 @@
             if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
             return 'left';
         }
-        $("#sidebar ul li").eq(23).addClass("open");
-        $("#sidebar ul li").eq(23).find("ul li").eq(2).addClass("active");
+        $("#sidebar ul li").eq(10).addClass("open");
+        $("#sidebar ul li").eq(10).find("ul li").eq(0).addClass("active");
+
     })
 </script>
-
 {/block}

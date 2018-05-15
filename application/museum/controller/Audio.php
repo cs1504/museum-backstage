@@ -66,6 +66,26 @@ class Audio extends CommonController
         }
     }
 
+    public function modify($id) {
+        if($this->request->isPost()) {
+            Db::table('audio')
+                ->data(['description' => input('post.description')])
+                ->where('id', $id)
+                ->update();
+        }
+        $audio = Db::table('audio')
+            ->alias('a')
+            ->join('user u', 'a.user_id = u.id')
+            ->join('museum m', 'a.museum_id = m.id')
+            ->field('audio.id, loginname as user_name, name as museum_name, audio.status, upload_time, 
+                pass_time, addr, description, suggestion, totext, labeltext')
+            ->where('a.id', $id)
+            ->find();
+        $this->assign('audio', $audio);
+        $this->assign('id', $id);
+        return $this->fetch('modify');
+    }
+
     public function add() {
         if($this->request->isPost()) {
             $res = (new \app\api\model\Audio())->insert(input('post.'));

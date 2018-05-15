@@ -45,6 +45,12 @@ Route::any('exhibition', 'museum/Exhibition/index');
 Route::any('exhibition/search', 'museum/Exhibition/search');
 Route::any('exhibition/insert', 'museum/Exhibition/insert');
 
+Route::any('exhibits/modify/:id', 'museum/Exhibits/modify');
+Route::any('exhibits/:id', 'museum/Exhibits/exhibition');
+Route::any('exhibits', 'museum/Exhibits/index');
+Route::any('exhibits/search', 'museum/Exhibits/search');
+Route::any('exhibits/insert', 'museum/Exhibits/insert');
+
 Route::any('audio/check/pass/:id', 'museum/Audio/pass');
 Route::any('audio/check/cancel/:id', 'museum/Audio/cancel');
 Route::any('audio/modify/:id', 'museum/Audio/modify');
