@@ -21,7 +21,7 @@ class CommentControlApi extends Controller
             }
 
             $status = Db::table('user')
-                ->where('id', $data['id'])
+                ->where('id', $data['user_id'])
                 ->value('status');
 
             if($status == 1) {
